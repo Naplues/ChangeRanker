@@ -1,6 +1,20 @@
 package util;
 
 public class Feature {
+
+    public static int FILES = 0;
+    public static int FUNCTIONS = 1;
+    public static int LINES = 2;
+    public static int ADDLINES = 3;
+    public static int DELETELINES = 4;
+    public static int POS = 5;
+    public static int TIME = 6;
+    public static int RF = 7;
+    public static int IBF = 8;
+    public static int DISTANCE = 9;
+    public static int ISCOMPONENT = 10;
+
+
     private Double files;
     private Double functions;
     private Double lines;
@@ -84,6 +98,43 @@ public class Feature {
     public boolean isInducing() {
         return isInducing;
     }
+
+
+    /**
+     * 根据名称获取值
+     *
+     * @param valueName
+     * @return
+     */
+    public Double getValue(int valueName) {
+        switch (valueName) {
+            case 0:
+                return files;
+            case 1:
+                return functions;
+            case 2:
+                return lines;
+            case 3:
+                return addLines;
+            case 4:
+                return deleteLines;
+            case 5:
+                return pos;
+            case 6:
+                return time;
+            case 7:
+                return rf;
+            case 8:
+                return ibf;
+            case 9:
+                return distance;
+            case 10:
+                return isComponent;
+            default:
+                return pos;
+        }
+    }
+
 
     public String toString() {
         String string = "";
