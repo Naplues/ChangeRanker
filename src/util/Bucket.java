@@ -7,18 +7,20 @@ import java.util.List;
  * feature[][]: 每一行代表一个bucket, 每一个元素代表一个bucket中的一个revision的特征
  */
 public class Bucket {
+    private String versionName;
     private String[] bucketNames;
 
     private Feature[][] features;
-    private int revisionNumber; //原来版本数
-    private int filterNumber;   //过滤后的版本数
+    private int revisionNumber; //原来版本数目
+    private int filterNumber;   //过滤后的版本数目
 
     public Feature[][] getFeatures() {
         return features;
     }
 
-    public Bucket(String bucketDir) {
-        File[] revisions = new File(bucketDir).listFiles();
+    public Bucket(String version) {
+        File[] revisions = new File("C:\\Users\\gzq\\Desktop\\ChangeLocator\\pi\\" + version + "\\features").listFiles();
+        versionName = version;
         revisionNumber = revisions.length;
         bucketNames = new String[revisions.length];
         features = new Feature[revisions.length][];
@@ -85,5 +87,9 @@ public class Bucket {
 
     public String[] getBucketNames() {
         return bucketNames;
+    }
+
+    public String getVersionName() {
+        return versionName;
     }
 }

@@ -8,6 +8,13 @@ package util;
  */
 public class Evaluation {
 
+    /**
+     * 召回率
+     *
+     * @param bucket
+     * @param k
+     * @return
+     */
     public static double recall(Bucket bucket, int k) {
         double rc = 0;
         Feature[][] features = bucket.getFeatures();
@@ -23,6 +30,12 @@ public class Evaluation {
         return rc;
     }
 
+    /**
+     * MRR
+     *
+     * @param bucket
+     * @return
+     */
     public static double MRR(Bucket bucket) {
         double mrr = 0.0;
         Feature[][] features = bucket.getFeatures();
@@ -38,6 +51,12 @@ public class Evaluation {
         return mrr;
     }
 
+    /**
+     * MAP
+     *
+     * @param bucket
+     * @return
+     */
     public static double MAP(Bucket bucket) {
         double map = 0.0;
         Feature[][] features = bucket.getFeatures();
@@ -57,14 +76,10 @@ public class Evaluation {
         return map;
     }
 
-    public static void evaluation(Bucket bucket) {
-        for (int k : new int[]{1, 5, 10}) Evaluation.recall(bucket, k);
-        Evaluation.MRR(bucket);
-        Evaluation.MAP(bucket);
-        System.out.println();
-    }
-
     public static void evaluation(Bucket[] buckets) {
+        String filePath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\pi\\output.csv";
+        String result = "Version,Recall@1,Recall@5,Recall@10,MRR,MAP\n";
+
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
         for (Bucket bucket : buckets) {
             r1 += Evaluation.recall(bucket, 1);
@@ -72,13 +87,27 @@ public class Evaluation {
             r10 += Evaluation.recall(bucket, 10);
             mrr += Evaluation.MRR(bucket);
             map += Evaluation.MAP(bucket);
+            result += "v" + bucket.getVersionName() + ",";
+            result += Evaluation.recall(bucket, 1) + ",";
+            result += Evaluation.recall(bucket, 5) + ",";
+            result += Evaluation.recall(bucket, 10) + ",";
+            result += Evaluation.MRR(bucket) + ",";
+            result += Evaluation.MAP(bucket) + "\n";
         }
+        result += "Average,";
+        result += r1 / buckets.length + ",";
+        result += r5 / buckets.length + ",";
+        result += r10 / buckets.length + ",";
+        result += mrr / buckets.length + ",";
+        result += map / buckets.length + "\n";
 
-        System.out.println("Recall@1: " + r1 / buckets.length);
-        System.out.println("Recall@5: " + r5 / buckets.length);
-        System.out.println("Recall@10: " + r10 / buckets.length);
-        System.out.println("MRR: " + mrr / buckets.length);
-        System.out.println("MAP: " + map / buckets.length);
+        //写入文件
+        //FileHandle.writeStringToFile(filePath, result);
+        //输出到控制台
+        System.out.print(r1 / buckets.length + ",");
+        System.out.print(r5 / buckets.length + ",");
+        System.out.print(r10 / buckets.length + ",");
+        System.out.print(mrr / buckets.length + ",");
+        System.out.println(map / buckets.length);
     }
-
 }
