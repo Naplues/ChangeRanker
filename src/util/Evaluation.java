@@ -104,10 +104,12 @@ public class Evaluation {
         //写入文件
         //FileHandle.writeStringToFile(filePath, result);
         //输出到控制台
+
         System.out.print(r1 / buckets.length + ",");
         System.out.print(r5 / buckets.length + ",");
         System.out.print(r10 / buckets.length + ",");
         System.out.print(mrr / buckets.length + ",");
         System.out.println(map / buckets.length);
+
     }
 }
