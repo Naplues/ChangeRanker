@@ -50,51 +50,6 @@ public class Feature {
         else this.isInducing = false;
     }
 
-
-    public Double getFiles() {
-        return files;
-    }
-
-    public Double getFunctions() {
-        return functions;
-    }
-
-    public Double getLines() {
-        return lines;
-    }
-
-    public Double getAddLines() {
-        return addLines;
-    }
-
-    public Double getDeleteLines() {
-        return deleteLines;
-    }
-
-    public Double getPos() {
-        return pos;
-    }
-
-    public Double getTime() {
-        return time;
-    }
-
-    public Double getRf() {
-        return rf;
-    }
-
-    public Double getIbf() {
-        return ibf;
-    }
-
-    public Double getDistance() {
-        return distance;
-    }
-
-    public Double getIsComponent() {
-        return isComponent;
-    }
-
     public boolean isInducing() {
         return isInducing;
     }
