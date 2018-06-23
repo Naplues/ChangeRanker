@@ -77,7 +77,7 @@ public class Evaluation {
     }
 
     public static void evaluation(Bucket[] buckets) {
-        String filePath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\pi\\output.csv";
+        String filePath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\pid\\output.csv";
         String result = "Version,Recall@1,Recall@5,Recall@10,MRR,MAP\n";
 
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
@@ -93,6 +93,8 @@ public class Evaluation {
             result += Evaluation.recall(bucket, 10) + ",";
             result += Evaluation.MRR(bucket) + ",";
             result += Evaluation.MAP(bucket) + "\n";
+            //System.out.println(Evaluation.recall(bucket, 1) + "," + Evaluation.recall(bucket, 5) +
+            //        "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) + ", " + bucket.getFilterNumber());
         }
         result += "Average,";
         result += r1 / buckets.length + ",";

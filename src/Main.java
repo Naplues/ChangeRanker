@@ -12,6 +12,7 @@ public class Main {
         // 测试Pi方法
         Test.testPi(versions, Feature.POS, Feature.ISCOMPONENT);
         Test.testPi(versions, Feature.POS, Feature.DISTANCE);
-        Test.testPi(versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        //Test.testPi(versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+
     }
 }

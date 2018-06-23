@@ -33,10 +33,10 @@ public class Test {
         Bucket[] buckets = new Bucket[versions.length];
 
         for (int n = 0; n < 11; n++) {
-            for (int m = 0; m < n; m++) {
+            for (int m = 0; m < 11; m++) {
                 for (int i = 0; i < versions.length; i++) {
                     Bucket bucket = new Bucket(versions[i]);
-                    bucket.setFeatures(Ranking.rankByFeature(bucket, n, m, 0));
+                    bucket.setFeatures(Ranking.rankByFeature(bucket, n, m));
                     buckets[i] = bucket;
                 }
                 Evaluation.evaluation(buckets);

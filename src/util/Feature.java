@@ -1,5 +1,8 @@
 package util;
 
+/**
+ * 一个change的各特征值对象
+ */
 public class Feature {
 
     public static int FILES = 0;

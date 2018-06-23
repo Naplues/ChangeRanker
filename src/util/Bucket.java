@@ -7,10 +7,10 @@ import java.util.List;
  * feature[][]: 每一行代表一个bucket, 每一个元素代表一个bucket中的一个revision的特征
  */
 public class Bucket {
+    private Feature[][] features;
+
     private String versionName;
     private String[] bucketNames;
-
-    private Feature[][] features;
     private int revisionNumber; //原来版本数目
     private int filterNumber;   //过滤后的版本数目
 
@@ -19,7 +19,7 @@ public class Bucket {
     }
 
     public Bucket(String version) {
-        File[] revisions = new File("C:\\Users\\gzq\\Desktop\\ChangeLocator\\pi\\" + version + "\\features").listFiles();
+        File[] revisions = new File("C:\\Users\\gzq\\Desktop\\ChangeLocator\\pid\\" + version + "\\features").listFiles();
         versionName = version;
         revisionNumber = revisions.length;
         bucketNames = new String[revisions.length];
@@ -60,20 +60,21 @@ public class Bucket {
         filterNumber = count;
     }
 
+
+
+
     public void setFeatures(Feature[][] features) {
         this.features = features;
     }
 
     public String toString() {
-        String string = "Bucket: " + bucketNames + "\n";
+        String string = "";
         string += "files,functions,lines,addLines,deleteLines,pos,time,rf,ibf,isComponent,distance,isInducing\n";
 
         for (int i = 0; i < features.length; i++) {
-            string += bucketNames[i] + features[i].length + "\n";
-            for (int j = 0; j < features[i].length; j++) {
-                string += features[i][j];
-            }
+            for (int j = 0; j < features[i].length; j++) string += features[i][j];
         }
+        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv",string);
         return string;
     }
 
@@ -91,5 +92,15 @@ public class Bucket {
 
     public String getVersionName() {
         return versionName;
+    }
+
+    public void output() {
+        int count = 0;
+        for (Feature[] bucket : features) {
+            if (bucket.length <= 5) {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
