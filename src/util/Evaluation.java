@@ -67,16 +67,19 @@ public class Evaluation {
                 if (features[i][j].isInducing()) {
                     ap += (double) (k + 1) / (j + 1);
                     k++;
+                    //System.out.print((j + 1) + " ");
                 }
             }
             ap /= k;
             map += ap;
+            //System.out.print(" || ");
         }
+        //System.out.println();
         map /= features.length;
         return map;
     }
 
-    public static void evaluation(Bucket[] buckets) {
+    public static void evaluation(Bucket[] buckets, boolean details) {
         String filePath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\pid\\output.csv";
         String result = "Version,Recall@1,Recall@5,Recall@10,MRR,MAP\n";
 
@@ -93,8 +96,9 @@ public class Evaluation {
             result += Evaluation.recall(bucket, 10) + ",";
             result += Evaluation.MRR(bucket) + ",";
             result += Evaluation.MAP(bucket) + "\n";
-            //System.out.println(Evaluation.recall(bucket, 1) + "," + Evaluation.recall(bucket, 5) +
-            //        "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) + ", " + bucket.getFilterNumber());
+            if (details)
+                System.out.println(Evaluation.recall(bucket, 1) + "," + Evaluation.recall(bucket, 5) +
+                        "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) + ", " + bucket.getFilterNumber());
         }
         result += "Average,";
         result += r1 / buckets.length + ",";
@@ -112,6 +116,54 @@ public class Evaluation {
         System.out.print(r10 / buckets.length + ",");
         System.out.print(mrr / buckets.length + ",");
         System.out.println(map / buckets.length);
+    }
 
+
+    /**
+     * 准确率
+     *
+     * @param bucket
+     * @param k
+     * @return
+     */
+    public static double precision(Bucket bucket, int k) {
+        double rc = 0;
+        Feature[][] features = bucket.getFeatures();
+        for (int i = 0; i < features.length; i++) {
+            for (int j = 0; j < k && j < features[i].length; j++) {
+                if (features[i][j].isInducing()) {
+                    rc++;
+                    break;
+                }
+            }
+        }
+        rc /= bucket.getFilterNumber();
+        return rc;
+    }
+
+    /**
+     * 评估候选集较少的数据集
+     *
+     * @param buckets
+     */
+    public static void evaLowDataset(Bucket[] buckets, boolean details) {
+        double r1 = 0.0, r2 = 0.0, r3 = 0.0, map = 0.0, mrr = 0.0;
+        for (Bucket bucket : buckets) {
+            r1 += Evaluation.precision(bucket, 1);
+            r2 += Evaluation.precision(bucket, 2);
+            r3 += Evaluation.precision(bucket, 3);
+            mrr += Evaluation.MRR(bucket);
+            map += Evaluation.MAP(bucket);
+            if (details)
+                System.out.println(Evaluation.precision(bucket, 1) + "," + Evaluation.precision(bucket, 2) +
+                        "," + Evaluation.precision(bucket, 3) + "," +
+                        Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) + ", " + bucket.getFilterNumber());
+        }
+        //输出到控制台
+        System.out.print(r1 / buckets.length + ",");
+        System.out.print(r2 / buckets.length + ",");
+        System.out.print(r3 / buckets.length + ",");
+        System.out.print(mrr / buckets.length + ",");
+        System.out.println(map / buckets.length);
     }
 }

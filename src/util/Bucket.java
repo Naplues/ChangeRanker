@@ -18,8 +18,16 @@ public class Bucket {
         return features;
     }
 
-    public Bucket(String version) {
-        File[] revisions = new File("C:\\Users\\gzq\\Desktop\\ChangeLocator\\pid\\" + version + "\\features").listFiles();
+    /**
+     * 保存一个项目的所有bucket信息
+     *
+     * @param version      项目版本号
+     * @param form         候选集形式
+     * @param isLowDataSet 是否测试少量候选集
+     * @param threshold    少量候选集阈值
+     */
+    public Bucket(String version, int form, boolean isLowDataSet, int... threshold) {
+        File[] revisions = new File(Util.rootPath + version + "\\Form" + form + "\\testing").listFiles();
         versionName = version;
         revisionNumber = revisions.length;
         bucketNames = new String[revisions.length];
@@ -32,11 +40,14 @@ public class Bucket {
                 features[i][j - 1] = new Feature(lines.get(j).split(","));
             }
         }
-        filter();
+        selectOracleFeature();  //选择有oracle的bucket
+        if (isLowDataSet) selectLowFeature(threshold[0]);
     }
 
-    // 过滤掉无效的bucket
-    public void filter() {
+    /**
+     * 选择有oracle的bucket
+     */
+    public void selectOracleFeature() {
         int[] pass = new int[features.length];
         int count = 0;
         for (int i = 0, j; i < features.length; i++) {
@@ -44,12 +55,14 @@ public class Bucket {
             for (j = 0; j < features[i].length; j++) if (features[i][j].isInducing()) break;
             if (j == features[i].length) pass[i] = 1;
         }
+        // 统计保留多少bucket
+        int remain = 0;
+        for (int i = 0; i < pass.length; i++) if (pass[i] == remain) count++;
 
-        for (int i = 0; i < pass.length; i++) if (pass[i] == 0) count++;
         Feature[][] filterFeature = new Feature[count][];
         String[] filterBucketNames = new String[count];
         for (int i = 0, j = 0; i < features.length; i++) {
-            if (pass[i] == 0) {
+            if (pass[i] == remain) {
                 filterFeature[j] = features[i];
                 filterBucketNames[j] = bucketNames[i];
                 j++;
@@ -60,7 +73,32 @@ public class Bucket {
         filterNumber = count;
     }
 
+    /**
+     * 选择候选个数在指定阈值以内的bucket
+     * @param threshold 候选集数量阈值
+     */
+    public void selectLowFeature(int threshold) {
+        int[] pass = new int[features.length];
+        int count = 0;
+        for (int i = 0; i < features.length; i++) if (features[i].length <= threshold) pass[i] = 1;
 
+        // 统计保留多少bucket
+        int remain = 1;
+        for (int i = 0; i < pass.length; i++) if (pass[i] == remain) count++;
+
+        Feature[][] filterFeature = new Feature[count][];
+        String[] filterBucketNames = new String[count];
+        for (int i = 0, j = 0; i < features.length; i++) {
+            if (pass[i] == remain) {
+                filterFeature[j] = features[i];
+                filterBucketNames[j] = bucketNames[i];
+                j++;
+            }
+        }
+        features = filterFeature;
+        bucketNames = filterBucketNames;
+        filterNumber = count;
+    }
 
 
     public void setFeatures(Feature[][] features) {
@@ -74,7 +112,7 @@ public class Bucket {
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) string += features[i][j];
         }
-        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv",string);
+        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv", string);
         return string;
     }
 
@@ -94,10 +132,10 @@ public class Bucket {
         return versionName;
     }
 
-    public void output() {
+    public void output(int threshold) {
         int count = 0;
         for (Feature[] bucket : features) {
-            if (bucket.length <= 5) {
+            if (bucket.length <= threshold) {
                 count++;
             }
         }

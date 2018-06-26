@@ -15,11 +15,11 @@ public class Test {
 
         for (int n = 0; n < 11; n++) {
             for (int i = 0; i < versions.length; i++) {
-                Bucket bucket = new Bucket(versions[i]);
+                Bucket bucket = new Bucket(versions[i], Util.form, false);
                 bucket.setFeatures(Ranking.rankByFeature(bucket, n));
                 buckets[i] = bucket;
             }
-            Evaluation.evaluation(buckets);
+            Evaluation.evaluation(buckets, false);
             System.out.println("n=" + n);
         }
     }
@@ -35,11 +35,11 @@ public class Test {
         for (int n = 0; n < 11; n++) {
             for (int m = 0; m < 11; m++) {
                 for (int i = 0; i < versions.length; i++) {
-                    Bucket bucket = new Bucket(versions[i]);
+                    Bucket bucket = new Bucket(versions[i], Util.form, false);
                     bucket.setFeatures(Ranking.rankByFeature(bucket, n, m));
                     buckets[i] = bucket;
                 }
-                Evaluation.evaluation(buckets);
+                Evaluation.evaluation(buckets, false);
                 System.out.println("n=" + n + " m=" + m);
             }
         }
@@ -53,10 +53,28 @@ public class Test {
     public static void testPi(String[] versions, int... features) {
         Bucket[] buckets = new Bucket[versions.length];
         for (int i = 0; i < versions.length; i++) {
-            Bucket bucket = new Bucket(versions[i]);
+            Bucket bucket = new Bucket(versions[i], Util.form, false);
             bucket.setFeatures(Ranking.rankByFeature(bucket, features));
             buckets[i] = bucket;
         }
-        Evaluation.evaluation(buckets);
+        Evaluation.evaluation(buckets, false);
+        System.out.println("================================================================================");
+    }
+
+    /**
+     * 测试Pi在候选集个数较少的bucket上的性能
+     *
+     * @param versions
+     * @param features
+     */
+    public static void testLowDataSet(String[] versions, int threshold, int... features) {
+        Bucket[] buckets = new Bucket[versions.length];
+        for (int i = 0; i < versions.length; i++) {
+            Bucket bucket = new Bucket(versions[i], Util.form, true, threshold);
+            bucket.setFeatures(Ranking.rankByFeature(bucket, features));
+            buckets[i] = bucket;
+        }
+        Evaluation.evaLowDataset(buckets, false);
+        System.out.println("================================================================================");
     }
 }
