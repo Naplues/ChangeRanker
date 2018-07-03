@@ -1,9 +1,14 @@
-package util;
+package test;
+
+import util.Bucket;
+import util.Evaluation;
+import util.Ranking;
+import util.Util;
 
 /**
  * 测试特征效果
  */
-public class Test {
+public class PidTest {
 
     /**
      * 测试单个特征在各版本数据上的性能
@@ -33,6 +38,7 @@ public class Test {
         Bucket[] buckets = new Bucket[versions.length];
 
         for (int n = 0; n < 11; n++) {
+            System.out.println("n=" + n);
             for (int m = 0; m < 11; m++) {
                 for (int i = 0; i < versions.length; i++) {
                     Bucket bucket = new Bucket(versions[i], Util.form, false);
@@ -40,7 +46,6 @@ public class Test {
                     buckets[i] = bucket;
                 }
                 Evaluation.evaluation(buckets, false);
-                System.out.println("n=" + n + " m=" + m);
             }
         }
     }
@@ -57,7 +62,7 @@ public class Test {
             bucket.setFeatures(Ranking.rankByFeature(bucket, features));
             buckets[i] = bucket;
         }
-        Evaluation.evaluation(buckets, false);
+        Evaluation.evaluation(buckets, true);
         System.out.println("================================================================================");
     }
 
@@ -73,6 +78,7 @@ public class Test {
             Bucket bucket = new Bucket(versions[i], Util.form, true, threshold);
             bucket.setFeatures(Ranking.rankByFeature(bucket, features));
             buckets[i] = bucket;
+            bucket.printBucketNames();
         }
         Evaluation.evaLowDataset(buckets, false);
         System.out.println("================================================================================");

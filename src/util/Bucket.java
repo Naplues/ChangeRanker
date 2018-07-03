@@ -19,7 +19,7 @@ public class Bucket {
     }
 
     /**
-     * 保存一个项目的所有bucket信息
+     * Pid: 保存一个项目的所有bucket信息
      *
      * @param version      项目版本号
      * @param form         候选集形式
@@ -42,6 +42,30 @@ public class Bucket {
         }
         selectOracleFeature();  //选择有oracle的bucket
         if (isLowDataSet) selectLowFeature(threshold[0]);
+    }
+
+    /**
+     * ChangeLocator: 保存一个项目的所有bucket信息
+     *
+     * @param version 项目版本号
+     * @param path    changeLocator数据路径
+     */
+    public Bucket(String version, String path) {
+        File[] revisions = new File(path + version).listFiles();
+        versionName = version;
+        revisionNumber = revisions.length;
+        bucketNames = new String[revisions.length];
+        features = new Feature[revisions.length][];
+        for (int i = 0; i < features.length; i++) {
+            List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
+            bucketNames[i] = revisions[i].getName();
+            features[i] = new Feature[lines.size()];
+
+            for (int j = 0; j < lines.size(); j++) {
+                features[i][j] = new Feature(lines.get(j).split("\t"), true);
+            }
+        }
+        this.filterNumber = this.revisionNumber;
     }
 
     /**
@@ -75,6 +99,7 @@ public class Bucket {
 
     /**
      * 选择候选个数在指定阈值以内的bucket
+     *
      * @param threshold 候选集数量阈值
      */
     public void selectLowFeature(int threshold) {
@@ -140,5 +165,15 @@ public class Bucket {
             }
         }
         System.out.println(count);
+    }
+
+    /**
+     * 打印bucketsNames
+     */
+    public void printBucketNames() {
+        for (int i = 0; i < bucketNames.length; i++) {
+            System.out.print(bucketNames[i] + " " + features[i].length + "||");
+        }
+        System.out.println();
     }
 }

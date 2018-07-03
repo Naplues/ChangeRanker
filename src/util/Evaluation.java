@@ -98,7 +98,8 @@ public class Evaluation {
             result += Evaluation.MAP(bucket) + "\n";
             if (details)
                 System.out.println(Evaluation.recall(bucket, 1) + "," + Evaluation.recall(bucket, 5) +
-                        "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) + ", " + bucket.getFilterNumber());
+                        "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) +
+                        ", " + bucket.getFilterNumber() + "/" + bucket.getRevisionNumber());
         }
         result += "Average,";
         result += r1 / buckets.length + ",";
@@ -130,6 +131,7 @@ public class Evaluation {
         double rc = 0;
         Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
+
             for (int j = 0; j < k && j < features[i].length; j++) {
                 if (features[i][j].isInducing()) {
                     rc++;
@@ -137,6 +139,7 @@ public class Evaluation {
                 }
             }
         }
+
         rc /= bucket.getFilterNumber();
         return rc;
     }
@@ -147,22 +150,20 @@ public class Evaluation {
      * @param buckets
      */
     public static void evaLowDataset(Bucket[] buckets, boolean details) {
-        double r1 = 0.0, r2 = 0.0, r3 = 0.0, map = 0.0, mrr = 0.0;
+        double r1 = 0.0, r2 = 0.0, map = 0.0, mrr = 0.0;
         for (Bucket bucket : buckets) {
             r1 += Evaluation.precision(bucket, 1);
             r2 += Evaluation.precision(bucket, 2);
-            r3 += Evaluation.precision(bucket, 3);
             mrr += Evaluation.MRR(bucket);
             map += Evaluation.MAP(bucket);
             if (details)
-                System.out.println(Evaluation.precision(bucket, 1) + "," + Evaluation.precision(bucket, 2) +
-                        "," + Evaluation.precision(bucket, 3) + "," +
+                System.out.println(Evaluation.precision(bucket, 1) + "," + Evaluation.precision(bucket, 2) + "," +
                         Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) + ", " + bucket.getFilterNumber());
         }
+
         //输出到控制台
         System.out.print(r1 / buckets.length + ",");
         System.out.print(r2 / buckets.length + ",");
-        System.out.print(r3 / buckets.length + ",");
         System.out.print(mrr / buckets.length + ",");
         System.out.println(map / buckets.length);
     }

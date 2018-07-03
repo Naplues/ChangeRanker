@@ -8,4 +8,5 @@ public class Util {
     //public static String rootPath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\pid\\";
     public static String rootPath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\origin\\prediction_data\\";
     public static int form = 3;
+    public static String changeLocatorPath = "C:\\Users\\gzq\\Desktop\\low_buckets\\";
 }

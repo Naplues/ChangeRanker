@@ -53,6 +53,22 @@ public class Feature {
         else this.isInducing = false;
     }
 
+    public Feature(String[] values, boolean isChangeLocator){
+        if(!isChangeLocator) return;
+        this.files = 0.0;
+        this.functions = 0.0;
+        this.lines = 0.0;
+        this.addLines = .0;
+        this.deleteLines = .0;
+        this.pos = .0;
+        this.time = .0;
+        this.rf = .0;
+        this.ibf = .0;
+        this.isComponent = .0;
+        this.distance = .0;
+        if (values[values.length - 1].equals("true")) this.isInducing = true;
+        else this.isInducing = false;
+    }
     public boolean isInducing() {
         return isInducing;
     }
