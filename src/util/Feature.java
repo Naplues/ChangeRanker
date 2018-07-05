@@ -6,7 +6,7 @@ package util;
 public class Feature {
 
     public static int FILES = 0;
-    public static int FUNCTIONS = 1;
+    public static int ISCOMPONENT = 1;
     public static int LINES = 2;
     public static int ADDLINES = 3;
     public static int DELETELINES = 4;
@@ -15,11 +15,10 @@ public class Feature {
     public static int RF = 7;
     public static int IBF = 8;
     public static int DISTANCE = 9;
-    public static int ISCOMPONENT = 10;
 
 
     private Double files;
-    private Double functions;
+    private Double isComponent;
     private Double lines;
     private Double addLines;
     private Double deleteLines;
@@ -28,7 +27,6 @@ public class Feature {
     private Double rf;
     private Double ibf;
     private Double distance;
-    private Double isComponent;
     private boolean isInducing;
 
     public Feature(String[] values) {
@@ -39,7 +37,6 @@ public class Feature {
         }
 
         this.files = number[1];
-        this.functions = number[2];
         this.lines = number[3];
         this.addLines = number[4];
         this.deleteLines = number[5];
@@ -53,10 +50,9 @@ public class Feature {
         else this.isInducing = false;
     }
 
-    public Feature(String[] values, boolean isChangeLocator){
-        if(!isChangeLocator) return;
+    public Feature(String[] values, boolean isChangeLocator) {
+        if (!isChangeLocator) return;
         this.files = 0.0;
-        this.functions = 0.0;
         this.lines = 0.0;
         this.addLines = .0;
         this.deleteLines = .0;
@@ -69,6 +65,7 @@ public class Feature {
         if (values[values.length - 1].equals("true")) this.isInducing = true;
         else this.isInducing = false;
     }
+
     public boolean isInducing() {
         return isInducing;
     }
@@ -85,7 +82,7 @@ public class Feature {
             case 0:
                 return files;
             case 1:
-                return functions;
+                return isComponent;
             case 2:
                 return lines;
             case 3:
@@ -102,18 +99,41 @@ public class Feature {
                 return ibf;
             case 9:
                 return distance;
-            case 10:
-                return isComponent;
             default:
                 return pos;
         }
     }
 
+    public static String getName(Object valueIndex) {
+        switch ((Integer) valueIndex) {
+            case 0:
+                return "NAF";
+            case 1:
+                return "CC";
+            case 2:
+                return "RLOCC";
+            case 3:
+                return "RLOAC";
+            case 4:
+                return "RLODC";
+            case 5:
+                return "IADCP";
+            case 6:
+                return "ITDCR";
+            case 7:
+                return "RF";
+            case 8:
+                return "IBF";
+            case 9:
+                return "IADCL";
+            default:
+                return "IADCP";
+        }
+    }
 
     public String toString() {
         String string = "";
         string += files + ",";
-        string += functions + ",";
         string += lines + ",";
         string += addLines + ",";
         string += deleteLines + ",";

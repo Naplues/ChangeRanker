@@ -67,22 +67,16 @@ public class Evaluation {
                 if (features[i][j].isInducing()) {
                     ap += (double) (k + 1) / (j + 1);
                     k++;
-                    //System.out.print((j + 1) + " ");
                 }
             }
             ap /= k;
             map += ap;
-            //System.out.print(" || ");
         }
-        //System.out.println();
         map /= features.length;
         return map;
     }
 
-    public static void evaluation(Bucket[] buckets, boolean details) {
-        String filePath = "C:\\Users\\gzq\\Desktop\\ChangeLocator\\pid\\output.csv";
-        String result = "Version,Recall@1,Recall@5,Recall@10,MRR,MAP\n";
-
+    public static double[] evaluation(Bucket[] buckets, boolean details) {
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
         for (Bucket bucket : buckets) {
             r1 += Evaluation.recall(bucket, 1);
@@ -90,33 +84,25 @@ public class Evaluation {
             r10 += Evaluation.recall(bucket, 10);
             mrr += Evaluation.MRR(bucket);
             map += Evaluation.MAP(bucket);
-            result += "v" + bucket.getVersionName() + ",";
-            result += Evaluation.recall(bucket, 1) + ",";
-            result += Evaluation.recall(bucket, 5) + ",";
-            result += Evaluation.recall(bucket, 10) + ",";
-            result += Evaluation.MRR(bucket) + ",";
-            result += Evaluation.MAP(bucket) + "\n";
             if (details)
                 System.out.println(Evaluation.recall(bucket, 1) + "," + Evaluation.recall(bucket, 5) +
                         "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) +
                         ", " + bucket.getFilterNumber() + "/" + bucket.getRevisionNumber());
         }
-        result += "Average,";
-        result += r1 / buckets.length + ",";
-        result += r5 / buckets.length + ",";
-        result += r10 / buckets.length + ",";
-        result += mrr / buckets.length + ",";
-        result += map / buckets.length + "\n";
 
-        //写入文件
-        //FileHandle.writeStringToFile(filePath, result);
         //输出到控制台
+        double[] values = new double[5];
+        values[0] = r1 / buckets.length;
+        values[1] = r5 / buckets.length;
+        values[2] = r10 / buckets.length;
+        values[3] = mrr / buckets.length;
+        values[4] = map / buckets.length;
 
-        System.out.print(r1 / buckets.length + ",");
-        System.out.print(r5 / buckets.length + ",");
-        System.out.print(r10 / buckets.length + ",");
-        System.out.print(mrr / buckets.length + ",");
-        System.out.println(map / buckets.length);
+        for (int i = 0; i < values.length; i++) {
+        //    System.out.print(values[i] + ",");
+        }
+        //System.out.println("\n================================================================================");
+        return values;
     }
 
 

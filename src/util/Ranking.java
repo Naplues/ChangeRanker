@@ -13,7 +13,7 @@ public class Ranking {
      *
      * @param bucket
      */
-    public static Feature[][] rankByFeature(Bucket bucket, int... features) {
+    public static Feature[][] rankByFeature(Bucket bucket, Integer... features) {
         Feature[][] result = bucket.getFeatures();
         Feature[][] inducing = getInducing(result, true);
         Feature[][] notInducing = getInducing(result, false);
@@ -30,7 +30,7 @@ public class Ranking {
      * @param features
      * @param feature
      */
-    public static void rank(Feature[][] features, int... feature) {
+    public static void rank(Feature[][] features, Integer... feature) {
         for (int i = 0; i < features.length; i++) {
             Arrays.sort(features[i], new Comparator<Feature>() {
                 @Override
@@ -54,7 +54,7 @@ public class Ranking {
      * @param features
      * @return
      */
-    private static Feature[][] adjust(Feature[][] inducing, Feature[][] notInducing, int... features) {
+    private static Feature[][] adjust(Feature[][] inducing, Feature[][] notInducing, Integer... features) {
         Feature[][] result = new Feature[inducing.length][];
 
         for (int i = 0; i < result.length; i++) {
