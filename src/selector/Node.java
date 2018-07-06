@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 结点表示
+ * 结点：表示一个特征
  * <p>
  * 1. 使用的特征集合结点
  * 2. 剩余的特征集合结点
@@ -19,7 +19,9 @@ public class Node {
     public static Integer ID = 0;
     private Integer id;
     private String name;
+    private int featureId;
     private Node parent;
+    private boolean best;
     private List<Node> children;
 
     private Set<Object> featureUsed;
@@ -30,6 +32,7 @@ public class Node {
     public Node() {
         id = ID++;
         name = "null";
+        best = false;
         parent = null;
         children = new ArrayList<>();
         featureUsed = null;
@@ -46,15 +49,32 @@ public class Node {
         this.featureUsed = new HashSet<>();
         this.featureCandidates = initialSet;
     }
-    public Node(Node parent){
+
+    /**
+     * 性能节点构造器
+     *
+     * @param parent
+     */
+    public Node(Node parent) {
         this();
         this.name = new DecimalFormat("0.000").format(parent.getPerformance());
         this.parent = parent;
     }
 
-    public Node(String name, Node parent, Set<Object> featureUsed, Set<Object> featureCandidates, double performance) {
+    /**
+     * 特征节点构造器
+     *
+     * @param name
+     * @param featureId
+     * @param parent
+     * @param featureUsed
+     * @param featureCandidates
+     * @param performance
+     */
+    public Node(String name, Object featureId, Node parent, Set<Object> featureUsed, Set<Object> featureCandidates, double performance) {
         this();
         this.name = name;
+        this.featureId = (Integer) featureId;
         this.parent = parent;
         this.featureUsed = featureUsed;
         this.featureCandidates = featureCandidates;
@@ -124,6 +144,22 @@ public class Node {
 
     public void addChild(Node child) {
         this.children.add(child);
+    }
+
+    public boolean isBest() {
+        return best;
+    }
+
+    public void setBest(boolean best) {
+        this.best = best;
+    }
+
+    public int getFeatureId() {
+        return featureId;
+    }
+
+    public void setFeatureId(int featureId) {
+        this.featureId = featureId;
     }
 
     public String toString() {

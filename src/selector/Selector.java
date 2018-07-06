@@ -1,7 +1,5 @@
 package selector;
 
-import util.Feature;
-
 import java.util.*;
 
 /**
@@ -9,17 +7,19 @@ import java.util.*;
  */
 public class Selector {
 
+    public static final int ALL = -1;
+
     /**
      * 开始选择
      *
      * @param featureNumber
      */
-    public void start(int featureNumber, String filePath, int neededFeatureNumber, double threshold) throws Exception {
-        Node root = new Node(featureNumber);
-        explore(root, neededFeatureNumber);
+    public void start(int featureNumber, String filePath, int neededFeatureNumber, double threshold, boolean isHorizontal, int top) throws Exception {
+        Node root = new Node(featureNumber);  //创建根节点
+        explore(root, neededFeatureNumber);  //探索特征组合
         System.out.println("Explore Finish.");
 
-        // 获取叶子节点
+        // 获取叶子节点，并根据性能对叶子节点排序
         List<Node> leaves = new ArrayList<>();
         DFS(root, leaves, threshold);
         Node[] result = Node.toNode(leaves.toArray());
@@ -31,9 +31,10 @@ public class Selector {
             }
         });
 
-        //输出叶子节点
-        for (int i = 0; i < result.length; i++) System.out.println(result[i]);
-        Graphviz.visual(leaves, false, filePath);
+        String[] featureNames = new String[featureNumber];
+        for (int i = 0; i < featureNumber; i++) featureNames[i] = getFeatureName(i);
+        if (top == ALL) top = leaves.size();  //修正全部叶节点个数
+        Graphviz.visual(result, isHorizontal, filePath, featureNumber, featureNames, top);
     }
 
 
@@ -62,7 +63,7 @@ public class Selector {
             //新性能较好，继续
             if (newPerformance >= oldPerformance) {
                 candidatesSet.remove(candidate); //更新候选集
-                Node newNode = new Node(getFeatureName(candidate), parent, usedSet, candidatesSet, newPerformance);
+                Node newNode = new Node(getFeatureName(candidate), candidate, parent, usedSet, candidatesSet, newPerformance);
                 parent.addChild(newNode);
                 if (newNode.getFeatureUsed().size() < neededFeatureNumber)
                     explore(newNode, neededFeatureNumber);  //探索子节点
@@ -96,30 +97,13 @@ public class Selector {
         return .0;
     }
 
+    /**
+     * 获取索引特征名称
+     *
+     * @param valueIndex
+     * @return
+     */
     public String getFeatureName(Object valueIndex) {
-        switch ((Integer) valueIndex) {
-            case 0:
-                return "NAF";
-            case 1:
-                return "CC";
-            case 2:
-                return "RLOCC";
-            case 3:
-                return "RLOAC";
-            case 4:
-                return "RLODC";
-            case 5:
-                return "IADCP";
-            case 6:
-                return "ITDCR";
-            case 7:
-                return "RF";
-            case 8:
-                return "IBF";
-            case 9:
-                return "IADCL";
-            default:
-                return "IADCP";
-        }
+        return "null";
     }
 }
