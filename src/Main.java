@@ -3,6 +3,16 @@ import test.PidTest;
 
 public class Main {
 
+    public static void testSelector() throws Exception{
+        //选择特征
+        int featureNumber = 10;
+        int neededFeatureNumber = 10;
+        double threshold = 0.0;
+        String outputPath = "C:\\Users\\gzq\\Desktop\\test";
+        int top = 10;
+        new MySelector().start(featureNumber, outputPath, neededFeatureNumber, threshold, false, top);
+    }
+
     public static void main(String[] args) throws Exception {
 
         // 测试单个特征
@@ -18,23 +28,17 @@ public class Main {
         //PidTest.testLowDataSet(versions, 5, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
 
         //PidTest.testMoreFeature(versions);
+        testSelector();
 
-        //选择特征
-        int featureNumber = 10;
-        int neededFeatureNumber = 10;
-        double threshold = 0.0;
-        String outputPath = "C:\\Users\\gzq\\Desktop\\test";
-        int top = 10;
-
-        new MySelector().start(featureNumber, outputPath, neededFeatureNumber, threshold, false, top);
     }
+
 }
 
 class MySelector extends Selector {
 
     @Override
     public double getValue(Integer[] features) {
-        return PidTest.testPid(PidTest.versions, features)[3];
+        return PidTest.testPid(PidTest.versions, features)[0];
     }
 
     @Override
