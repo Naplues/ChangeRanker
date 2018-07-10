@@ -16,7 +16,7 @@ public class PidTest {
     public static void testSingleFeature(String[] versions) {
         Bucket[] buckets = new Bucket[versions.length];
 
-        for (int n = 0; n < 11; n++) {
+        for (int n = 0; n < 10; n++) {
             for (int i = 0; i < versions.length; i++) {
                 Bucket bucket = new Bucket(versions[i], Util.form, false);
                 bucket.setFeatures(Ranking.rankByFeature(bucket, n));
@@ -35,9 +35,9 @@ public class PidTest {
     public static void testGroupFeature(String[] versions) {
         Bucket[] buckets = new Bucket[versions.length];
 
-        for (int n = 0; n < 11; n++) {
+        for (int n = 0; n < 10; n++) {
             System.out.println("n=" + n);
-            for (int m = 0; m < 11; m++) {
+            for (int m = 0; m < 10; m++) {
                 for (int i = 0; i < versions.length; i++) {
                     Bucket bucket = new Bucket(versions[i], Util.form, false);
                     bucket.setFeatures(Ranking.rankByFeature(bucket, n, m));

@@ -99,9 +99,9 @@ public class Evaluation {
         values[4] = map / buckets.length;
 
         for (int i = 0; i < values.length; i++) {
-        //    System.out.print(values[i] + ",");
+            System.out.print(values[i] + ",");
         }
-        //System.out.println("\n================================================================================");
+        System.out.println("\n================================================================================");
         return values;
     }
 

@@ -1,8 +1,36 @@
 import selector.Selector;
 import test.PidTest;
+import util.Feature;
 
 public class Main {
 
+    public static void main(String[] args) throws Exception {
+
+        // 测试单个特征
+        //PidTest.testSingleFeature(PidTest.versions);
+        // 测试两个特征
+        //PidTest.testGroupFeature(PidTest.versions);
+        // 测试Pi方法
+        //PidTest.testPid(PidTest.versions, Feature.POS, Feature.ISCOMPONENT);
+        //PidTest.testPid(PidTest.versions, Feature.POS, Feature.DISTANCE);
+        // 测试Pid方法
+        PidTest.testPid(PidTest.versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        // 测试Pid在候选较少的buckets上的结果
+        //PidTest.testLowDataSet(PidTest.versions, 10, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        //PidTest.testLowDataSet(PidTest.versions, 5, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        //测试更多特征组合
+        //PidTest.testMoreFeature(versions);
+
+        //测试特征选择器
+        //testSelector();
+
+    }
+
+
+    /**
+     * 测试特征选择器
+     * @throws Exception
+     */
     public static void testSelector() throws Exception{
         //选择特征
         int featureNumber = 10;
@@ -12,26 +40,6 @@ public class Main {
         int top = 10;
         new MySelector().start(featureNumber, outputPath, neededFeatureNumber, threshold, false, top);
     }
-
-    public static void main(String[] args) throws Exception {
-
-        // 测试单个特征
-        //PidTest.testSingleFeature(versions);
-        // 测试两个特征
-        //PidTest.testGroupFeature(versions);
-        // 测试Pi方法
-        //PidTest.testPid(versions, Feature.POS, Feature.ISCOMPONENT);
-        //PidTest.testPid(versions, Feature.POS, Feature.DISTANCE);
-        // 测试Pid方法
-        //PidTest.testPid(PidTest.versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
-        //PidTest.testLowDataSet(versions, 10, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
-        //PidTest.testLowDataSet(versions, 5, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
-
-        //PidTest.testMoreFeature(versions);
-        testSelector();
-
-    }
-
 }
 
 class MySelector extends Selector {
