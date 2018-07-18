@@ -25,11 +25,21 @@ public class Selector {
         Node[] result = Node.toNode(leaves.toArray());
         Arrays.sort(result, new Comparator<Node>() {
             public int compare(Node o1, Node o2) {
-                Double a1 = o1.getPerformance();
-                Double a2 = o2.getPerformance();
-                return a2.compareTo(a1);
+                // 两种组合的性能
+                Double p1 = o1.getPerformance();
+                Double p2 = o2.getPerformance();
+                // 两种组合的特征数
+                Integer f1 = o1.getFeatureUsed().size();
+                Integer f2 = o2.getFeatureUsed().size();
+                int pr = p2.compareTo(p1); //性能比较结果,逆排
+
+                if (pr == 0) {
+                    pr = f1.compareTo(f2); //特征数比较结果,顺排
+                }
+                return pr;
             }
         });
+
 
         String[] featureNames = new String[featureNumber];
         for (int i = 0; i < featureNumber; i++) featureNames[i] = getFeatureName(i);

@@ -7,7 +7,7 @@ import util.*;
  */
 public class PidTest {
     // 项目版本
-    public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+    public static String[] versions = {"6.5"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
     /**
      * 测试单个特征在各版本数据上的性能
      *
@@ -60,7 +60,7 @@ public class PidTest {
             bucket.setFeatures(Ranking.rankByFeature(bucket, features));
             buckets[i] = bucket;
         }
-        return Evaluation.evaluation(buckets, false);
+        return Evaluation.evaluation(buckets, true);
     }
 
     /**

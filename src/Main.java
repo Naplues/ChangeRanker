@@ -14,7 +14,7 @@ public class Main {
         //PidTest.testPid(PidTest.versions, Feature.POS, Feature.ISCOMPONENT);
         //PidTest.testPid(PidTest.versions, Feature.POS, Feature.DISTANCE);
         // 测试Pid方法
-        PidTest.testPid(PidTest.versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        //PidTest.testPid(PidTest.versions, 1, 5, 9);
         // 测试Pid在候选较少的buckets上的结果
         //PidTest.testLowDataSet(PidTest.versions, 10, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
         //PidTest.testLowDataSet(PidTest.versions, 5, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
@@ -22,16 +22,17 @@ public class Main {
         //PidTest.testMoreFeature(versions);
 
         //测试特征选择器
-        //testSelector();
+        testSelector();
 
     }
 
 
     /**
      * 测试特征选择器
+     *
      * @throws Exception
      */
-    public static void testSelector() throws Exception{
+    public static void testSelector() throws Exception {
         //选择特征
         int featureNumber = 10;
         int neededFeatureNumber = 10;
@@ -46,7 +47,7 @@ class MySelector extends Selector {
 
     @Override
     public double getValue(Integer[] features) {
-        return PidTest.testPid(PidTest.versions, features)[0];
+        return PidTest.testPid(PidTest.versions, features)[4];
     }
 
     @Override

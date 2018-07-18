@@ -67,7 +67,7 @@ public class Graphviz {
         for (String link : links) string += link;
         string += "}";
         FileHandle.writeStringToFile(filePath + ".dot", string); // 写入文件
-        drawGraph(filePath, "emf");
+        drawGraph(filePath, "svg");
 
         //输出叶子节点 特征频率
         System.out.println("Top " + top + " paths:");
