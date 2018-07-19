@@ -6,7 +6,7 @@ import java.util.*;
  * 有效特征选择
  */
 public class Selector {
-
+    //选项值: 表示使用全部组合结果
     public static final int ALL = -1;
 
     /**
@@ -14,7 +14,7 @@ public class Selector {
      *
      * @param featureNumber
      */
-    public void start(int featureNumber, String filePath, int neededFeatureNumber, double threshold, boolean isHorizontal, int top) throws Exception {
+    public void start(int featureNumber, String filePath, int neededFeatureNumber, double threshold, boolean isHorizontal, int top) {
         Node root = new Node(featureNumber);  //创建根节点
         explore(root, neededFeatureNumber);  //探索特征组合
         System.out.println("Explore Finish.");
@@ -32,18 +32,14 @@ public class Selector {
                 Integer f1 = o1.getFeatureUsed().size();
                 Integer f2 = o2.getFeatureUsed().size();
                 int pr = p2.compareTo(p1); //性能比较结果,逆排
-
-                if (pr == 0) {
-                    pr = f1.compareTo(f2); //特征数比较结果,顺排
-                }
+                if (pr == 0) pr = f1.compareTo(f2); //特征数比较结果, 性能值相同时使用组合特征数较少的排列靠前,顺排。
                 return pr;
             }
         });
 
-
         String[] featureNames = new String[featureNumber];
         for (int i = 0; i < featureNumber; i++) featureNames[i] = getFeatureName(i);
-        if (top == ALL) top = leaves.size();  //修正全部叶节点个数
+        if (top == ALL) top = leaves.size();  //当未指定选择数目时，使用全部叶节点。修正全部叶节点个数
         Graphviz.visual(result, isHorizontal, filePath, featureNumber, featureNames, top);
     }
 
@@ -52,6 +48,7 @@ public class Selector {
      * 探索新特征
      *
      * @param parent
+     * @param neededFeatureNumber
      */
     public void explore(Node parent, int neededFeatureNumber) {
         // 获取候选特征集合
@@ -88,6 +85,7 @@ public class Selector {
      *
      * @param node
      * @param leaves
+     * @param threshold
      */
     public static void DFS(Node node, List<Node> leaves, double threshold) {
         List<Node> children = node.getChildren();

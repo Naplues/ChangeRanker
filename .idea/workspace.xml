@@ -7,18 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="665f20c4-6f85-4ec3-9195-6ba40940db0b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Pi_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Pi_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/MySelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/MySelector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/ChangeLowTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/test/ChangeLowTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/test/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/util/Bucket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/util/Evaluation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ChangeLowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ChangeLowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/PidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PidTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Bucket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Evaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Pid.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/MySelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Graphviz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Selector$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Selector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/ChangeLowTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/PidTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Bucket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Evaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Feature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/FileHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Ranking$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Ranking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Selector.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,67 +38,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1439#1440#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PidTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graphviz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Selector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,13 +70,13 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/util/Util.java" />
         <option value="$PROJECT_DIR$/src/selector/Graphviz.java" />
-        <option value="$PROJECT_DIR$/src/selector/Selector.java" />
         <option value="$PROJECT_DIR$/src/test/ChangeLowTest.java" />
         <option value="$PROJECT_DIR$/src/util/Bucket.java" />
         <option value="$PROJECT_DIR$/src/test/Test.java" />
         <option value="$PROJECT_DIR$/src/util/Evaluation.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/test/PidTest.java" />
+        <option value="$PROJECT_DIR$/src/selector/Selector.java" />
       </list>
     </option>
   </component>
@@ -146,6 +95,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,29 +104,10 @@
               <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pi" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="selector" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,7 +142,7 @@
     </configuration>
     <configuration name="ChangeLowTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.ChangeLowTest" />
-      <module name="Pi" />
+      <module name="Pid" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -221,12 +153,12 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Pi" />
+      <module name="Pid" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Test" />
-      <module name="Pi" />
+      <module name="Pid" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -304,7 +236,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -319,7 +250,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12739871" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -349,19 +280,11 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
           <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -401,7 +324,6 @@
         <state relative-caret-position="855">
           <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -434,7 +356,6 @@
         <state relative-caret-position="912">
           <caret line="48" column="62" lean-forward="true" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -467,7 +388,6 @@
         <state relative-caret-position="570">
           <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -500,7 +420,6 @@
         <state relative-caret-position="152">
           <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -512,7 +431,6 @@
         <state relative-caret-position="285">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -527,7 +445,6 @@
         <state relative-caret-position="133">
           <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="71" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -594,27 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ChangeLowTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -636,26 +532,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
+    <entry file="file://$PROJECT_DIR$/out/production/Pi/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state relative-caret-position="19">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>

@@ -2,7 +2,7 @@
   <artifact type="jar" name="Pi:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Pi_jar</output-path>
     <root id="archive" name="Pi.jar">
-      <element id="module-output" name="Pi" />
+      <element id="module-output" name="Pid" />
     </root>
   </artifact>
 </component>
