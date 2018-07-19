@@ -8,18 +8,17 @@
   <component name="ChangeListManager">
     <list default="true" id="665f20c4-6f85-4ec3-9195-6ba40940db0b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pi/MySelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/MySelector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Graphviz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/selector/Graphviz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/PidTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/test/PidTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/ChangeLowTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/test/ChangeLowTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/test/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/util/Bucket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/util/Evaluation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pi/util/Util.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/Graphviz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Graphviz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Selector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ChangeLowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ChangeLowTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/PidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Bucket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Evaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +33,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="243">
+              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1439#1440#0" expanded="true" />
@@ -45,20 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PidTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Evaluation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Evaluation.java">
+      <file leaf-file-name="PidTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+            <state relative-caret-position="375">
+              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -66,8 +65,8 @@
       <file leaf-file-name="Graphviz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="342">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -75,7 +74,7 @@
       <file leaf-file-name="Selector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="722">
               <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
             </state>
           </provider>
@@ -113,9 +112,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/util/PidTest.java" />
         <option value="$PROJECT_DIR$/src/util/Test.java" />
-        <option value="$PROJECT_DIR$/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/util/Bucket.java" />
-        <option value="$PROJECT_DIR$/src/test/ChangeLowTest.java" />
         <option value="$PROJECT_DIR$/src/util/Ranking.java" />
         <option value="$PROJECT_DIR$/src/ext/org/enoir/graphvizapi/Edge.java" />
         <option value="$PROJECT_DIR$/src/util/Feature.java" />
@@ -125,10 +121,13 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/util/Util.java" />
         <option value="$PROJECT_DIR$/src/selector/Graphviz.java" />
-        <option value="$PROJECT_DIR$/src/util/Evaluation.java" />
-        <option value="$PROJECT_DIR$/src/test/PidTest.java" />
         <option value="$PROJECT_DIR$/src/selector/Selector.java" />
+        <option value="$PROJECT_DIR$/src/test/ChangeLowTest.java" />
+        <option value="$PROJECT_DIR$/src/util/Bucket.java" />
+        <option value="$PROJECT_DIR$/src/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/util/Evaluation.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/PidTest.java" />
       </list>
     </option>
   </component>
@@ -147,7 +146,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,12 +168,13 @@
               <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -285,8 +284,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ChangeLowTest" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ChangeLowTest" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +319,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12739871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -350,6 +349,13 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
@@ -562,7 +568,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/FileHandle.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/ChangeLowTest.java" />
     <entry file="file://$PROJECT_DIR$/src/util/Ranking.java" />
     <entry file="file://$PROJECT_DIR$/src/ext/org/enoir/graphvizapi/Edge.java" />
     <entry file="file://$PROJECT_DIR$/src/ext/org/enoir/graphvizapi/Graphviz.java" />
@@ -575,13 +580,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Metrics.java" />
     <entry file="file://$PROJECT_DIR$/src/util/Feature.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/selector/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -596,27 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Bucket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Evaluation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -626,22 +603,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="342">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="722">
           <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ChangeLowTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Bucket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Evaluation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="54" column="42" lean-forward="true" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state relative-caret-position="243">
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />

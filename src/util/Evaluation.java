@@ -47,7 +47,7 @@ public class Evaluation {
                 }
             }
         }
-        mrr /= features.length;
+        mrr /= bucket.getRevisionNumber();
         return mrr;
     }
 
@@ -72,7 +72,7 @@ public class Evaluation {
             ap /= k;
             map += ap;
         }
-        map /= features.length;
+        map /= bucket.getRevisionNumber();
         return map;
     }
 
@@ -102,6 +102,7 @@ public class Evaluation {
             System.out.print(values[i] + ",");
         }
         //System.out.println("\n================================================================================");
+        System.out.println();
         return values;
     }
 

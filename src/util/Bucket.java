@@ -50,10 +50,10 @@ public class Bucket {
      * @param version 项目版本号
      * @param path    changeLocator数据路径
      */
-    public Bucket(String version, String path) {
-        File[] revisions = new File(path + version).listFiles();
+    public Bucket(String version, String path, int filter) {
+        File[] revisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
         versionName = version;
-        revisionNumber = revisions.length;
+        revisionNumber = filter;
         bucketNames = new String[revisions.length];
         features = new Feature[revisions.length][];
         for (int i = 0; i < features.length; i++) {
@@ -65,7 +65,7 @@ public class Bucket {
                 features[i][j] = new Feature(lines.get(j).split("\t"), true);
             }
         }
-        this.filterNumber = this.revisionNumber;
+        this.filterNumber = revisions.length;
     }
 
     /**

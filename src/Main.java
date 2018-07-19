@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         // 测试单个特征
-        //PidTest.testSingleFeature(PidTest.versions);
+        PidTest.testSingleFeature(PidTest.versions);
         // 测试两个特征
         //PidTest.testGroupFeature(PidTest.versions);
         // 测试Pi方法
@@ -22,7 +22,7 @@ public class Main {
         //PidTest.testMoreFeature(versions);
 
         //测试特征选择器
-        testSelector();
+        //testSelector();
 
     }
 
@@ -47,7 +47,7 @@ class MySelector extends Selector {
 
     @Override
     public double getValue(Integer[] features) {
-        return PidTest.testPid(PidTest.versions, features)[4];
+        return PidTest.testPid(PidTest.versions, features)[3];
     }
 
     @Override

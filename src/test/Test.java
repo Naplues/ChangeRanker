@@ -1,6 +1,6 @@
 package test;
 
-import util.FileHandle;
+import util.*;
 
 import java.util.List;
 
@@ -26,7 +26,6 @@ public class Test {
             }
             System.out.println();
         }
-
     }
 
     public static void average(double[][] values) {
@@ -43,12 +42,12 @@ public class Test {
     }
 
     public static void run(String form) {
-        String filePath = "C:\\Users\\gzq\\Desktop\\" + form + "\\";
-        String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+        String filePath = "C:\\Users\\gzq\\Desktop\\origin\\prediction_data\\";
+        String[] versions = {"6.7"};//, "6.8", "6.9", "7.0", "7.1", "7.2"
 
         double[][] values = new double[versions.length][];
         for (int i = 0; i < versions.length; i++) {
-            values[i] = read(filePath + versions[i] + "\\Logistic.txt");
+            values[i] = read(filePath + versions[i] + "\\" + form + "\\results\\Logistic\\Logistic.txt");
         }
         //print(values);
         System.out.println(form);
@@ -56,10 +55,23 @@ public class Test {
         System.out.println("==============================================================");
     }
 
+    public static void makeBuckets(String form) {
+        String filePath = "C:\\Users\\gzq\\Desktop\\origin\\prediction_data\\";
+        String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};//, "6.8", "6.9", "7.0", "7.1", "7.2"
+        int[] revision = {61, 52, 40, 38, 41, 39};
+        Bucket[] buckets = new Bucket[versions.length];
+        for (int i = 0; i < versions.length; i++) {
+            Bucket bucket = new Bucket(versions[i], filePath + versions[i] + "\\" + form + "\\results\\Logistic\\", revision[i]);
+            buckets[i] = bucket;
+        }
+        Evaluation.evaluation(buckets, true);
+    }
+
     public static void main(String[] args) {
         System.out.println("Recall@1\tRecall@5\tRecall@10\tMAP\tMRR");
-        run("Form1");
-        run("Form2");
-        run("Form3");
+        //run("Form1");
+        //run("Form2");
+        //run("Form3");
+        makeBuckets("Form3");
     }
 }
