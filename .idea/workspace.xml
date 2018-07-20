@@ -7,37 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="665f20c4-6f85-4ec3-9195-6ba40940db0b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/newdata/argouml.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/columba-1.4-src.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/hibernate-distribution-3.3.2.GA.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/jEdit-4.2.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/jfreechart-1.0.19.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/jmeter-2.10.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/jruby-1.4.0.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/sql12.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newdata/testjEdit-4.2.arff.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newdata/Evaluation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newdata/Feature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newdata/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/newdata/Ranking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/MySelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/MySelector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/selector/Graphviz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/selector/Graphviz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/selector/Selector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/selector/Selector$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/selector/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/selector/Selector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/test/PidTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/test/PidTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Bucket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Evaluation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Ranking$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Ranking$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Ranking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Ranking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Selector.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Selector.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/Graphviz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Graphviz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Selector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Bucket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Evaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/newdata/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/newdata/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/Graphviz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/Selector.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +24,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/newdata/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,32 +123,21 @@
               <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="selector" type="462c0819:PsiDirectoryNode" />
+              <item name="newdata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="newdata" type="462c0819:PsiDirectoryNode" />
               <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -162,15 +149,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gzq\Desktop\git\Pi\src\newdata" />
-      <recent name="C:\Users\gzq\Desktop\git\Pi\src" />
-      <recent name="C:\Users\gzq\Desktop\git\Pi\lib" />
-      <recent name="C:\Users\gzq\Desktop\git\Pi" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gzq\Desktop\git\Pi\newdata" />
       <recent name="C:\Users\gzq\Desktop\git\Pi\src\newdata" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gzq\Desktop\git\Pi\lib" />
+      <recent name="C:\Users\gzq\Desktop\git\Pi\src\newdata" />
+      <recent name="C:\Users\gzq\Desktop\git\Pi\src" />
+      <recent name="C:\Users\gzq\Desktop\git\Pi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,6 +183,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="newdata.Main" />
+      <module name="Pid" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="newdata.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -298,34 +296,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3278867" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3017429" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13166311" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30392158" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Module Dependencies" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3278867" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -362,8 +361,6 @@
           <caret line="48" column="62" lean-forward="true" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -395,8 +392,6 @@
           <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -428,8 +423,6 @@
           <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,8 +433,6 @@
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -455,8 +446,6 @@
           <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,9 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/newdata/argouml.arff.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/newdata/jmeter-2.10.arff.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -612,9 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -632,23 +615,6 @@
             <element signature="e#2605#2606#0" expanded="true" />
             <element signature="e#2637#2638#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newdata/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -673,6 +639,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/Selector.jar!/nju/gzq/selector/FileHandle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newdata/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -692,7 +682,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -727,7 +717,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Pi</last-edited>
+          <last-edited>Pid</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

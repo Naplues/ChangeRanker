@@ -1,4 +1,5 @@
-import selector.Selector;
+
+import nju.gzq.selector.Selector;
 import test.PidTest;
 import util.Feature;
 
@@ -25,7 +26,6 @@ public class Main {
         //testSelector();
 
     }
-
 
     /**
      * 测试特征选择器

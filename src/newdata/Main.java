@@ -1,6 +1,6 @@
 package newdata;
 
-import selector.Selector;
+import nju.gzq.selector.Selector;
 
 public class Main {
     public static String name = "average";
