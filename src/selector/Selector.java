@@ -10,11 +10,18 @@ public class Selector {
     public static final int ALL = -1;
 
     /**
-     * 开始选择
+     * 开始选择特征
      *
-     * @param featureNumber
+     * @param featureNumber        特征数目
+     * @param filePath             输出图片路径
+     * @param type                 输出图片类型
+     * @param neededFeatureNumber  需要特征数目
+     * @param threshold            性能阈值
+     * @param isHorizontal         节点摆放位置
+     * @param top                  输出前top个结果
+     * @param frequencyInformation 频率信息
      */
-    public void start(int featureNumber, String filePath, int neededFeatureNumber, double threshold, boolean isHorizontal, int top) {
+    public final void start(int featureNumber, String filePath, String type, int neededFeatureNumber, double threshold, boolean isHorizontal, int top, boolean frequencyInformation) {
         Node root = new Node(featureNumber);  //创建根节点
         explore(root, neededFeatureNumber);  //探索特征组合
         System.out.println("Explore Finish.");
@@ -39,8 +46,9 @@ public class Selector {
 
         String[] featureNames = new String[featureNumber];
         for (int i = 0; i < featureNumber; i++) featureNames[i] = getFeatureName(i);
-        if (top == ALL) top = leaves.size();  //当未指定选择数目时，使用全部叶节点。修正全部叶节点个数
-        Graphviz.visual(result, isHorizontal, filePath, featureNumber, featureNames, top);
+        //当未指定选择返回结果数或者选择的结果数大于实际生成的值时，使用全部叶节点。修正全部叶节点个数
+        if (top == ALL || top > leaves.size()) top = leaves.size();
+        Graphviz.visual(result, isHorizontal, filePath, type, featureNames, top, frequencyInformation);
     }
 
 
@@ -50,13 +58,11 @@ public class Selector {
      * @param parent
      * @param neededFeatureNumber
      */
-    public void explore(Node parent, int neededFeatureNumber) {
+    public final void explore(Node parent, int neededFeatureNumber) {
         // 获取候选特征集合
         Set<Object> candidatesSet = parent.getFeatureCandidates();
         Object[] candidates = candidatesSet.toArray();
-        if (candidates.length == 0) {
-            return;
-        }
+        if (candidates.length == 0) return;
         for (Object candidate : candidates) {
             // 获取新的特征集合
             Set<Object> usedSet = parent.getFeatureUsed();
@@ -81,24 +87,26 @@ public class Selector {
     }
 
     /**
-     * 深度优先遍历
+     * 深度优先遍历特征树, 找到树中的所有叶子节点
      *
-     * @param node
-     * @param leaves
-     * @param threshold
+     * @param node      父节点
+     * @param leaves    叶子节点列表, 初始为空, 遍历完成后存储所有的叶节点
+     * @param threshold 阈值
      */
-    public static void DFS(Node node, List<Node> leaves, double threshold) {
+    public final static void DFS(Node node, List<Node> leaves, double threshold) {
         List<Node> children = node.getChildren();
         if (children.size() == 0 && node.getPerformance() > threshold)
             leaves.add(node);
         for (int i = 0; i < children.size(); i++) DFS(children.get(i), leaves, threshold);
     }
 
+    //////////////////////////////////////////////////// 重写方法 ///////////////////////////////////////////////////////
+
     /**
-     * 获取Metric值
+     * 重写方法: 获取指定的Metric值
      *
-     * @param features
-     * @return
+     * @param features 特征列表
+     * @return 组合后特征的度量值
      */
 
     public double getValue(Integer[] features) {
@@ -106,10 +114,10 @@ public class Selector {
     }
 
     /**
-     * 获取索引特征名称
+     * 重写方法: 获取指定索引的特征名称
      *
-     * @param valueIndex
-     * @return
+     * @param valueIndex 特征索引
+     * @return 特征名称
      */
     public String getFeatureName(Object valueIndex) {
         return "null";

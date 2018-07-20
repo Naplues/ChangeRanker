@@ -38,8 +38,9 @@ public class Main {
         int neededFeatureNumber = 10;
         double threshold = 0.0;
         String outputPath = "C:\\Users\\gzq\\Desktop\\test";
+        String fileType = "svg";
         int top = 10;
-        new MySelector().start(featureNumber, outputPath, neededFeatureNumber, threshold, false, top);
+        new MySelector().start(featureNumber, outputPath, fileType, neededFeatureNumber, threshold, false, top, false);
     }
 }
 

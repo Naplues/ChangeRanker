@@ -17,6 +17,7 @@ public class Evaluation {
      */
     public static double recall(Bucket bucket, int k) {
         double rc = 0;
+        /*
         Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < k && j < features[i].length; j++) {
@@ -25,7 +26,7 @@ public class Evaluation {
                     break;
                 }
             }
-        }
+        }*/
         rc /= bucket.getRevisionNumber();
         return rc;
     }
@@ -37,7 +38,7 @@ public class Evaluation {
      * @return
      */
     public static double MRR(Bucket bucket) {
-        double mrr = 0.0;
+        double mrr = 0.0;/*
         Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) {
@@ -46,7 +47,7 @@ public class Evaluation {
                     break;
                 }
             }
-        }
+        }*/
         mrr /= bucket.getRevisionNumber();
         return mrr;
     }
@@ -58,7 +59,7 @@ public class Evaluation {
      * @return
      */
     public static double MAP(Bucket bucket) {
-        double map = 0.0;
+        double map = 0.0;/*
         Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             double ap = 0.0;
@@ -71,7 +72,7 @@ public class Evaluation {
             }
             ap /= k;
             map += ap;
-        }
+        }*/
         map /= bucket.getRevisionNumber();
         return map;
     }
@@ -115,7 +116,7 @@ public class Evaluation {
      * @return
      */
     public static double precision(Bucket bucket, int k) {
-        double rc = 0;
+        double rc = 0;/*
         Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
 
@@ -126,7 +127,7 @@ public class Evaluation {
                 }
             }
         }
-
+*/
         rc /= bucket.getFilterNumber();
         return rc;
     }

@@ -7,27 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="665f20c4-6f85-4ec3-9195-6ba40940db0b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Pi_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Pi_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/argouml.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/columba-1.4-src.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/hibernate-distribution-3.3.2.GA.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/jEdit-4.2.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/jfreechart-1.0.19.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/jmeter-2.10.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/jruby-1.4.0.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/sql12.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newdata/testjEdit-4.2.arff.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newdata/Evaluation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newdata/Feature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newdata/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/newdata/Ranking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Pid.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/MySelector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Graphviz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Selector$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/selector/Selector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/ChangeLowTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/PidTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Bucket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Evaluation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Feature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/FileHandle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Ranking$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Ranking.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pi/util/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/MySelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/MySelector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/selector/Graphviz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/selector/Graphviz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/selector/Selector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/selector/Selector$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/selector/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/selector/Selector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/test/PidTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/test/PidTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Bucket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Evaluation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Ranking$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Ranking$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pid/util/Ranking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pid/util/Ranking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/Graphviz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Graphviz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/Selector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Bucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Evaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Ranking.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +48,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,28 +71,33 @@
       <list>
         <option value="$PROJECT_DIR$/src/util/PidTest.java" />
         <option value="$PROJECT_DIR$/src/util/Test.java" />
-        <option value="$PROJECT_DIR$/src/util/Ranking.java" />
         <option value="$PROJECT_DIR$/src/ext/org/enoir/graphvizapi/Edge.java" />
         <option value="$PROJECT_DIR$/src/util/Feature.java" />
         <option value="$PROJECT_DIR$/src/selector/Metrics.java" />
         <option value="$PROJECT_DIR$/src/test/Metrics.java" />
-        <option value="$PROJECT_DIR$/src/selector/Node.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/selector/Graphviz.java" />
         <option value="$PROJECT_DIR$/src/test/ChangeLowTest.java" />
-        <option value="$PROJECT_DIR$/src/util/Bucket.java" />
         <option value="$PROJECT_DIR$/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/util/Evaluation.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/test/PidTest.java" />
+        <option value="$PROJECT_DIR$/src/util/Ranking.java" />
+        <option value="$PROJECT_DIR$/src/util/Evaluation.java" />
+        <option value="$PROJECT_DIR$/src/newdata/Ranking.java" />
+        <option value="$PROJECT_DIR$/src/newdata/Feature.java" />
+        <option value="$PROJECT_DIR$/src/util/Bucket.java" />
+        <option value="$PROJECT_DIR$/src/newdata/Metric.java" />
+        <option value="$PROJECT_DIR$/src/newdata/Evaluation.java" />
+        <option value="$PROJECT_DIR$/src/selector/Node.java" />
+        <option value="$PROJECT_DIR$/src/selector/Graphviz.java" />
         <option value="$PROJECT_DIR$/src/selector/Selector.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/newdata/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1932" />
-    <option name="y" value="-21" />
+    <option name="x" value="2085" />
+    <option name="y" value="-26" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -94,9 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,10 +116,42 @@
               <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pi" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="selector" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -119,9 +163,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gzq\Desktop\git\Pi\lib" />
+      <recent name="C:\Users\gzq\Desktop\git\Pi\src\newdata" />
       <recent name="C:\Users\gzq\Desktop\git\Pi\src" />
+      <recent name="C:\Users\gzq\Desktop\git\Pi\lib" />
       <recent name="C:\Users\gzq\Desktop\git\Pi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gzq\Desktop\git\Pi\newdata" />
+      <recent name="C:\Users\gzq\Desktop\git\Pi\src\newdata" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -155,6 +204,17 @@
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Pid" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="newdata.Main" />
+      <module name="Pid" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="newdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Test" />
@@ -212,9 +272,11 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.ChangeLowTest" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.ChangeLowTest" />
@@ -245,25 +307,25 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34313726" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3017429" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12846482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30392158" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30392158" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Module Dependencies" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3278867" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -280,63 +342,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Evaluation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1862">
-          <caret line="98" column="41" lean-forward="true" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
-          <folding>
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/Bucket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -356,6 +361,7 @@
         <state relative-caret-position="912">
           <caret line="48" column="62" lean-forward="true" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -388,6 +394,7 @@
         <state relative-caret-position="570">
           <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -420,6 +427,7 @@
         <state relative-caret-position="152">
           <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -431,6 +439,7 @@
         <state relative-caret-position="285">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -445,6 +454,7 @@
         <state relative-caret-position="133">
           <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="71" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1508#1509#0" expanded="true" />
           </folding>
@@ -485,7 +495,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/FileHandle.java" />
-    <entry file="file://$PROJECT_DIR$/src/util/Ranking.java" />
     <entry file="file://$PROJECT_DIR$/src/ext/org/enoir/graphvizapi/Edge.java" />
     <entry file="file://$PROJECT_DIR$/src/ext/org/enoir/graphvizapi/Graphviz.java" />
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
@@ -496,14 +505,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Metrics.java" />
-    <entry file="file://$PROJECT_DIR$/src/util/Feature.java" />
-    <entry file="file://$PROJECT_DIR$/src/selector/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -515,20 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Bucket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Evaluation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -546,42 +533,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
+    <entry file="file://$PROJECT_DIR$/newdata/testjEdit-4.2.arff.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Ranking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
+    <entry file="file://$PROJECT_DIR$/src/util/Feature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="57">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
+    <entry file="file://$PROJECT_DIR$/src/newdata/Ranking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Evaluation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newdata/argouml.arff.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newdata/jmeter-2.10.arff.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+          <caret line="12" column="71" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Bucket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PidTest.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newdata/Evaluation.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newdata/Feature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#1631#1632#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
+            <element signature="e#2605#2606#0" expanded="true" />
+            <element signature="e#2637#2638#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        <state relative-caret-position="217">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newdata/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selector/Selector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selector/Graphviz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selector/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1843">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>

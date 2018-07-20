@@ -2,6 +2,7 @@ package util;
 
 import java.io.File;
 import java.util.List;
+import newdata.Feature;
 
 /**
  * feature[][]: 每一行代表一个bucket, 每一个元素代表一个bucket中的一个revision的特征
@@ -66,6 +67,21 @@ public class Bucket {
             }
         }
         this.filterNumber = revisions.length;
+    }
+
+
+    public Bucket(String path){
+        revisionNumber = 1;
+        bucketNames = new String[1];
+        features = new Feature[1][];
+        for (int i = 0; i < features.length; i++) {
+            List<String> lines = FileHandle.readFileToLines(path);
+            bucketNames[i] = path;
+            features[i] = new Feature[lines.size() - 1];
+            for (int j = 1; j < lines.size(); j++) {
+                features[i][j - 1] = new Feature(lines.get(j).split(","));
+            }
+        }
     }
 
     /**

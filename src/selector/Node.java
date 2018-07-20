@@ -167,7 +167,7 @@ public class Node {
         for (Object f : featureUsed) {
             text += f + " ";
         }
-        text += " => " + performance;
+        text += " => " + new DecimalFormat("0.000").format(performance);
         return text;
     }
 
