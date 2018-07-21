@@ -1,7 +1,6 @@
 package newdata;
 
 import util.Bucket;
-
 import java.io.File;
 
 public class Evaluation {
@@ -21,6 +20,7 @@ public class Evaluation {
     /**
      * F1 value
      * F1 = 2 * P * R / (P + R)
+     *
      * @param bucket
      * @return
      */
@@ -33,16 +33,16 @@ public class Evaluation {
             if (feature[i].getTemp() != 0) position++;
             if (feature[i].isInducing()) total++;
         }
-        System.out.println(position + ", " + total);
+        //System.out.println(position + ", " + total);
 
         Double positive = .0;
         for (int i = 0; i < position; i++) if (feature[i].isInducing()) positive++;
-        System.out.println(positive);
+        //System.out.println(positive);
 
         Double P = positive / position; // 32/47
         Double R = positive / total;    // 32/195
         F1value = 2 * P * R / (P + R);
-        System.out.println("Recall=" + R + " Precision=" + P + " F1=" + F1value);
+        System.out.println( P + ", " + R + ", " + F1value);
         return F1value;
     }
 
@@ -57,12 +57,11 @@ public class Evaluation {
         File[] projects = new File(path).listFiles();
 
         Double value = .0;
-        for (File project : projects) {
-            Bucket bucket = new Bucket(project.getPath());
-            bucket.setFeatures(Ranking.rankByFeature(bucket, features));
-            value += Evaluation.F1(bucket);
-        }
-        value /= projects.length;
+        //System.out.println(project.getPath());
+        Bucket bucket = new Bucket(projects[2].getPath());
+        bucket.setFeatures(Ranking.rankByFeature(bucket, features));
+        value += Evaluation.F1(bucket);
+
         return value;
     }
 }
