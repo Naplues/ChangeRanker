@@ -1,6 +1,6 @@
 package test;
 
-import nju.gzq.pid.Bucket;
+import nju.gzq.pid.Project;
 import nju.gzq.pid.Evaluation;
 import nju.gzq.selector.FileHandle;
 
@@ -65,9 +65,9 @@ public class ChangeLocatorTest {
         String filePath = "C:\\Users\\gzq\\Desktop\\origin\\prediction_data\\";
         String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};//, "6.8", "6.9", "7.0", "7.1", "7.2"
         int[] revision = {61, 52, 40, 38, 41, 39};
-        Bucket[] buckets = new Bucket[versions.length];
+        Project[] buckets = new Project[versions.length];
         for (int i = 0; i < versions.length; i++) {
-            Bucket bucket = new Bucket(versions[i], filePath + versions[i] + "\\" + form + "\\results\\Logistic\\", revision[i]);
+            Project bucket = new Project(versions[i], filePath + versions[i] + "\\" + form + "\\results\\Logistic\\", revision[i]);
             buckets[i] = bucket;
         }
         Evaluation.evaluation(buckets, true);
@@ -79,9 +79,9 @@ public class ChangeLocatorTest {
      */
     public static void testLowDataset() {
         String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
-        Bucket[] buckets = new Bucket[versions.length];
+        Project[] buckets = new Project[versions.length];
         for (int i = 0; i < versions.length; i++) {
-            Bucket bucket = new Bucket(versions[i], changeLocatorLowBucketPath, 10);
+            Project bucket = new Project(versions[i], changeLocatorLowBucketPath, 10);
             buckets[i] = bucket;
         }
         Evaluation.evaLowDataset(buckets, true);

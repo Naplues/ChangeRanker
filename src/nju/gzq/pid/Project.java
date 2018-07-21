@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * feature[][]: 每一行代表一个bucket, 每一个元素代表一个bucket中的一个revision的特征记录
  */
-public class Bucket {
+public class Project {
     private BaseFeature[][] features;
 
     private String versionName;
@@ -24,11 +24,11 @@ public class Bucket {
     /**
      * Pid: 保存一个项目的所有bucket信息
      *
-     * @param path      项目版本号
+     * @param path         项目版本号
      * @param isLowDataSet 是否测试少量候选集
      * @param threshold    少量候选集阈值
      */
-    public Bucket(String path, boolean isLowDataSet, int... threshold) {
+    public Project(String path, boolean isLowDataSet, int... threshold) {
         File[] revisions = new File(path).listFiles();
         versionName = new File(path).getName();
         revisionNumber = revisions.length;
@@ -53,7 +53,7 @@ public class Bucket {
      * @param path    changeLocator数据路径
      */
 
-    public Bucket(String version, String path, int filter) {
+    public Project(String version, String path, int filter) {
         File[] revisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
         versionName = version;
         revisionNumber = filter;

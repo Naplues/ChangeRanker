@@ -1,6 +1,6 @@
 package test;
 
-import nju.gzq.pid.Bucket;
+import nju.gzq.pid.Project;
 import nju.gzq.pid.Evaluation;
 import nju.gzq.pid.Ranking;
 
@@ -9,7 +9,7 @@ import nju.gzq.pid.Ranking;
  * 测试特征效果
  */
 public class PidTest {
-    public static String rootPath = "data_form3\\";
+    public static String rootPath = "buckets_data\\form3\\";
     // 项目版本
     public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
 
@@ -19,11 +19,11 @@ public class PidTest {
      * @param versions
      */
     public static void testSingleFeature(String[] versions) {
-        Bucket[] buckets = new Bucket[versions.length];
+        Project[] buckets = new Project[versions.length];
 
         for (int n = 0; n < 10; n++) {
             for (int i = 0; i < versions.length; i++) {
-                Bucket bucket = new Bucket(rootPath + versions[i], false);
+                Project bucket = new Project(rootPath + versions[i], false);
                 bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, n));
                 buckets[i] = bucket;
             }
@@ -38,13 +38,13 @@ public class PidTest {
      * @param versions
      */
     public static void testGroupFeature(String[] versions) {
-        Bucket[] buckets = new Bucket[versions.length];
+        Project[] buckets = new Project[versions.length];
 
         for (int n = 0; n < 10; n++) {
             System.out.println("n=" + n);
             for (int m = 0; m < 10; m++) {
                 for (int i = 0; i < versions.length; i++) {
-                    Bucket bucket = new Bucket(rootPath + versions[i], false);
+                    Project bucket = new Project(rootPath + versions[i], false);
                     bucket.setFeatures(Ranking.rankByFeature(bucket, n, m));
                     buckets[i] = bucket;
                 }
@@ -59,9 +59,9 @@ public class PidTest {
      * @param versions
      */
     public static double[] testPid(String[] versions, Integer... features) {
-        Bucket[] buckets = new Bucket[versions.length];
+        Project[] buckets = new Project[versions.length];
         for (int i = 0; i < versions.length; i++) {
-            Bucket bucket = new Bucket(rootPath + versions[i], false);
+            Project bucket = new Project(rootPath + versions[i], false);
             bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
             buckets[i] = bucket;
         }
@@ -76,9 +76,9 @@ public class PidTest {
      * @param features
      */
     public static void testLowDataSet(String[] versions, int threshold, Integer... features) {
-        Bucket[] buckets = new Bucket[versions.length];
+        Project[] buckets = new Project[versions.length];
         for (int i = 0; i < versions.length; i++) {
-            Bucket bucket = new Bucket(rootPath + versions[i], true, threshold);
+            Project bucket = new Project(rootPath + versions[i], true, threshold);
             bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
             buckets[i] = bucket;
             bucket.printBucketNames();

@@ -16,7 +16,7 @@ public class Ranking extends BaseRanking {
      * @param features
      * @return
      */
-    public static BaseFeature[][] rankByFeature(Bucket bucket, int combination, int ranking, Integer... features) {
+    public static BaseFeature[][] rankByFeature(Project bucket, int combination, int ranking, Integer... features) {
         BaseFeature[][] result = bucket.getFeatures();
         BaseFeature[][] inducing = getInducing(result, true);
         BaseFeature[][] notInducing = getInducing(result, false);

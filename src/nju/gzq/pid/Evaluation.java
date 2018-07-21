@@ -17,7 +17,7 @@ public class Evaluation {
      * @param k
      * @return
      */
-    public static double recall(Bucket bucket, int k) {
+    public static double recall(Project bucket, int k) {
         double rc = 0;
 
         BaseFeature[][] features = bucket.getFeatures();
@@ -39,7 +39,7 @@ public class Evaluation {
      * @param bucket
      * @return
      */
-    public static double MRR(Bucket bucket) {
+    public static double MRR(Project bucket) {
         double mrr = 0.0;
         BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
@@ -60,7 +60,7 @@ public class Evaluation {
      * @param bucket
      * @return
      */
-    public static double MAP(Bucket bucket) {
+    public static double MAP(Project bucket) {
         double map = 0.0;
         BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
@@ -79,9 +79,9 @@ public class Evaluation {
         return map;
     }
 
-    public static double[] evaluation(Bucket[] buckets, boolean details) {
+    public static double[] evaluation(Project[] buckets, boolean details) {
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
-        for (Bucket bucket : buckets) {
+        for (Project bucket : buckets) {
             r1 += Evaluation.recall(bucket, 1);
             r5 += Evaluation.recall(bucket, 5);
             r10 += Evaluation.recall(bucket, 10);
@@ -117,7 +117,7 @@ public class Evaluation {
      * @param k
      * @return
      */
-    public static double precision(Bucket bucket, int k) {
+    public static double precision(Project bucket, int k) {
         double rc = 0;
         BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
@@ -139,9 +139,9 @@ public class Evaluation {
      *
      * @param buckets
      */
-    public static void evaLowDataset(Bucket[] buckets, boolean details) {
+    public static void evaLowDataset(Project[] buckets, boolean details) {
         double r1 = 0.0, r2 = 0.0, map = 0.0, mrr = 0.0;
-        for (Bucket bucket : buckets) {
+        for (Project bucket : buckets) {
             r1 += Evaluation.precision(bucket, 1);
             r2 += Evaluation.precision(bucket, 2);
             mrr += Evaluation.MRR(bucket);
