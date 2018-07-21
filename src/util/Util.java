@@ -1,7 +1,5 @@
 package util;
 
-import selector.Node;
-
 /**
  * 程序运行配置
  */

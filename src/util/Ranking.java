@@ -2,7 +2,7 @@ package util;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import newdata.Feature;
+
 
 /**
  * util.Ranking: 对revisions按照某个特征值进行排序
