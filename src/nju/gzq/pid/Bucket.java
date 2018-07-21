@@ -24,14 +24,13 @@ public class Bucket {
     /**
      * Pid: 保存一个项目的所有bucket信息
      *
-     * @param version      项目版本号
-     * @param form         候选集形式
+     * @param path      项目版本号
      * @param isLowDataSet 是否测试少量候选集
      * @param threshold    少量候选集阈值
      */
-    public Bucket(String version, int form, boolean isLowDataSet, int... threshold) {
-        File[] revisions = new File(Util.rootPath + version + "\\Form" + form + "\\testing").listFiles();
-        versionName = version;
+    public Bucket(String path, boolean isLowDataSet, int... threshold) {
+        File[] revisions = new File(path).listFiles();
+        versionName = new File(path).getName();
         revisionNumber = revisions.length;
         bucketNames = new String[revisions.length];
         features = new BaseFeature[revisions.length][];
@@ -53,7 +52,7 @@ public class Bucket {
      * @param version 项目版本号
      * @param path    changeLocator数据路径
      */
-    /*
+
     public Bucket(String version, String path, int filter) {
         File[] revisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
         versionName = version;
@@ -66,12 +65,12 @@ public class Bucket {
             features[i] = new BaseFeature[lines.size()];
 
             for (int j = 0; j < lines.size(); j++) {
-                features[i][j] = new BaseFeature(lines.get(j).split("\t"), true);
+                features[i][j] = new BaseFeature(lines.get(j).split("\t"), 12, 0, 2);
             }
         }
         this.filterNumber = revisions.length;
     }
-*/
+
 
     /**
      * 选择有oracle的bucket
@@ -142,7 +141,7 @@ public class Bucket {
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) string += features[i][j];
         }
-        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv", string);
+        FileHandle.writeStringToFile("C:\\Users\\naplues\\Desktop\\out.csv", string);
         return string;
     }
 

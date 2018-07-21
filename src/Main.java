@@ -34,7 +34,7 @@ public class Main {
         int featureNumber = 10;
         int neededFeatureNumber = 10;
         double threshold = 0.0;
-        String outputPath = "C:\\Users\\gzq\\Desktop\\test";
+        String outputPath = "C:\\Users\\naplues\\Desktop\\testLowDataset";
         String fileType = "svg";
         int top = 10;
         new MySelector().start(featureNumber, outputPath, fileType, neededFeatureNumber, threshold, false, top, false);

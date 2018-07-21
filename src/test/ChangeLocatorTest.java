@@ -1,6 +1,7 @@
 package test;
 
-
+import nju.gzq.pid.Bucket;
+import nju.gzq.pid.Evaluation;
 import nju.gzq.selector.FileHandle;
 
 import java.util.List;
@@ -8,7 +9,11 @@ import java.util.List;
 /**
  * ChangeLocator 实验结果
  */
-public class Test {
+public class ChangeLocatorTest {
+
+    // 数据集根目录
+    public static String changeLocatorLowBucketPath = "C:\\Users\\gzq\\Desktop\\low_buckets\\";
+
     public static double[] read(String filePath) {
         List<String> lines = FileHandle.readFileToLines(filePath);
         double[] values = new double[5];
@@ -55,7 +60,7 @@ public class Test {
         average(values);
         System.out.println("==============================================================");
     }
-    /*
+/*
     public static void makeBuckets(String form) {
         String filePath = "C:\\Users\\gzq\\Desktop\\origin\\prediction_data\\";
         String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};//, "6.8", "6.9", "7.0", "7.1", "7.2"
@@ -68,6 +73,21 @@ public class Test {
         Evaluation.evaluation(buckets, true);
     }
 */
+
+    /**
+     * ChangeLocator 在low dataset上的性能
+     */
+    public static void testLowDataset() {
+        String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+        Bucket[] buckets = new Bucket[versions.length];
+        for (int i = 0; i < versions.length; i++) {
+            Bucket bucket = new Bucket(versions[i], changeLocatorLowBucketPath, 10);
+            buckets[i] = bucket;
+        }
+        Evaluation.evaLowDataset(buckets, true);
+    }
+
+
     public static void main(String[] args) {
         System.out.println("Recall@1\tRecall@5\tRecall@10\tMAP\tMRR");
         //run("Form1");
