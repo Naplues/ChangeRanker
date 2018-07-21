@@ -1,4 +1,7 @@
-package util;
+package nju.gzq.pid;
+
+import nju.gzq.base.BaseFeature;
+import nju.gzq.selector.FileHandle;
 
 import java.io.File;
 import java.util.List;
@@ -7,14 +10,14 @@ import java.util.List;
  * feature[][]: 每一行代表一个bucket, 每一个元素代表一个bucket中的一个revision的特征记录
  */
 public class Bucket {
-    private Feature[][] features;
+    private BaseFeature[][] features;
 
     private String versionName;
     private String[] bucketNames;
     private int revisionNumber; //原来版本数目
     private int filterNumber;   //过滤后的版本数目
 
-    public Feature[][] getFeatures() {
+    public BaseFeature[][] getFeatures() {
         return features;
     }
 
@@ -31,13 +34,13 @@ public class Bucket {
         versionName = version;
         revisionNumber = revisions.length;
         bucketNames = new String[revisions.length];
-        features = new Feature[revisions.length][];
+        features = new BaseFeature[revisions.length][];
         for (int i = 0; i < features.length; i++) {
             List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
             bucketNames[i] = revisions[i].getName();
-            features[i] = new Feature[lines.size() - 1];
+            features[i] = new BaseFeature[lines.size() - 1];
             for (int j = 1; j < lines.size(); j++) {
-                features[i][j - 1] = new Feature(lines.get(j).split(","));
+                features[i][j - 1] = new BaseFeature(lines.get(j).split(","), 12, 0, 2);
             }
         }
         selectOracleFeature();  //选择有oracle的bucket
@@ -50,24 +53,25 @@ public class Bucket {
      * @param version 项目版本号
      * @param path    changeLocator数据路径
      */
+    /*
     public Bucket(String version, String path, int filter) {
         File[] revisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
         versionName = version;
         revisionNumber = filter;
         bucketNames = new String[revisions.length];
-        features = new Feature[revisions.length][];
+        features = new BaseFeature[revisions.length][];
         for (int i = 0; i < features.length; i++) {
             List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
             bucketNames[i] = revisions[i].getName();
-            features[i] = new Feature[lines.size()];
+            features[i] = new BaseFeature[lines.size()];
 
             for (int j = 0; j < lines.size(); j++) {
-                features[i][j] = new Feature(lines.get(j).split("\t"), true);
+                features[i][j] = new BaseFeature(lines.get(j).split("\t"), true);
             }
         }
         this.filterNumber = revisions.length;
     }
-
+*/
 
     /**
      * 选择有oracle的bucket
@@ -77,14 +81,14 @@ public class Bucket {
         int count = 0;
         for (int i = 0, j; i < features.length; i++) {
             if (features[i].length == 1) continue;
-            for (j = 0; j < features[i].length; j++) if (features[i][j].isInducing()) break;
+            for (j = 0; j < features[i].length; j++) if (features[i][j].isLabel()) break;
             if (j == features[i].length) pass[i] = 1;
         }
         // 统计保留多少bucket
         int remain = 0;
         for (int i = 0; i < pass.length; i++) if (pass[i] == remain) count++;
 
-        Feature[][] filterFeature = new Feature[count][];
+        BaseFeature[][] filterFeature = new BaseFeature[count][];
         String[] filterBucketNames = new String[count];
         for (int i = 0, j = 0; i < features.length; i++) {
             if (pass[i] == remain) {
@@ -112,7 +116,7 @@ public class Bucket {
         int remain = 1;
         for (int i = 0; i < pass.length; i++) if (pass[i] == remain) count++;
 
-        Feature[][] filterFeature = new Feature[count][];
+        BaseFeature[][] filterFeature = new BaseFeature[count][];
         String[] filterBucketNames = new String[count];
         for (int i = 0, j = 0; i < features.length; i++) {
             if (pass[i] == remain) {
@@ -127,7 +131,7 @@ public class Bucket {
     }
 
 
-    public void setFeatures(Feature[][] features) {
+    public void setFeatures(BaseFeature[][] features) {
         this.features = features;
     }
 
@@ -160,7 +164,7 @@ public class Bucket {
 
     public void output(int threshold) {
         int count = 0;
-        for (Feature[] bucket : features) {
+        for (BaseFeature[] bucket : features) {
             if (bucket.length <= threshold) {
                 count++;
             }

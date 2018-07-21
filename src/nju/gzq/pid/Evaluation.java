@@ -1,4 +1,6 @@
-package util;
+package nju.gzq.pid;
+
+import nju.gzq.base.BaseFeature;
 
 /**
  * 对结果进行评估
@@ -18,10 +20,10 @@ public class Evaluation {
     public static double recall(Bucket bucket, int k) {
         double rc = 0;
 
-        Feature[][] features = bucket.getFeatures();
+        BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < k && j < features[i].length; j++) {
-                if (features[i][j].isInducing()) {
+                if (features[i][j].isLabel()) {
                     rc++;
                     break;
                 }
@@ -39,10 +41,10 @@ public class Evaluation {
      */
     public static double MRR(Bucket bucket) {
         double mrr = 0.0;
-        Feature[][] features = bucket.getFeatures();
+        BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) {
-                if (features[i][j].isInducing()) {
+                if (features[i][j].isLabel()) {
                     mrr += 1.0 / (j + 1);
                     break;
                 }
@@ -60,12 +62,12 @@ public class Evaluation {
      */
     public static double MAP(Bucket bucket) {
         double map = 0.0;
-        Feature[][] features = bucket.getFeatures();
+        BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             double ap = 0.0;
             int k = 0;
             for (int j = 0; j < features[i].length; j++) {
-                if (features[i][j].isInducing()) {
+                if (features[i][j].isLabel()) {
                     ap += (double) (k + 1) / (j + 1);
                     k++;
                 }
@@ -116,18 +118,18 @@ public class Evaluation {
      * @return
      */
     public static double precision(Bucket bucket, int k) {
-        double rc = 0;/*
-        Feature[][] features = bucket.getFeatures();
+        double rc = 0;
+        BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
 
             for (int j = 0; j < k && j < features[i].length; j++) {
-                if (features[i][j].isInducing()) {
+                if (features[i][j].isLabel()) {
                     rc++;
                     break;
                 }
             }
         }
-*/
+
         rc /= bucket.getFilterNumber();
         return rc;
     }

@@ -1,29 +1,28 @@
 
-import nju.gzq.selector.Selector;
+
 import test.PidTest;
-import util.Feature;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
         // 测试单个特征
-        PidTest.testSingleFeature(PidTest.versions);
+        //PidTest.testSingleFeature(PidTest.versions);
         // 测试两个特征
         //PidTest.testGroupFeature(PidTest.versions);
         // 测试Pi方法
-        //PidTest.testPid(PidTest.versions, Feature.POS, Feature.ISCOMPONENT);
-        //PidTest.testPid(PidTest.versions, Feature.POS, Feature.DISTANCE);
+        //PidTest.testPid(PidTest.versions, BaseFeature.POS, BaseFeature.ISCOMPONENT);
+        //PidTest.testPid(PidTest.versions, BaseFeature.POS, BaseFeature.DISTANCE);
         // 测试Pid方法
         //PidTest.testPid(PidTest.versions, 1, 5, 9);
         // 测试Pid在候选较少的buckets上的结果
-        //PidTest.testLowDataSet(PidTest.versions, 10, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
-        //PidTest.testLowDataSet(PidTest.versions, 5, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        //PidTest.testLowDataSet(PidTest.versions, 10, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
+        //PidTest.testLowDataSet(PidTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
         //测试更多特征组合
         //PidTest.testMoreFeature(versions);
 
         //测试特征选择器
-        //testSelector();
+        testSelector();
 
     }
 
@@ -41,41 +40,5 @@ public class Main {
         String fileType = "svg";
         int top = 10;
         new MySelector().start(featureNumber, outputPath, fileType, neededFeatureNumber, threshold, false, top, false);
-    }
-}
-
-class MySelector extends Selector {
-
-    @Override
-    public double getValue(Integer[] features) {
-        return PidTest.testPid(PidTest.versions, features)[3];
-    }
-
-    @Override
-    public String getFeatureName(Object valueIndex) {
-        switch ((Integer) valueIndex) {
-            case 0:
-                return "NAF";
-            case 1:
-                return "CC";
-            case 2:
-                return "RLOCC";
-            case 3:
-                return "RLOAC";
-            case 4:
-                return "RLODC";
-            case 5:
-                return "IADCP";
-            case 6:
-                return "ITDCR";
-            case 7:
-                return "RF";
-            case 8:
-                return "IBF";
-            case 9:
-                return "IADCL";
-            default:
-                return "IADCP";
-        }
     }
 }

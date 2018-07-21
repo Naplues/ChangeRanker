@@ -1,6 +1,7 @@
 package test;
 
-import util.*;
+
+import nju.gzq.selector.FileHandle;
 
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class Test {
         average(values);
         System.out.println("==============================================================");
     }
-
+    /*
     public static void makeBuckets(String form) {
         String filePath = "C:\\Users\\gzq\\Desktop\\origin\\prediction_data\\";
         String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};//, "6.8", "6.9", "7.0", "7.1", "7.2"
@@ -66,12 +67,12 @@ public class Test {
         }
         Evaluation.evaluation(buckets, true);
     }
-
+*/
     public static void main(String[] args) {
         System.out.println("Recall@1\tRecall@5\tRecall@10\tMAP\tMRR");
         //run("Form1");
         //run("Form2");
         //run("Form3");
-        makeBuckets("Form3");
+        //makeBuckets("Form3");
     }
 }

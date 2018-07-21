@@ -1,6 +1,10 @@
 package test;
 
-import util.*;
+import nju.gzq.pid.Bucket;
+import nju.gzq.pid.Evaluation;
+import nju.gzq.pid.Ranking;
+import nju.gzq.pid.Util;
+
 
 /**
  * 测试特征效果
@@ -8,6 +12,7 @@ import util.*;
 public class PidTest {
     // 项目版本
     public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
+
     /**
      * 测试单个特征在各版本数据上的性能
      *
@@ -19,7 +24,7 @@ public class PidTest {
         for (int n = 0; n < 10; n++) {
             for (int i = 0; i < versions.length; i++) {
                 Bucket bucket = new Bucket(versions[i], Util.form, false);
-                bucket.setFeatures(Ranking.rankByFeature(bucket, n));
+                bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, n));
                 buckets[i] = bucket;
             }
             Evaluation.evaluation(buckets, false);
@@ -57,10 +62,10 @@ public class PidTest {
         Bucket[] buckets = new Bucket[versions.length];
         for (int i = 0; i < versions.length; i++) {
             Bucket bucket = new Bucket(versions[i], Util.form, false);
-            bucket.setFeatures(Ranking.rankByFeature(bucket, features));
+            bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
             buckets[i] = bucket;
         }
-        return Evaluation.evaluation(buckets, true);
+        return Evaluation.evaluation(buckets, false);
 
     }
 
@@ -74,7 +79,7 @@ public class PidTest {
         Bucket[] buckets = new Bucket[versions.length];
         for (int i = 0; i < versions.length; i++) {
             Bucket bucket = new Bucket(versions[i], Util.form, true, threshold);
-            bucket.setFeatures(Ranking.rankByFeature(bucket, features));
+            bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
             buckets[i] = bucket;
             bucket.printBucketNames();
         }
@@ -84,29 +89,31 @@ public class PidTest {
 
 
     public static void testMoreFeature(String[] versions) {
+    	//4: pos, 8: is Component, 9: distance
+    	//2: RLOAC, 5: ITDCR 
         //更多特征
-        PidTest.testPid(versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT);
+        PidTest.testPid(versions, 4, 9, 8);
 
         //除去一个
-        PidTest.testPid(versions, Feature.DISTANCE, Feature.ISCOMPONENT, Feature.TIME);
-        PidTest.testPid(versions, Feature.DISTANCE, Feature.ISCOMPONENT, Feature.ADDLINES);
+        PidTest.testPid(versions, 9, 8, 5);
+        PidTest.testPid(versions, 9, 8, 2);
 
-        PidTest.testPid(versions, Feature.POS, Feature.DISTANCE, Feature.TIME);
-        PidTest.testPid(versions, Feature.POS, Feature.DISTANCE, Feature.ADDLINES);
+        PidTest.testPid(versions, 4, 9, 5);
+        PidTest.testPid(versions, 4, 9, 2);
 
-        PidTest.testPid(versions, Feature.POS, Feature.ISCOMPONENT, Feature.TIME);
-        PidTest.testPid(versions, Feature.POS, Feature.ISCOMPONENT, Feature.ADDLINES);
+        PidTest.testPid(versions, 4, 8, 5);
+        PidTest.testPid(versions, 4, 8, 2);
 
         //保留一个
-        PidTest.testPid(versions, Feature.ADDLINES, Feature.TIME, Feature.POS);
-        PidTest.testPid(versions, Feature.ADDLINES, Feature.TIME, Feature.ISCOMPONENT);
-        PidTest.testPid(versions, Feature.ADDLINES, Feature.TIME, Feature.DISTANCE);
+        PidTest.testPid(versions, 2, 5, 4);
+        PidTest.testPid(versions, 2, 5, 8);
+        PidTest.testPid(versions, 2, 5, 9);
 
         //增加一个
-        PidTest.testPid(versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT, Feature.TIME);
-        PidTest.testPid(versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT, Feature.ADDLINES);
+        PidTest.testPid(versions, 4, 9, 8, 5);
+        PidTest.testPid(versions, 4, 9, 8, 2);
 
         //增加两个
-        PidTest.testPid(versions, Feature.POS, Feature.DISTANCE, Feature.ISCOMPONENT, Feature.ADDLINES, Feature.TIME);
+        PidTest.testPid(versions, 4, 9, 8, 2, 5);
     }
 }
