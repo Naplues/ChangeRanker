@@ -27,8 +27,8 @@ public class PidTest {
                 bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, n));
                 buckets[i] = bucket;
             }
-            Evaluation.evaluation(buckets, false);
-            System.out.println("n=" + n);
+            Evaluation.evaluation(buckets, true);
+            //System.out.println("n=" + n);
         }
     }
 
