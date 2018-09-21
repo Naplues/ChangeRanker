@@ -42,6 +42,18 @@ public class Project {
                 features[i][j - 1] = new BaseFeature(lines.get(j).split(","), 12, 0, 2);
             }
         }
+/*
+        for (int i = 0; i < features.length; i++) {
+            System.out.print(revisions[i].getName() + ", ");
+            int c = 0, t = 0;
+            for (int j = 0; j < features[i].length; j++) {
+                if (features[i][j].isLabel()) c++;
+                t++;
+            }
+            System.out.println(t + ", " + c);
+        }
+
+*/
         selectOracleFeature();  //选择有oracle的bucket
         if (isLowDataSet) selectLowFeature(threshold[0]);
     }

@@ -11,7 +11,7 @@ import nju.gzq.pid.Ranking;
 public class PidTest {
     public static String rootPath = "buckets_data\\form3\\";
     // 项目版本
-    public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
+    public static String[] versions = {"6.5"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
 
     /**
      * 测试单个特征在各版本数据上的性能
@@ -92,7 +92,7 @@ public class PidTest {
         //4: pos, 8: is Component, 9: distance
         //2: RLOAC, 5: ITDCR
         //更多特征
-        PidTest.testPid(versions, 4, 9, 8);
+
 
         //除去一个
         PidTest.testPid(versions, 9, 8, 5);
@@ -115,5 +115,7 @@ public class PidTest {
 
         //增加两个
         PidTest.testPid(versions, 4, 9, 8, 2, 5);
+
+        PidTest.testPid(versions, 4, 9, 8);
     }
 }

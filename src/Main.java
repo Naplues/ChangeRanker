@@ -16,20 +16,20 @@ public class Main {
         //PidTest.testLowDataSet(PidTest.versions, 10, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
         //PidTest.testLowDataSet(PidTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
         //测试更多特征组合
-        PidTest.testMoreFeature(PidTest.versions);
+        //PidTest.testMoreFeature(PidTest.versions);
 
 
         // 测试Pid方法
-        //PidTest.testPid(PidTest.versions, 4, 8, 9);
+        //PidTest.testPid(PidTest.versions, 9, 4,8);
         //测试特征选择器
         //testSelector();
 
-        //combine();
+        combine();
     }
 
 
     public static void combine() {
-        String filePath = "C:\\Users\\gzq\\Desktop\\git\\Pid\\buckets_data\\form1\\6.5";
+        String filePath = "C:\\Users\\gzq\\Desktop\\git\\Pid\\buckets_data\\form3\\6.5x";
         File[] files = new File(filePath).listFiles();
         String text = "";
         String head = "";
@@ -42,7 +42,7 @@ public class Main {
         }
         text = head + text;
         System.out.println(text);
-        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\result1.csv", text);
+        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\combine.csv", text);
     }
 
     /**
