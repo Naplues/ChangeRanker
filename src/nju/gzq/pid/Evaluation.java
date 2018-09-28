@@ -84,22 +84,6 @@ public class Evaluation {
     }
 
     public static double[] evaluation(Project[] buckets, boolean details) {
-        //1, 3, 4, 5, 6, 7, 8, 9, 10, 11
-        int[] index = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-        for (int i : index) {
-            for (Project bucket : buckets) {
-                double sum = 0;
-                for (BaseFeature[] features : bucket.getFeatures()) {
-                    Set<Double> set = new HashSet<>();
-                    for (BaseFeature feature : features) set.add(feature.getValueFromIndex(i));
-                    sum += set.size();
-                }
-                sum /= bucket.getFeatures().length;
-                System.out.println(i + ": " + sum);
-            }
-        }
-
 
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
         for (Project bucket : buckets) {

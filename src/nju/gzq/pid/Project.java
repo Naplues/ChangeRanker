@@ -54,8 +54,12 @@ public class Project {
         }
 
 */
+
         selectOracleFeature();  //选择有oracle的bucket
         if (isLowDataSet) selectLowFeature(threshold[0]);
+
+        //output();
+        //output(10);
     }
 
     /**
@@ -66,7 +70,11 @@ public class Project {
      */
 
     public Project(String version, String path, int filter) {
-        File[] revisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
+        File[] tempRevisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
+        File[] revisions = new File[tempRevisions.length - 1]; //去除Logistic文件
+        for (int i = 0; i < revisions.length; i++)
+            revisions[i] = tempRevisions[i];
+
         versionName = version;
         revisionNumber = filter;
         bucketNames = new String[revisions.length];
@@ -77,7 +85,7 @@ public class Project {
             features[i] = new BaseFeature[lines.size()];
 
             for (int j = 0; j < lines.size(); j++) {
-                features[i][j] = new BaseFeature(lines.get(j).split("\t"), 12, 0, 2);
+                features[i][j] = new BaseFeature(lines.get(j).split("\t"), 2, 0);
             }
         }
         this.filterNumber = revisions.length;
@@ -174,11 +182,21 @@ public class Project {
     }
 
     public void output(int threshold) {
-        int count = 0;
+        int count = 0, i = 0;
         for (BaseFeature[] bucket : features) {
-            if (bucket.length <= threshold) {
+            if (bucket.length <= threshold && bucket.length > 5) {
                 count++;
+                System.out.println(bucketNames[i]);
             }
+            i++;
+        }
+        System.out.println(count);
+    }
+
+    public void output() {
+        int count = 130;
+        for (BaseFeature[] bucket : features) {
+            count = Math.min(bucket.length, count);
         }
         System.out.println(count);
     }

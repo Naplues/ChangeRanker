@@ -13,7 +13,7 @@ public class Main {
         // 测试两个特征
         //PidTest.testGroupFeature(PidTest.versions);
         // 测试Pid在候选较少的buckets上的结果
-        //PidTest.testLowDataSet(PidTest.versions, 10, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
+        PidTest.testLowDataSet(PidTest.versions, 10, 4,8,9);
         //PidTest.testLowDataSet(PidTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
         //测试更多特征组合
         //PidTest.testMoreFeature(PidTest.versions);
@@ -24,12 +24,12 @@ public class Main {
         //测试特征选择器
         //testSelector();
 
-        combine();
+        //combine();
     }
 
 
     public static void combine() {
-        String filePath = "C:\\Users\\gzq\\Desktop\\git\\Pid\\buckets_data\\form3\\6.5x";
+        String filePath = "C:\\Users\\gzq\\Desktop\\git\\Pid\\buckets_data\\form3\\6.5";
         File[] files = new File(filePath).listFiles();
         String text = "";
         String head = "";

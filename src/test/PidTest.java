@@ -9,9 +9,9 @@ import nju.gzq.pid.Ranking;
  * 测试特征效果
  */
 public class PidTest {
-    public static String rootPath = "buckets_data\\form3\\";
+    public static String rootPath = "buckets_data\\low\\10\\";
     // 项目版本
-    public static String[] versions = {"6.5"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
+    public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
 
     /**
      * 测试单个特征在各版本数据上的性能
@@ -89,33 +89,53 @@ public class PidTest {
 
 
     public static void testMoreFeature(String[] versions) {
-        //4: pos, 8: is Component, 9: distance
-        //2: RLOAC, 5: ITDCR
+        //0: NAF 4: pos 5: ITDCR 8: is Component, 9: distance
+
         //更多特征
 
+        Integer[] feature = {0, 4, 5, 8, 9};
+        // 一个特征 5
+        for (int i = 0; i < feature.length; i++) {
+            System.out.print(i + ",  ");
+            PidTest.testPid(versions, feature[i]);
+        }
 
-        //除去一个
-        PidTest.testPid(versions, 9, 8, 5);
-        PidTest.testPid(versions, 9, 8, 2);
+        // 两个特征 10
+        for (int i = 0; i < feature.length - 1; i++) {
+            for (int j = i + 1; j < feature.length; j++) {
+                System.out.print(i + "+" + j + ",  ");
+                PidTest.testPid(versions, feature[i], feature[j]);
+            }
+        }
 
-        PidTest.testPid(versions, 4, 9, 5);
-        PidTest.testPid(versions, 4, 9, 2);
 
-        PidTest.testPid(versions, 4, 8, 5);
-        PidTest.testPid(versions, 4, 8, 2);
+        // 三个特征 10
+        for (int k = 0; k < feature.length - 2; k++) {
+            for (int i = k + 1; i < feature.length - 1; i++) {
+                for (int j = i + 1; j < feature.length; j++) {
+                    System.out.print(k + "+" + i + "+" + j + ", ");
+                    PidTest.testPid(versions, feature[i], feature[j], feature[k]);
+                }
+            }
+        }
 
-        //保留一个
-        PidTest.testPid(versions, 2, 5, 4);
-        PidTest.testPid(versions, 2, 5, 8);
-        PidTest.testPid(versions, 2, 5, 9);
 
-        //增加一个
-        PidTest.testPid(versions, 4, 9, 8, 5);
-        PidTest.testPid(versions, 4, 9, 8, 2);
+        //四个特征 5
+        for (int m = 0; m < feature.length - 3; m++) {
+            for (int k = m + 1; k < feature.length - 2; k++) {
+                for (int i = k + 1; i < feature.length - 1; i++) {
+                    for (int j = i + 1; j < feature.length - 0; j++) {
+                        System.out.print(m + "+" + k + "+" + i + "+" + j + ", ");
+                        PidTest.testPid(versions, feature[i], feature[j], feature[k], feature[m]);
+                    }
+                }
+            }
+        }
 
-        //增加两个
-        PidTest.testPid(versions, 4, 9, 8, 2, 5);
 
-        PidTest.testPid(versions, 4, 9, 8);
+        //五个特征 1
+        System.out.print("0+1+2+3+4,  ");
+        PidTest.testPid(versions, feature);
+
     }
 }
