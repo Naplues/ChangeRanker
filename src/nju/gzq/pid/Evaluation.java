@@ -85,6 +85,8 @@ public class Evaluation {
 
     public static double[] evaluation(Project[] buckets, boolean details) {
 
+
+
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
         for (Project bucket : buckets) {
             r1 += Evaluation.recall(bucket, 1);

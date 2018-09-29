@@ -13,36 +13,48 @@ public class Main {
         // 测试两个特征
         //PidTest.testGroupFeature(PidTest.versions);
         // 测试Pid在候选较少的buckets上的结果
-        PidTest.testLowDataSet(PidTest.versions, 10, 4,8,9);
+        //PidTest.testLowDataSet(PidTest.versions, 10, 4,8,9);
         //PidTest.testLowDataSet(PidTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
         //测试更多特征组合
         //PidTest.testMoreFeature(PidTest.versions);
 
 
         // 测试Pid方法
-        //PidTest.testPid(PidTest.versions, 9, 4,8);
+        PidTest.testPid(PidTest.versions, 9, 4,8);
         //测试特征选择器
         //testSelector();
-
-        //combine();
+        //for (String version : PidTest.versions) combine(version);
     }
 
 
-    public static void combine() {
-        String filePath = "C:\\Users\\gzq\\Desktop\\git\\Pid\\buckets_data\\form3\\6.5";
+    public static void combine(String version) {
+        String filePath = "C:\\Users\\gzq\\Desktop\\git\\Pid\\buckets_data\\form3\\" + version;
         File[] files = new File(filePath).listFiles();
         String text = "";
         String head = "";
+        int count = 0;
         for (File file : files) {
             List<String> lines = FileHandle.readFileToLines(file.getPath());
             head = lines.get(0) + "\n";
             for (int i = 1; i < lines.size(); i++) {
-                text += lines.get(i) + "\n";
+                String[] a = lines.get(i).split(",");
+                boolean allZero = true;
+                for (int x = 1; x < a.length - 1; x++) {
+                    if (!a[x].equals("0") && !a[x].equals("0.0")) {
+                        allZero = false;
+                        break;
+                    }
+                }
+                if (!allZero) {
+                    text += lines.get(i) + "\n";
+                    count++;
+                }
             }
         }
         text = head + text;
-        System.out.println(text);
-        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\combine.csv", text);
+        //System.out.println(text);
+        //FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\combine.csv", text);
+        System.out.println(count);
     }
 
     /**
@@ -58,6 +70,6 @@ public class Main {
         String outputPath = "C:\\Users\\gzq\\Desktop\\result";
         String fileType = "svg";
         int top = 10;
-        new MySelector().start(featureNumber, outputPath, fileType, neededFeatureNumber, threshold, false, top,false);
+        new MySelector().start(featureNumber, outputPath, fileType, neededFeatureNumber, threshold, false, top, false);
     }
 }
