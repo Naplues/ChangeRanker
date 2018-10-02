@@ -9,7 +9,7 @@ import nju.gzq.pid.Ranking;
  * 测试特征效果
  */
 public class PidTest {
-    public static String rootPath = "buckets_data\\form30.610\\";  //buckets_data\low\10\
+    public static String rootPath = "buckets_data\\form3x5\\";  //buckets_data\low\10\
     // 项目版本
     public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
 
@@ -65,7 +65,7 @@ public class PidTest {
             bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
             buckets[i] = bucket;
         }
-        return Evaluation.evaluation(buckets, false);
+        return Evaluation.evaluation(buckets, true);
 
     }
 

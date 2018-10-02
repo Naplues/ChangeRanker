@@ -4,8 +4,8 @@
 
 **Keywords**: Please Wait.
 
-## Pid
-This project implements the Pid approach.
+## PLC
+This project implements the PLC approach.
 
 ## Data Set:
 All changes feature data are collected by [Wu et al.](http://101.96.10.64/sccpu2.cse.ust.hk/castle/materials/ChangeLocator.pdf)  
