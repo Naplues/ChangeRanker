@@ -1,4 +1,4 @@
-# Pid: A simple unsupervised approach to locating crash-inducing changes
+# PLC: A simple combination based approach to locating crash-inducing changes
 
 **Abstract**. Please Wait.   
 

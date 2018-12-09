@@ -1,8 +1,8 @@
 package test;
 
-import nju.gzq.pid.Project;
-import nju.gzq.pid.Evaluation;
-import nju.gzq.pid.Ranking;
+import nju.gzq.plc.Project;
+import nju.gzq.plc.Evaluation;
+import nju.gzq.plc.Ranking;
 import nju.gzq.selector.FileHandle;
 
 import java.util.List;

@@ -1,14 +1,14 @@
 package test;
 
-import nju.gzq.pid.Project;
-import nju.gzq.pid.Evaluation;
-import nju.gzq.pid.Ranking;
+import nju.gzq.plc.Project;
+import nju.gzq.plc.Evaluation;
+import nju.gzq.plc.Ranking;
 
 
 /**
  * 测试特征效果
  */
-public class PidTest {
+public class PLCTest {
     public static String rootPath = "buckets_data\\form3x5\\";  //buckets_data\low\10\
     // 项目版本
     public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //, "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
@@ -97,14 +97,14 @@ public class PidTest {
         // 一个特征 5
         for (int i = 0; i < feature.length; i++) {
             System.out.print(i + ",  ");
-            PidTest.testPid(versions, feature[i]);
+            PLCTest.testPid(versions, feature[i]);
         }
 
         // 两个特征 10
         for (int i = 0; i < feature.length - 1; i++) {
             for (int j = i + 1; j < feature.length; j++) {
                 System.out.print(i + "+" + j + ",  ");
-                PidTest.testPid(versions, feature[i], feature[j]);
+                PLCTest.testPid(versions, feature[i], feature[j]);
             }
         }
 
@@ -114,7 +114,7 @@ public class PidTest {
             for (int i = k + 1; i < feature.length - 1; i++) {
                 for (int j = i + 1; j < feature.length; j++) {
                     System.out.print(k + "+" + i + "+" + j + ", ");
-                    PidTest.testPid(versions, feature[i], feature[j], feature[k]);
+                    PLCTest.testPid(versions, feature[i], feature[j], feature[k]);
                 }
             }
         }
@@ -126,7 +126,7 @@ public class PidTest {
                 for (int i = k + 1; i < feature.length - 1; i++) {
                     for (int j = i + 1; j < feature.length - 0; j++) {
                         System.out.print(m + "+" + k + "+" + i + "+" + j + ", ");
-                        PidTest.testPid(versions, feature[i], feature[j], feature[k], feature[m]);
+                        PLCTest.testPid(versions, feature[i], feature[j], feature[k], feature[m]);
                     }
                 }
             }
@@ -135,7 +135,7 @@ public class PidTest {
 
         //五个特征 1
         System.out.print("0+1+2+3+4,  ");
-        PidTest.testPid(versions, feature);
+        PLCTest.testPid(versions, feature);
 
     }
 }

@@ -1,11 +1,11 @@
 import nju.gzq.selector.Selector;
-import test.PidTest;
+import test.PLCTest;
 
 public class MySelector extends Selector {
 
     @Override
     public double getValue(Integer[] features) {
-        return PidTest.testPid(PidTest.versions, features)[3];
+        return PLCTest.testPid(PLCTest.versions, features)[3];
     }
 
     @Override

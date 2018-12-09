@@ -1,5 +1,5 @@
 import nju.gzq.selector.FileHandle;
-import test.PidTest;
+import test.PLCTest;
 
 import java.io.File;
 import java.util.List;
@@ -9,21 +9,21 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         // 测试单个特征
-        //PidTest.testSingleFeature(PidTest.versions);
+        //PLCTest.testSingleFeature(PLCTest.versions);
         // 测试两个特征
-        //PidTest.testGroupFeature(PidTest.versions);
+        //PLCTest.testGroupFeature(PLCTest.versions);
         // 测试Pid在候选较少的buckets上的结果
-        //PidTest.testLowDataSet(PidTest.versions, 10, 4,8,9);
-        //PidTest.testLowDataSet(PidTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
+        //PLCTest.testLowDataSet(PLCTest.versions, 10, 4,8,9);
+        //PLCTest.testLowDataSet(PLCTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
         //测试更多特征组合
-        //PidTest.testMoreFeature(PidTest.versions);
+        //PLCTest.testMoreFeature(PLCTest.versions);
 
 
         // 测试Pid方法
-        PidTest.testPid(PidTest.versions, 9, 4,8);
+        PLCTest.testPid(PLCTest.versions, 9, 4,8);
         //测试特征选择器
         //testSelector();
-        //for (String version : PidTest.versions) combine(version);
+        //for (String version : PLCTest.versions) combine(version);
     }
 
 

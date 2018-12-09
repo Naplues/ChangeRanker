@@ -1,10 +1,6 @@
-package nju.gzq.pid;
+package nju.gzq.plc;
 
 import nju.gzq.base.BaseFeature;
-import nju.gzq.base.BaseProject;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * 对结果进行评估
