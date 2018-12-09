@@ -18,7 +18,7 @@ public class Evaluation {
      * @return
      */
     public static double recall(Project bucket, int k) {
-        double rc = 0;
+        double rc = .0;
 
         BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
@@ -40,7 +40,7 @@ public class Evaluation {
      * @return
      */
     public static double MRR(Project bucket) {
-        double mrr = 0.0;
+        double mrr = .0;
         BaseFeature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) {

@@ -1,3 +1,5 @@
+package main;
+
 import nju.gzq.selector.FileHandle;
 import test.PLCTest;
 
@@ -8,19 +10,17 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        // 测试PLC方法
+        PLCTest.testPLC(4, 8, 9);
+
         // 测试单个特征
         //PLCTest.testSingleFeature(PLCTest.versions);
-        // 测试两个特征
-        //PLCTest.testGroupFeature(PLCTest.versions);
         // 测试Pid在候选较少的buckets上的结果
-        //PLCTest.testLowDataSet(PLCTest.versions, 10, 4,8,9);
-        //PLCTest.testLowDataSet(PLCTest.versions, 5, BaseFeature.POS, BaseFeature.DISTANCE, BaseFeature.ISCOMPONENT);
+        //PLCTest.testLowDataSet(10, 4,8,9);
+        //PLCTest.testLowDataSet(5, 4, 8, 9);
         //测试更多特征组合
-        //PLCTest.testMoreFeature(PLCTest.versions);
+        //PLCTest.testMoreFeature();
 
-
-        // 测试Pid方法
-        PLCTest.testPid(PLCTest.versions, 9, 4,8);
         //测试特征选择器
         //testSelector();
         //for (String version : PLCTest.versions) combine(version);

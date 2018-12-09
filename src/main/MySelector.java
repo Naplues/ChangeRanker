@@ -1,3 +1,5 @@
+package main;
+
 import nju.gzq.selector.Selector;
 import test.PLCTest;
 
@@ -5,7 +7,7 @@ public class MySelector extends Selector {
 
     @Override
     public double getValue(Integer[] features) {
-        return PLCTest.testPid(PLCTest.versions, features)[3];
+        return PLCTest.testPLC(features)[3];
     }
 
     @Override
