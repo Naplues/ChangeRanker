@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Selector">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/Selector.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

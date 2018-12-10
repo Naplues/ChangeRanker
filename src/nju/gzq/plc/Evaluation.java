@@ -79,21 +79,42 @@ public class Evaluation {
         return map;
     }
 
+    /**
+     * 评估单个项目的性能
+     *
+     * @param bucket
+     * @return
+     */
+    public static double[] evaluation(Project bucket, boolean details) {
+        double[] result = new double[5];
+        result[0] = Evaluation.recall(bucket, 1);
+        result[1] = Evaluation.recall(bucket, 5);
+        result[2] = Evaluation.recall(bucket, 10);
+        result[3] = Evaluation.MRR(bucket);
+        result[4] = Evaluation.MAP(bucket);
+        if (details) {
+            for (int i = 0; i < result.length; i++) System.out.print(result[i] + ", ");
+            System.out.println(bucket.getFilterNumber() + "/" + bucket.getRevisionNumber());
+        }
+        return result;
+    }
+
+    /**
+     * 评估多个项目的平均性能
+     * @param buckets
+     * @param details
+     * @return
+     */
     public static double[] evaluation(Project[] buckets, boolean details) {
-
-
 
         double r1 = 0.0, r5 = 0.0, r10 = 0.0, map = 0.0, mrr = 0.0;
         for (Project bucket : buckets) {
-            r1 += Evaluation.recall(bucket, 1);
-            r5 += Evaluation.recall(bucket, 5);
-            r10 += Evaluation.recall(bucket, 10);
-            mrr += Evaluation.MRR(bucket);
-            map += Evaluation.MAP(bucket);
-            if (details)
-                System.out.println(Evaluation.recall(bucket, 1) + "," + Evaluation.recall(bucket, 5) +
-                        "," + Evaluation.recall(bucket, 10) + "," + Evaluation.MRR(bucket) + "," + Evaluation.MAP(bucket) +
-                        ", " + bucket.getFilterNumber() + "/" + bucket.getRevisionNumber());
+            double[] result = evaluation(bucket, details);
+            r1 += result[0];
+            r5 += result[1];
+            r10 += result[2];
+            mrr += result[3];
+            map += result[4];
         }
 
         //输出到控制台
@@ -105,10 +126,9 @@ public class Evaluation {
         values[4] = map / buckets.length;
 
         for (int i = 0; i < values.length; i++) {
-            System.out.print(values[i] + ",");
+            // System.out.print(values[i] + ",");
         }
-        //System.out.println("\n================================================================================");
-        System.out.println();
+        // System.out.println();
         return values;
     }
 

@@ -1,9 +1,9 @@
 package test;
 
+import nju.gzq.FileHandle;
 import nju.gzq.plc.Project;
 import nju.gzq.plc.Evaluation;
 import nju.gzq.plc.Ranking;
-import nju.gzq.selector.FileHandle;
 
 import java.util.List;
 

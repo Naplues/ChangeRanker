@@ -1,7 +1,7 @@
 package nju.gzq.plc;
 
+import nju.gzq.FileHandle;
 import nju.gzq.base.BaseFeature;
-import nju.gzq.selector.FileHandle;
 
 import java.io.File;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Project {
     private BaseFeature[][] features;
-
+    public static String[] featureNames;
     private String versionName;
     private String[] bucketNames;
     private int revisionNumber; //原来版本数目
@@ -22,7 +22,7 @@ public class Project {
     }
 
     /**
-     * Pid: 保存一个项目的所有bucket信息
+     * PLC: 保存一个项目的所有bucket信息
      *
      * @param path         项目版本号
      * @param isLowDataSet 是否测试少量候选集
@@ -38,28 +38,16 @@ public class Project {
             List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
             bucketNames[i] = revisions[i].getName();
             features[i] = new BaseFeature[lines.size() - 1];
-            for (int j = 1; j < lines.size(); j++) {
-                features[i][j - 1] = new BaseFeature(lines.get(j).split(","), 12, 0, 2);
+            for (int j = 1; j < lines.size(); j++) {  // , 3, 4, 5, 8, 9
+                features[i][j - 1] = new BaseFeature(lines.get(j).split(","), 12, 0, 2, 3, 4, 5, 8, 9);
             }
+            // 设置特征名称与索引
+            if (featureNames == null) // , 3, 4, 5, 8, 9
+                setFeatureNames(lines.get(0).split(","), 12, 0, 2, 3, 4, 5, 8, 9);
         }
-/*
-        for (int i = 0; i < features.length; i++) {
-            System.out.print(revisions[i].getName() + ", ");
-            int c = 0, t = 0;
-            for (int j = 0; j < features[i].length; j++) {
-                if (features[i][j].isLabel()) c++;
-                t++;
-            }
-            System.out.println(t + ", " + c);
-        }
-
-*/
 
         selectOracleFeature();  //选择有oracle的bucket
         if (isLowDataSet) selectLowFeature(threshold[0]);
-
-        //output();
-        //output(10);
     }
 
     /**
@@ -91,7 +79,6 @@ public class Project {
         this.filterNumber = revisions.length;
     }
 
-
     /**
      * 选择有oracle的bucket
      */
@@ -116,6 +103,7 @@ public class Project {
                 j++;
             }
         }
+
         features = filterFeature;
         bucketNames = filterBucketNames;
         filterNumber = count;
@@ -161,7 +149,7 @@ public class Project {
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) string += features[i][j];
         }
-        FileHandle.writeStringToFile("C:\\Users\\naplues\\Desktop\\out.csv", string);
+        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv", string);
         return string;
     }
 
@@ -209,5 +197,29 @@ public class Project {
             System.out.print(bucketNames[i] + " " + features[i].length + "||");
         }
         System.out.println();
+    }
+
+    public static void setFeatureNames(String[] feature, int labelIndex, int... abandonIndex) {
+        featureNames = new String[feature.length - 1 - abandonIndex.length];
+        for (int i = 0, j = 0; i < featureNames.length; j++) {
+            // label attribute
+            if (j == labelIndex) continue;
+
+            // abandon attribute
+            boolean isAbandon = false;
+            for (int abandon : abandonIndex)
+                if (j == abandon) {
+                    isAbandon = true;
+                    break;
+                }
+            if (isAbandon) continue;
+
+            //useful feature
+            featureNames[i++] = feature[j].replace("\"", "");
+        }
+    }
+
+    public static String getFeatureNames(Object index) {
+        return featureNames[(Integer) index];
     }
 }
