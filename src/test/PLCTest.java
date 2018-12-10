@@ -9,7 +9,7 @@ import nju.gzq.plc.Ranking;
  * 测试特征效果
  */
 public class PLCTest {
-    public static String rootPath = "buckets_data\\form3\\";  //buckets_data\low\10\
+    public static String rootPath = "buckets_data\\Form3\\";  //buckets_data\low\10\
     public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
 
     /**
