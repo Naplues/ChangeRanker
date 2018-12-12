@@ -1,7 +1,5 @@
 package nju.gzq.plc;
 
-import nju.gzq.base.BaseFeature;
-
 /**
  * 对结果进行评估
  * recall:召回率
@@ -20,7 +18,7 @@ public class Evaluation {
     public static double recall(Project bucket, int k) {
         double rc = .0;
 
-        BaseFeature[][] features = bucket.getFeatures();
+        Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < k && j < features[i].length; j++) {
                 if (features[i][j].isLabel()) {
@@ -41,7 +39,7 @@ public class Evaluation {
      */
     public static double MRR(Project bucket) {
         double mrr = .0;
-        BaseFeature[][] features = bucket.getFeatures();
+        Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) {
                 if (features[i][j].isLabel()) {
@@ -62,7 +60,7 @@ public class Evaluation {
      */
     public static double MAP(Project bucket) {
         double map = 0.0;
-        BaseFeature[][] features = bucket.getFeatures();
+        Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
             double ap = 0.0;
             int k = 0;
@@ -142,7 +140,7 @@ public class Evaluation {
      */
     public static double precision(Project bucket, int k) {
         double rc = 0;
-        BaseFeature[][] features = bucket.getFeatures();
+        Feature[][] features = bucket.getFeatures();
         for (int i = 0; i < features.length; i++) {
 
             for (int j = 0; j < k && j < features[i].length; j++) {

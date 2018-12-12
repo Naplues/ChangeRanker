@@ -15,33 +15,35 @@ import java.util.List;
 public class PLCTest {
     public static String rootPath = "crash_data\\Form3\\";  //buckets_data\low\10\
     public static String[] versions = {"6.5", "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+    public static int labelIndex = 12;
+    public static int[] abandonIndex = {0, 2, 3, 4, 5, 8, 9};
 
     /**
      * 训练测试: 测试PLC方法在各版本数据集上的性能以及平均性能
      *
      * @param features
      */
-    public static double[] testPLC(List<String> trainVersions, Integer... features) {
-        Project[] buckets = new Project[trainVersions.size()];
+    public static double[] trainFeatureCombination(List<String> trainVersions, boolean details, Integer... features) {
+        Project[] projects = new Project[trainVersions.size()];
         for (int i = 0; i < trainVersions.size(); i++) {
-            Project bucket = new Project(rootPath + trainVersions.get(i), false);
+            Project bucket = new Project(rootPath + trainVersions.get(i), labelIndex, abandonIndex);
             bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
-            buckets[i] = bucket;
+            projects[i] = bucket;
         }
-        return Evaluation.evaluation(buckets, false);
+        return Evaluation.evaluation(projects, details);
     }
 
     /**
-     * 测试PLC在制定版本上的性能
+     * 测试PLC在指定版本上的性能
      *
      * @param targetVersion
      * @param features
      * @return
      */
-    public static double[] testPLC(int targetVersion, Integer... features) {
-        Project bucket = new Project(rootPath + versions[targetVersion], false);
-        bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
-        return Evaluation.evaluation(bucket, true);
+    public static double[] testFeatureCombination(int targetVersion, Integer... features) {
+        Project project = new Project(rootPath + versions[targetVersion], labelIndex, abandonIndex);
+        project.setFeatures(Ranking.rankByFeature(project, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
+        return Evaluation.evaluation(project, true);
     }
 
 
@@ -56,35 +58,13 @@ public class PLCTest {
         trainVersions.add(versions[0]); //添加6.5 作为最初的训练集
         for (int i = 1; i < versions.length; i++) {
             // 在之前版本上获得最有组合
-            Integer[] featureCombination = new MySelector().start(trainVersions, 5, 5, .0, 10);
-            for (int feature : featureCombination) System.out.print(feature + " ");
-            System.out.println();
-
-            // 在下一版本上测试性能
-            testPLC(i, featureCombination);
-            // 加入新的训练集
+            Integer[] featureCombination = new MySelector().start(trainVersions, 5, 5, .0, 5);
+            // 在下一版本上测试性能, i: 下一版本索引
+            testFeatureCombination(i, featureCombination);
+            // 将下一版本i加入训练集
             trainVersions.add(versions[i]);
         }
     }
-
-    /**
-     * 测试单个特征在各版本数据上的性能
-     *
-     * @param versions
-     */
-    public static void testSingleFeature(String[] versions) {
-        Project[] buckets = new Project[versions.length];
-        for (int n = 0; n < 10; n++) {
-            for (int i = 0; i < versions.length; i++) {
-                Project bucket = new Project(rootPath + versions[i], false);
-                bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, n));
-                buckets[i] = bucket;
-            }
-            Evaluation.evaluation(buckets, true);
-            //System.out.println("n=" + n);
-        }
-    }
-
 
     /**
      * 测试PLC在候选集个数较少的bucket上的性能
@@ -95,7 +75,7 @@ public class PLCTest {
     public static void testLowDataSet(int threshold, Integer... features) {
         Project[] buckets = new Project[versions.length];
         for (int i = 0; i < versions.length; i++) {
-            Project bucket = new Project(rootPath + versions[i], true, threshold);
+            Project bucket = new Project(rootPath + versions[i], labelIndex, abandonIndex);
             bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
             buckets[i] = bucket;
             bucket.printBucketNames();
@@ -112,14 +92,14 @@ public class PLCTest {
         // 一个特征 5
         for (int i = 0; i < feature.length; i++) {
             System.out.print(i + ",  ");
-            PLCTest.testPLC(feature[i]);
+            PLCTest.trainFeatureCombination(feature[i]);
         }
 
         // 两个特征 10
         for (int i = 0; i < feature.length - 1; i++) {
             for (int j = i + 1; j < feature.length; j++) {
                 System.out.print(i + "+" + j + ",  ");
-                PLCTest.testPLC(feature[i], feature[j]);
+                PLCTest.trainFeatureCombination(feature[i], feature[j]);
             }
         }
 
@@ -128,7 +108,7 @@ public class PLCTest {
             for (int i = k + 1; i < feature.length - 1; i++) {
                 for (int j = i + 1; j < feature.length; j++) {
                     System.out.print(k + "+" + i + "+" + j + ", ");
-                    PLCTest.testPLC(feature[i], feature[j], feature[k]);
+                    PLCTest.trainFeatureCombination(feature[i], feature[j], feature[k]);
                 }
             }
         }
@@ -139,7 +119,7 @@ public class PLCTest {
                 for (int i = k + 1; i < feature.length - 1; i++) {
                     for (int j = i + 1; j < feature.length - 0; j++) {
                         System.out.print(m + "+" + k + "+" + i + "+" + j + ", ");
-                        PLCTest.testPLC(feature[i], feature[j], feature[k], feature[m]);
+                        PLCTest.trainFeatureCombination(feature[i], feature[j], feature[k], feature[m]);
                     }
                 }
             }
@@ -147,6 +127,6 @@ public class PLCTest {
 
         //五个特征 1
         System.out.print("0+1+2+3+4,  ");
-        PLCTest.testPLC(feature);
+        PLCTest.trainFeatureCombination(feature);
     }*/
 }

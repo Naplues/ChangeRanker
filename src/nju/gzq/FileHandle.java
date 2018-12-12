@@ -5,8 +5,6 @@ package nju.gzq;
  * @author naplues
  */
 
-import nju.gzq.base.BaseProject;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -29,14 +27,13 @@ public class FileHandle {
     public static List<String> readFileToLines(String filePath, boolean... args) {
         BufferedReader reader = null;
         if (args.length > 0 && args[0])
-            reader = FileHandle.getExternelPath(filePath); // 读取文件系统路径
+            reader = FileHandle.getExternalPath(filePath); // 读取文件系统路径
         else
             reader = FileHandle.getActualPath(filePath); // 默认读取实际路径
         List<String> lines = new ArrayList<>();
         try {
             String s = null;
-            while ((s = reader.readLine()) != null)
-                lines.add(s);
+            while ((s = reader.readLine()) != null) lines.add(s);
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -44,21 +41,6 @@ public class FileHandle {
         return lines;
     }
 
-    /**
-     * 读取文件返回一个文本字符串
-     *
-     * @param filePath
-     * @return
-     */
-    public static String readFileToString(String filePath, boolean... args) {
-        String string = "";
-        List<String> lines = readFileToLines(filePath, args);
-        for (String t : lines) {
-            string += t;
-        }
-
-        return string;
-    }
 
     /**
      * 将字符串写入文件，false表示覆盖
@@ -70,31 +52,19 @@ public class FileHandle {
         try {
             // true = append file
             File file = new File(filePath);
-            if (!file.exists())
-                file.createNewFile();
+            if (!file.exists()) file.createNewFile();
             boolean append = false;
-            if (a.length == 1) {
-                append = a[0];
-            }
-            FileWriter fileWritter = new FileWriter(file, append);
-            BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-            bufferWritter.write(data);
-            bufferWritter.close();
-            fileWritter.close();
+            if (a.length == 1) append = a[0];
+            FileWriter fileWriter = new FileWriter(file, append);
+            BufferedWriter bufferWriter = new BufferedWriter(fileWriter);
+            bufferWriter.write(data);
+            bufferWriter.close();
+            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    /**
-     * @param filePath
-     * @param a
-     */
-    public static void writeLinesToFile(String filePath, List<String> lines, boolean... a) {
-        for (String t : lines) {
-            writeStringToFile(filePath, t + "\n", a);
-        }
-    }
 
     /**
      * 获取实际的文件路径
@@ -117,7 +87,7 @@ public class FileHandle {
      * @param path
      * @return
      */
-    public static BufferedReader getExternelPath(String path) {
+    public static BufferedReader getExternalPath(String path) {
         try {
             return new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8"));
         } catch (UnsupportedEncodingException | FileNotFoundException e) {
@@ -127,10 +97,6 @@ public class FileHandle {
     }
 
     public static void printLines(List<String> lines) {
-        for (String line : lines) {
-            System.out.println(line);
-        }
+        for (String line : lines) System.out.println(line);
     }
-
-
 }

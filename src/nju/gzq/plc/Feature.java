@@ -1,12 +1,10 @@
-package nju.gzq.base;
-
-import nju.gzq.Setting;
+package nju.gzq.plc;
 
 /**
- * BaseFeature: Built-in BaseFeature class which defines the structure of the feature read from external file (e.g., .csv)
+ * Feature: Built-in Feature class which defines the structure of the feature read from external file (e.g., .csv)
  * An instance denotes the data of a line in .csv file
  */
-public class BaseFeature {
+public class Feature {
     //////////////////////////////////////// Field Definition ////////////////////////////////////////////
     // temporary value of combinatorial features, which will be assigned during feature selection.
     private Double temp;
@@ -20,7 +18,7 @@ public class BaseFeature {
     /**
      * Default constructor
      */
-    public BaseFeature() {
+    public Feature() {
 
     }
 
@@ -30,7 +28,7 @@ public class BaseFeature {
      * @param valueString Numeric value of string form
      * @param labelIndex  label index in valueString in array
      */
-    public BaseFeature(String[] valueString, int labelIndex, int... abandonIndex) {
+    public Feature(String[] valueString, int labelIndex, int... abandonIndex) {
         // assign feature value
         featureValue = new Double[valueString.length - 1 - abandonIndex.length];
         for (int i = 0, j = 0; i < featureValue.length; j++) {
@@ -52,7 +50,7 @@ public class BaseFeature {
         }
 
         // assign label value
-        this.label = valueString[labelIndex].equals(Setting.positiveName);
+        this.label = valueString[labelIndex].equals("true");
     }
 
     /**

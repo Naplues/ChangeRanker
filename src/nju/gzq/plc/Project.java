@@ -1,7 +1,6 @@
 package nju.gzq.plc;
 
 import nju.gzq.FileHandle;
-import nju.gzq.base.BaseFeature;
 
 import java.io.File;
 import java.util.List;
@@ -10,14 +9,14 @@ import java.util.List;
  * feature[][]: 每一行代表一个bucket, 每一个元素代表一个bucket中的一个revision的特征记录
  */
 public class Project {
-    private BaseFeature[][] features;
+    private Feature[][] features;
     public static String[] featureNames;
     private String versionName;
     private String[] bucketNames;
     private int revisionNumber; //原来版本数目
     private int filterNumber;   //过滤后的版本数目
 
-    public BaseFeature[][] getFeatures() {
+    public Feature[][] getFeatures() {
         return features;
     }
 
@@ -25,29 +24,28 @@ public class Project {
      * PLC: 保存一个项目的所有bucket信息
      *
      * @param path         项目版本号
-     * @param isLowDataSet 是否测试少量候选集
-     * @param threshold    少量候选集阈值
+     * @param labelIndex   标记值索引
+     * @param abandonIndex 舍弃特征索引
      */
-    public Project(String path, boolean isLowDataSet, int... threshold) {
+    public Project(String path, int labelIndex, int... abandonIndex) {
         File[] revisions = new File(path).listFiles();
         versionName = new File(path).getName();
         revisionNumber = revisions.length;
         bucketNames = new String[revisions.length];
-        features = new BaseFeature[revisions.length][];
+        features = new Feature[revisions.length][];
         for (int i = 0; i < features.length; i++) {
             List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
             bucketNames[i] = revisions[i].getName();
-            features[i] = new BaseFeature[lines.size() - 1];
-            for (int j = 1; j < lines.size(); j++) {  // , 3, 4, 5, 8, 9
-                features[i][j - 1] = new BaseFeature(lines.get(j).split(","), 12, 0, 2, 3, 4, 5, 8, 9);
+            features[i] = new Feature[lines.size() - 1];
+            for (int j = 1; j < lines.size(); j++) {
+                features[i][j - 1] = new Feature(lines.get(j).split(","), labelIndex, abandonIndex);
             }
             // 设置特征名称与索引
-            if (featureNames == null) // , 3, 4, 5, 8, 9
-                setFeatureNames(lines.get(0).split(","), 12, 0, 2, 3, 4, 5, 8, 9);
+            if (featureNames == null)
+                setFeatureNames(lines.get(0).split(","), labelIndex, abandonIndex);
         }
 
         selectOracleFeature();  //选择有oracle的bucket
-        if (isLowDataSet) selectLowFeature(threshold[0]);
     }
 
     /**
@@ -66,14 +64,14 @@ public class Project {
         versionName = version;
         revisionNumber = filter;
         bucketNames = new String[revisions.length];
-        features = new BaseFeature[revisions.length][];
+        features = new Feature[revisions.length][];
         for (int i = 0; i < features.length; i++) {
             List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
             bucketNames[i] = revisions[i].getName();
-            features[i] = new BaseFeature[lines.size()];
+            features[i] = new Feature[lines.size()];
 
             for (int j = 0; j < lines.size(); j++) {
-                features[i][j] = new BaseFeature(lines.get(j).split("\t"), 2, 0);
+                features[i][j] = new Feature(lines.get(j).split("\t"), 2, 0);
             }
         }
         this.filterNumber = revisions.length;
@@ -94,7 +92,7 @@ public class Project {
         int remain = 0;
         for (int i = 0; i < pass.length; i++) if (pass[i] == remain) count++;
 
-        BaseFeature[][] filterFeature = new BaseFeature[count][];
+        Feature[][] filterFeature = new Feature[count][];
         String[] filterBucketNames = new String[count];
         for (int i = 0, j = 0; i < features.length; i++) {
             if (pass[i] == remain) {
@@ -123,7 +121,7 @@ public class Project {
         int remain = 1;
         for (int i = 0; i < pass.length; i++) if (pass[i] == remain) count++;
 
-        BaseFeature[][] filterFeature = new BaseFeature[count][];
+        Feature[][] filterFeature = new Feature[count][];
         String[] filterBucketNames = new String[count];
         for (int i = 0, j = 0; i < features.length; i++) {
             if (pass[i] == remain) {
@@ -138,7 +136,7 @@ public class Project {
     }
 
 
-    public void setFeatures(BaseFeature[][] features) {
+    public void setFeatures(Feature[][] features) {
         this.features = features;
     }
 
@@ -159,34 +157,6 @@ public class Project {
 
     public int getFilterNumber() {
         return filterNumber;
-    }
-
-    public String[] getBucketNames() {
-        return bucketNames;
-    }
-
-    public String getVersionName() {
-        return versionName;
-    }
-
-    public void output(int threshold) {
-        int count = 0, i = 0;
-        for (BaseFeature[] bucket : features) {
-            if (bucket.length <= threshold && bucket.length > 5) {
-                count++;
-                System.out.println(bucketNames[i]);
-            }
-            i++;
-        }
-        System.out.println(count);
-    }
-
-    public void output() {
-        int count = 130;
-        for (BaseFeature[] bucket : features) {
-            count = Math.min(bucket.length, count);
-        }
-        System.out.println(count);
     }
 
     /**
