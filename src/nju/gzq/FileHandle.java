@@ -15,7 +15,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class FileHandle {
     /**
@@ -41,6 +43,28 @@ public class FileHandle {
         return lines;
     }
 
+    /**
+     * 读取文件返回一个字符串集合
+     * @param filePath
+     * @param args
+     * @return
+     */
+    public static Set<String> readFileToSet(String filePath, boolean... args){
+        BufferedReader reader = null;
+        if (args.length > 0 && args[0])
+            reader = FileHandle.getExternalPath(filePath); // 读取文件系统路径
+        else
+            reader = FileHandle.getActualPath(filePath); // 默认读取实际路径
+        Set<String> lines = new HashSet<>();
+        try {
+            String s = null;
+            while ((s = reader.readLine()) != null) lines.add(s);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return lines;
+    }
 
     /**
      * 将字符串写入文件，false表示覆盖

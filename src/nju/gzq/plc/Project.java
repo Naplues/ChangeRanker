@@ -46,6 +46,10 @@ public class Project {
         }
 
         selectOracleFeature();  //选择有oracle的bucket
+
+        String text = "";
+        for (String name : bucketNames) text += name + "\n";
+        FileHandle.writeStringToFile("crash_data\\info\\" + versionName, text);
     }
 
     /**
@@ -85,7 +89,9 @@ public class Project {
         int count = 0;
         for (int i = 0, j; i < features.length; i++) {
             if (features[i].length == 1) continue;
-            for (j = 0; j < features[i].length; j++) if (features[i][j].isLabel()) break;
+            for (j = 0; j < features[i].length; j++)
+                if (features[i][j].isLabel()) break;
+
             if (j == features[i].length) pass[i] = 1;
         }
         // 统计保留多少bucket
