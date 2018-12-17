@@ -1,9 +1,9 @@
 package test;
 
 import main.MySelector;
-import nju.gzq.plc.Project;
-import nju.gzq.plc.Evaluation;
-import nju.gzq.plc.Ranking;
+import nju.gzq.fc.Project;
+import nju.gzq.fc.Evaluation;
+import nju.gzq.fc.Ranking;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class PLCTest {
     public static String rootPath = "crash_data\\Form3\\";  //buckets_data\low\10\
     public static String[] versions = {"6.5", "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
     public static int labelIndex = 12;
-    public static int[] abandonIndex = {0, 2, 3, 4, 5, 8, 9};
+    public static int[] abandonIndex = {0, 2};//, 3, 4, 5, 8, 9
 
     /**
      * 训练测试: 测试PLC方法在各版本数据集上的性能以及平均性能
@@ -58,7 +58,7 @@ public class PLCTest {
         trainVersions.add(versions[0]); //添加6.5 作为最初的训练集
         for (int i = 1; i < versions.length; i++) {
             // 在之前版本上获得最有组合
-            Integer[] featureCombination = new MySelector().start(trainVersions, 5, 5, .0, 5);
+            Integer[] featureCombination = new MySelector().start(trainVersions, 10, 10, .0, 10);
             // 在下一版本上测试性能, i: 下一版本索引
             testFeatureCombination(i, featureCombination);
             // 将下一版本i加入训练集
