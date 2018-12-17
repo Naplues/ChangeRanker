@@ -52,6 +52,7 @@ public class Selector {
         //Graphviz.visual(result, true, "./out", "svg", featureNames, top);
 
         // 返回Top@k中使用特征数最少的组合
+
         int bestIndex = top - 1; //最优组合索引
         for (int i = top - 1, min = result[top - 1].getFeatureUsed().size(); i >= 0; i--) {
             if (result[i].getFeatureUsed().size() <= min) {
@@ -60,6 +61,7 @@ public class Selector {
             }
         }
 
+        //bestIndex = 0;
         Set<Object> bestSet = result[bestIndex].getFeatureUsed();
         Integer[] bestCombination = new Integer[bestSet.size()];
         int i = 0;

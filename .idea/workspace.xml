@@ -5,28 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8440f594-c363-4fb6-b449-d82844be88a3" name="Default" comment="更新数据集">
-      <change afterPath="$PROJECT_DIR$/crash_data/training/6.5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training/6.7.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training/6.8.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training/6.9.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training/7.0.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training/7.1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nju/gzq/Learning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/7.0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/7.1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates/7.2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/7.0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/7.1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/7.2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.7.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.9.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/training_single/7.0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crash_data/training_single/7.1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training/6.5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training/6.7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training/6.8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training/6.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training/7.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training/7.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PLC/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Project.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/test/Combine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/Learning.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Evaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Feature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Ranking$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Ranking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Selector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/test/ChangeLocatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/test/ChangeLocatorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PLC/test/PLCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/test/PLCTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/plc/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/fc/Evaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/plc/Feature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/fc/Feature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/plc/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/fc/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/plc/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/fc/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/Learning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Learning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Prediction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ChangeLocatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ChangeLocatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/Combine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/other/Combine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/PLCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PLCTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,17 +64,29 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="437">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PLCTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/PLCTest.java">
+      <file leaf-file-name="Predictor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+            <state relative-caret-position="475">
+              <caret line="277" column="39" selection-start-line="277" selection-start-column="39" selection-end-line="277" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LearnToRank.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-760">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -114,20 +146,29 @@
         <option value="$PROJECT_DIR$/src/nju/gzq/base/BaseRanking.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Ranking.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Feature.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/FileHandle.java" />
         <option value="$PROJECT_DIR$/src/test/Combine.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Project.java" />
         <option value="$PROJECT_DIR$/src/main/MySelector.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/Learning.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/test/PLCTest.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/ml/Main.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/Learning.java" />
+        <option value="$PROJECT_DIR$/src/test/Learning.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" />
+        <option value="$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-101" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-77" />
+    <option name="y" value="78" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -149,18 +190,31 @@
             <path>
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
               <item name="PLC" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="crash_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
               <item name="PLC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
               <item name="PLC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gzq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gzq" type="462c0819:PsiDirectoryNode" />
+              <item name="ml" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -180,16 +234,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\candidates" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\lib" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\src\nju\gzq\ml" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\training" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\naplues\Desktop\git\Pid" />
       <recent name="C:\Users\naplues\Desktop\git\Pid\buckets_data" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\training" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\lib" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\Combine" />
-      <recent name="C:\Users\gzq\Desktop\git\Pid\buckets_data\form3" />
-      <recent name="C:\Users\gzq\Desktop\git\Pid\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,12 +282,12 @@
       </extension>
     </configuration>
     <configuration name="Learning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="nju.gzq.Learning" />
+      <option name="MAIN_CLASS_NAME" value="test.Learning" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="nju.gzq.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -374,7 +428,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-77" y="78" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
@@ -384,12 +439,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3888889" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3888889" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.14552239" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.14552239" />
       <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -429,80 +484,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/Learning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/BaseFeature.java" />
-    <entry file="file://$PROJECT_DIR$/src/util/Feature.java" />
-    <entry file="file://$PROJECT_DIR$/data/6.7/Form3/testing/12160.csv" />
-    <entry file="file://$PROJECT_DIR$/data/6.7/Form2/testing/12160.csv" />
-    <entry file="file://$PROJECT_DIR$/src/test/ChangeLowTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/pid/Util.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/Pi/A.class" />
-    <entry file="jar://$PROJECT_DIR$/lib/Selector.jar!/nju/gzq/selector/Selector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/Selector.jar!/nju/gzq/base/BaseRanking.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buckets_data/form3/6.5/1347.csv" />
-    <entry file="jar://$PROJECT_DIR$/lib/Selector.jar!/nju/gzq/base/BaseFeature.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Selector.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PLC.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/Selector.jar!/nju/gzq/Main.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -552,13 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="72" column="30" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Selector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -647,27 +621,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/Learning.java">
+    <entry file="file://$PROJECT_DIR$/src/test/PLCTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state relative-caret-position="836">
+          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Learning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="874">
+          <caret line="69" column="56" lean-forward="true" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />
+          <folding>
+            <element signature="e#4730#4731#0" expanded="true" />
+            <element signature="e#4755#4756#0" expanded="true" />
+            <element signature="e#4908#4909#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PLCTest.java">
+    <entry file="file://$PROJECT_DIR$/crash_data/Combine3/6.7_train.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/oracleBuckets/6.5">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        <state relative-caret-position="76">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.8.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.7.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.5.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="491" selection-start-line="491" selection-end-line="501" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.9.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6060">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.8.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4179">
+          <caret line="1" selection-start-line="1" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.7.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.5.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/changeLocator_predict.jar!/main/Prediction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.7.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.9.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates_multiple/6.5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-760">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="277" column="39" selection-start-line="277" selection-start-column="39" selection-end-line="277" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -688,7 +791,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -747,7 +850,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Selector</last-edited>
+          <last-edited>changeLocator_predict</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
