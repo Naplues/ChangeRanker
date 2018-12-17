@@ -86,12 +86,12 @@ public class Predictor {
         int bid;
         while (var10.hasNext()) {
             bid = (Integer) var10.next();
-            HashSet<String> inducings = (HashSet) inducingRevisions.get(bid);
-            HashSet<String> potential = (HashSet) potentialRevisions.get(bid);
+            HashSet<String> inducings = inducingRevisions.get(bid);
+            HashSet<String> potential = potentialRevisions.get(bid);
             List<String> features = FileToLines.fileToLines(previous + File.separator + bid + ".txt");
 
             for (int i = 1; i < features.size(); ++i) {
-                String[] split = ((String) features.get(i)).split("\t");
+                String[] split = features.get(i).split("\t");
                 if (potential.contains(split[0])) {
                     String line = bid + "@" + split[0];
                     boolean allZero = true;
@@ -241,9 +241,8 @@ public class Predictor {
      * @throws Exception
      */
     public void predict() throws Exception {
-        String trainFileName = "crash_data/training_single/" + preVersion + ".csv";
         //训练集文件 train.csv
-        File trainFile = new File(trainFileName);
+        File trainFile = new File("crash_data/training_single/" + preVersion + ".csv");
         this.loadFiles(this.nextVersion);
         //建立结果文件夹results/Logistic
         List<List<Integer>> ranks = new ArrayList();

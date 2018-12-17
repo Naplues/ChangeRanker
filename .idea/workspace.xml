@@ -1,56 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/other/Combine.java" line="40" mnemonic="9" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="8440f594-c363-4fb6-b449-d82844be88a3" name="Default" comment="更新数据集">
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/6.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/7.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/7.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates/7.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/6.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/7.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/7.1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/candidates_multiple/7.2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.7.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.8.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training_single/6.9.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training_single/7.0.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crash_data/training_single/7.1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crash_data/training/6.5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crash_data/training/6.7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crash_data/training/6.8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crash_data/training/6.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crash_data/training/7.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crash_data/training/7.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/Learning.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Evaluation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Feature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Project.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Ranking$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/plc/Ranking.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Selector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/test/ChangeLocatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/test/ChangeLocatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/test/PLCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/test/PLCTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/Learning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Learning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Prediction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/105870.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/105870.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/116703.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/116703.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/12160.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/12160.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/132903.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/132903.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/133211.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/133211.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/133522.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/133522.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/136319.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/136319.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/136864.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/136864.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/143983.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/143983.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/144180.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/144180.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/145149.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/145149.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/145505.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/145505.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/146027.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/146027.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/146179.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/146179.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/146440.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/146440.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/147311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/147311.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/147528.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/147528.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/148968.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/148968.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/149037.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/149037.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/149126.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/149126.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/149365.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/149365.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/150616.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/150616.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/150785.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/150785.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/150791.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/150791.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/150955.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/150955.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151035.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151035.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151182.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151182.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151402.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151402.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151483.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151483.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151487.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151487.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151566.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151566.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151652.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151652.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/151702.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/151702.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/152110.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/152110.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/152117.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/152117.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/152176.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/152176.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/152407.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/152407.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/152458.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/152458.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/152953.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/152953.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/153267.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/153267.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/153409.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/153409.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/153556.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/153556.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/153790.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/153790.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/154715.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/154715.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/154730.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/154730.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/154932.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/154932.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/155021.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/155021.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/155913.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/155913.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/157282.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/157282.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/157674.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/157674.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/157882.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/157882.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/158030.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/158030.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/158356.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/158356.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/158441.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/158441.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/158743.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/158743.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/159173.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/159173.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/159351.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/159351.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/159892.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/159892.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/159974.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/159974.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/160138.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/160138.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/160336.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/160336.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/160498.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/160498.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/160660.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/160660.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/162971.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/162971.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/163040.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/163040.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/163067.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/163067.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/163409.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/163409.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164064.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164064.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164149.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164149.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164352.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164352.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164590.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164590.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164692.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164692.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164761.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164761.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/164762.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/164762.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/165431.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/165431.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/165513.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/165513.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/165622.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/165622.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/167361.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/167361.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/167489.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/167489.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/168108.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/168108.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/168472.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/168472.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/168608.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/168608.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/169812.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/169812.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/169820.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/169820.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/170231.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/170231.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/170455.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/170455.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/170549.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/170549.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/170716.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/170716.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/170762.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/170762.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171237.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171237.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171461.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171461.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171622.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171622.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171674.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171674.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171675.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171675.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171690.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171690.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171812.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171812.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/171918.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/171918.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/172265.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/172265.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/173157.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/173157.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/173758.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/173758.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/174134.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/174134.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/174501.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/174501.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/175142.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/175142.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/175259.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/175259.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/175322.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/175322.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/175967.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/175967.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/176945.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/176945.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/177122.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/177122.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/177715.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/177715.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/178227.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/178227.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/178393.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/178393.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/178466.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/178466.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/178582.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/178582.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/178794.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/178794.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/178810.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/178810.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/179185.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/179185.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/179633.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/179633.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/179641.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/179641.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/179690.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/179690.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/179784.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/179784.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/179785.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/179785.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/180073.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/180073.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/180080.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/180080.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/180599.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/180599.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/180712.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/180712.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/180726.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/180726.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/181520.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/181520.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/182429.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/182429.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/182824.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/182824.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/183051.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/183051.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/183208.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/183208.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/183264.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/183264.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/183274.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/183274.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/183543.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/183543.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/183808.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/183808.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184272.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184272.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184276.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184276.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184362.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184362.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184548.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184548.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184579.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184579.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184581.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184581.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184596.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184596.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184788.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184788.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/184997.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/184997.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/185608.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/185608.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/185647.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/185647.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/185810.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/185810.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/186211.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/186211.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/186854.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/186854.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/187417.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/187417.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/188393.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/188393.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/189526.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/189526.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/189554.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/189554.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/189746.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/189746.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/189882.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/189882.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/190604.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/190604.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/190775.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/190775.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/190901.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/190901.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/191105.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/191105.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/191156.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/191156.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/191358.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/191358.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/191399.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/191399.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/191571.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/191571.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/192186.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/192186.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/192478.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/192478.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/192719.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/192719.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/192732.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/192732.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/192776.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/192776.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/192894.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/192894.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/193374.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/193374.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/194008.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/194008.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/194225.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/194225.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/194243.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/194243.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/194717.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/194717.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/195797.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/195797.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/195997.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/195997.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/198565.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/198565.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/199833.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/199833.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/203700.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/203700.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/210816.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/210816.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/211848.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/211848.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/218072.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/218072.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/38410.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/38410.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/55032.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/55032.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/75311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/75311.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/Logistic.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/Logistic.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,32 +203,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="148">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Predictor.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="277" column="39" selection-start-line="277" selection-start-column="39" selection-end-line="277" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LearnToRank.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-760">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="81">
+              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+              <folding>
+                <element signature="docComment;method#loadFiles#0;class#Predictor#0" />
+                <element signature="method#loadFiles#0;class#Predictor#0" />
+                <element signature="method#constructTestingData#0;class#Predictor#0" />
+                <element signature="method#isHit#0;class#Predictor#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,10 +302,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-77" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-78" />
     <option name="y" value="78" />
-    <option name="width" value="1936" />
+    <option name="width" value="1937" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -180,6 +316,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,6 +328,12 @@
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
               <item name="PLC" type="462c0819:PsiDirectoryNode" />
               <item name="crash_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="crash_data" type="462c0819:PsiDirectoryNode" />
+              <item name="training_single" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
@@ -221,12 +364,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544455674296" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545061120019" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/changeLocator_predict.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -269,6 +410,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Combine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="other.Combine" />
@@ -280,6 +424,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Learning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Learning" />
@@ -291,59 +438,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration default="true" type="TestNG">
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -428,42 +553,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-77" y="78" width="1936" height="1056" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.29302832" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3888889" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.14552239" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.15844786" />
       <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3445826" />
       <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29840142" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3445826" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="EvoSuite" order="9" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.29302832" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新结构调整" />
@@ -474,9 +596,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="更新数据集" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="buckets[i]" language="JAVA" />
@@ -484,27 +603,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/Selector.jar!/nju/gzq/Main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ChangeLocatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Evaluation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1419">
-          <caret line="124" column="41" lean-forward="true" selection-start-line="124" selection-start-column="41" selection-end-line="124" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -514,20 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/base/BaseProject.java" />
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/base/BaseRanking.java" />
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Ranking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="22" lean-forward="true" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Feature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Ranking.java" />
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Feature.java" />
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/Setting.java" />
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Graphviz.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -570,23 +656,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/other/Combine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/other/Combine.java" />
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/fc/Project.java" />
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/FileHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -601,13 +672,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/weka.jar!/weka/core/converters/CSVLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/weka.jar!/weka/core/converters/CSVLoader.class" />
     <entry file="file://$PROJECT_DIR$/crash_data/Form3/6.7/55032.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -628,23 +693,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Learning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/Learning.java" />
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
@@ -668,57 +718,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.8.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.7.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.5.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="491" selection-start-line="491" selection-end-line="501" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.9.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6060">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.8.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4179">
-          <caret line="1" selection-start-line="1" selection-end-line="241" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.7.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.5.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.8.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.5.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" />
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" />
     <entry file="jar://$PROJECT_DIR$/lib/changeLocator_predict.jar!/main/Prediction.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -726,51 +733,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.7.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.8.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.9.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates_multiple/6.5.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.5.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java">
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.7.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.8.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.9.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.0.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.2.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.1.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates_multiple/6.5.txt" />
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.5.txt" />
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-760">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="148">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.7.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-474" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/results/Logistic/38410.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/results/Logistic/55032.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/results/Logistic/12160.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="277" column="39" selection-start-line="277" selection-start-column="39" selection-end-line="277" selection-end-column="39" />
+        <state relative-caret-position="81">
+          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+          <folding>
+            <element signature="docComment;method#loadFiles#0;class#Predictor#0" />
+            <element signature="method#loadFiles#0;class#Predictor#0" />
+            <element signature="method#constructTestingData#0;class#Predictor#0" />
+            <element signature="method#isHit#0;class#Predictor#0" />
+          </folding>
         </state>
       </provider>
     </entry>
