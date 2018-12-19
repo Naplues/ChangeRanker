@@ -12,16 +12,18 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-        // 测试PLC方法
-        //PLCTest.testFeatureCombination(6,  4, 8, 9);
+        // 测试FC
+        //PLCTest.testFeatureCombination(0, 4, 8, 9);
         //测试特征选择器
         //PLCTest.testSelector();
 
+
+        //测试ML
         for (int i = 0; i < versions.length - 1; i++) {
             Predictor predict = new Predictor(versions[i], versions[i + 1], form, classifier);
             //predict.constructTrainingData();
             //predict.constructTestingData();
-            predict.predict();
+            predict.predict(true, true);
         }
     }
 }

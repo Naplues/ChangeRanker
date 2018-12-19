@@ -30,6 +30,7 @@ public class Predictor {
         this.nextVersion = nextVersion;
         this.form = form;
         this.classifier = classifier;
+        System.out.println(preVersion + ", " + nextVersion);
     }
 
     /**
@@ -38,6 +39,7 @@ public class Predictor {
      * @param targetVersion 目标版本
      */
     public void loadFiles(String targetVersion) {
+        System.out.println("load: " + targetVersion);
         if (this.loadedVersion == null || !this.loadedVersion.equals(targetVersion)) {
             this.loadedVersion = targetVersion;
             String filename = "crash_data/candidates/" + targetVersion + ".txt";
@@ -238,11 +240,18 @@ public class Predictor {
     /**
      * 预测
      *
+     * @param selectFeatures       选择特征
+     * @param trainMultipleVersion 训练多个版本数据
      * @throws Exception
      */
-    public void predict() throws Exception {
+    public void predict(boolean selectFeatures, boolean trainMultipleVersion) throws Exception {
         //训练集文件 train.csv
-        File trainFile = new File("crash_data/training_single/" + preVersion + ".csv");
+
+        File trainFile;
+        if (!trainMultipleVersion)
+            trainFile = new File("crash_data/training_single/" + preVersion + ".csv");
+        else
+            trainFile = new File("crash_data/training_multiple/" + preVersion + ".csv");
         this.loadFiles(this.nextVersion);
         //建立结果文件夹results/Logistic
         List<List<Integer>> ranks = new ArrayList();
@@ -267,9 +276,12 @@ public class Predictor {
                 } else {
                     String testFileName = "crash_data/Form3/" + nextVersion + "/" + bid + ".csv";
                     File testFile = new File(testFileName);
-                    HashMap<String, Pair<Integer, Double>> predictLabel = LearnToRank.learnToRank(trainFile, testFile, this.classifier);
+                    HashMap<String, Pair<Integer, Double>> predictLabel;
+                    if (!selectFeatures)
+                        predictLabel = LearnToRank.learnToRank(trainFile, testFile, this.classifier);
+                    else
+                        predictLabel = LearnToRank.learnToRankWithFeatureSelection(trainFile, testFile, this.classifier);
                     //HashMap<String, Pair<Integer, Double>> predictLabel = LearnToRank.learnToRankWithIndex(trainFile, testFile, this.classifier);
-                    //HashMap<String, Pair<Integer, Double>> predictLabel = LearnToRank.learnToRankWithFeatureSelection(trainFile, testFile, this.classifier);
                     result = new ArrayList();
                     Iterator keyIterator = predictLabel.keySet().iterator();
                     //处理单个change的结果
@@ -277,7 +289,6 @@ public class Predictor {
                         String key = (String) keyIterator.next();
                         //将change ID 和预测值对应起来 <192894@8bc8d1cd23df, 0.8607162006854425>
                         result.add(new Pair(key, ((Pair) predictLabel.get(key)).getValue()));
-
                         //储存bucket的oracle change ID和oracle
                     }
                     //根据数值从小到大排序

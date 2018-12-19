@@ -189,10 +189,25 @@
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/55032.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/55032.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/75311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/75311.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/Logistic.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/Logistic.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_single/6.5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_single/6.5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_single/6.7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_single/6.7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_single/6.8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_single/6.8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_single/6.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_single/6.9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_single/7.0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_single/7.0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/training_single/7.1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/training_single/7.1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/Predictor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/Predictor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,25 +218,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="274">
+              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="Predictor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+            <state relative-caret-position="-29">
+              <caret line="237" column="5" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="5" />
               <folding>
                 <element signature="docComment;method#loadFiles#0;class#Predictor#0" />
-                <element signature="method#loadFiles#0;class#Predictor#0" />
+                <element signature="method#constructTrainingData#0;class#Predictor#0" />
                 <element signature="method#constructTestingData#0;class#Predictor#0" />
-                <element signature="method#isHit#0;class#Predictor#0" />
               </folding>
             </state>
           </provider>
@@ -292,20 +306,27 @@
         <option value="$PROJECT_DIR$/src/nju/gzq/Learning.java" />
         <option value="$PROJECT_DIR$/src/test/Learning.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" />
+        <option value="$PROJECT_DIR$/crash_data/training_single/6.5.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_single/6.7.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_single/6.8.csv" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" />
+        <option value="$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_single/6.9.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_single/7.0.csv" />
+        <option value="$PROJECT_DIR$/crash_data/training_single/7.1.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-78" />
-    <option name="y" value="78" />
-    <option name="width" value="1937" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -316,7 +337,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,12 +351,6 @@
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
               <item name="PLC" type="462c0819:PsiDirectoryNode" />
               <item name="crash_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
-              <item name="crash_data" type="462c0819:PsiDirectoryNode" />
-              <item name="training_single" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
@@ -363,7 +380,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,16 +391,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\candidates" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\lib" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\src\nju\gzq\ml" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\training" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\naplues\Desktop\git\Pid" />
       <recent name="C:\Users\naplues\Desktop\git\Pid\buckets_data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\training_multiple" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\training_single" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\candidates" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -410,9 +426,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Combine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="other.Combine" />
@@ -424,9 +437,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Learning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Learning" />
@@ -438,37 +448,59 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method v="2">
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -553,39 +585,42 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.15844786" />
-      <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29840142" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3445826" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
-      <window_info anchor="bottom" id="EvoSuite" order="9" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.29302832" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.29302832" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29738563" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.15991472" />
+      <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3445826" />
+      <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
+      <window_info anchor="bottom" id="EvoSuite" order="9" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
     </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新结构调整" />
@@ -603,6 +638,18 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+          <folding>
+            <element signature="docComment;method#loadFiles#0;class#Predictor#0" />
+            <element signature="method#constructTrainingData#0;class#Predictor#0" />
+            <element signature="method#constructTestingData#0;class#Predictor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -673,12 +720,6 @@
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weka.jar!/weka/core/converters/CSVLoader.class" />
-    <entry file="file://$PROJECT_DIR$/crash_data/Form3/6.7/55032.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/Form3/6.7/42983.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/crash_data/Form3/6.7/75311.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -708,9 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/Combine3/6.7_train.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/crash_data/oracleBuckets/6.5">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -718,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.8.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.5.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.0.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.1.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.9.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.8.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.7.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.5.csv" />
     <entry file="jar://$PROJECT_DIR$/lib/changeLocator_predict.jar!/main/Prediction.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -740,27 +770,11 @@
     <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.2.txt" />
     <entry file="file://$PROJECT_DIR$/crash_data/candidates/7.1.txt" />
     <entry file="file://$PROJECT_DIR$/crash_data/candidates_multiple/6.5.txt" />
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.5.txt" />
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.7.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-474" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crash_data/results/Logistic/38410.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-568" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/results/Logistic/55032.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/crash_data/results/Logistic/12160.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -769,16 +783,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.5.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="31" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/7.0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.7.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.8.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/6.9.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_single/7.1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.7.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.8.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.9.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="354" column="26" selection-start-line="354" selection-start-column="26" selection-end-line="354" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8512">
+          <caret line="448" column="161" selection-start-line="448" selection-start-column="161" selection-end-line="448" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.5.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+        <state relative-caret-position="-29">
+          <caret line="237" column="5" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="5" />
           <folding>
             <element signature="docComment;method#loadFiles#0;class#Predictor#0" />
-            <element signature="method#loadFiles#0;class#Predictor#0" />
+            <element signature="method#constructTrainingData#0;class#Predictor#0" />
             <element signature="method#constructTestingData#0;class#Predictor#0" />
-            <element signature="method#isHit#0;class#Predictor#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
