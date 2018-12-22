@@ -26,9 +26,11 @@ import weka.core.Utils;
 import weka.core.converters.CSVLoader;
 
 public class LearnToRank {
+    public static int[] abandonIndex = {0, 1, 2, 3, 4, 5, 7, 8, 9};
 
     /**
      * 特征选择后学习并且排序
+     *
      * @param trainFile
      * @param testFile
      * @param classifierName
@@ -124,7 +126,7 @@ public class LearnToRank {
         CSVLoader loader = new CSVLoader();
         loader.setSource(trainFile);
         Instances trainDataset = loader.getDataSet();
-        trainDataset.deleteAttributeAt(0);
+        for (int i = abandonIndex.length-1; i >= 0; i--) trainDataset.deleteAttributeAt(abandonIndex[i]);
 
         trainDataset.setClassIndex(trainDataset.numAttributes() - 1);
         loader = new CSVLoader();
@@ -133,7 +135,7 @@ public class LearnToRank {
         Instances copyTestDataset = new Instances(testDataset);
         testDataset.setClassIndex(testDataset.numAttributes() - 1);
         copyTestDataset.setClassIndex(copyTestDataset.numAttributes() - 1);
-        testDataset.deleteAttributeAt(0);
+        for (int i = abandonIndex.length-1; i >= 0; i--) testDataset.deleteAttributeAt(abandonIndex[i]);
         // 构建分类器
         classifier.buildClassifier(trainDataset);
 

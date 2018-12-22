@@ -8,6 +8,6 @@ import java.util.List;
 public class MySelector extends Selector {
     @Override
     public double getValue(List<String> trainVersions, Integer[] features) {
-        return PLCTest.trainFeatureCombination(trainVersions, false, features)[3];
+        return PLCTest.trainFeatureCombination("Form3", trainVersions, false, features)[3];
     }
 }

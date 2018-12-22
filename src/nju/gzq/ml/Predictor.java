@@ -22,6 +22,7 @@ public class Predictor {
     public String form; // Form
     public String classifier; //分类器名称
     private String loadedVersion; //加载的版本
+    public static int[] abandonIndex = {0, 2, 3, 4, 5, 8, 9};
     private static HashMap<Integer, HashSet<String>> inducingRevisions; //true
     private static HashMap<Integer, HashSet<String>> potentialRevisions; //false
 
@@ -30,7 +31,7 @@ public class Predictor {
         this.nextVersion = nextVersion;
         this.form = form;
         this.classifier = classifier;
-        System.out.println(preVersion + ", " + nextVersion);
+        System.out.println();
     }
 
     /**
@@ -38,11 +39,11 @@ public class Predictor {
      *
      * @param targetVersion 目标版本
      */
-    public void loadFiles(String targetVersion) {
-        System.out.println("load: " + targetVersion);
+    public void loadFiles(String form, String targetVersion) {
+        // System.out.println("load: " + targetVersion);
         if (this.loadedVersion == null || !this.loadedVersion.equals(targetVersion)) {
             this.loadedVersion = targetVersion;
-            String filename = "crash_data/candidates/" + targetVersion + ".txt";
+            String filename = Main.rootPath + "/" + form + "/candidates/" + targetVersion + ".txt";
             List<String> lines = FileToLines.fileToLines(filename);
             inducingRevisions = new HashMap();
             potentialRevisions = new HashMap();
@@ -69,7 +70,7 @@ public class Predictor {
     /**
      * 构建训练集
      */
-    public void constructTrainingData() {
+    public void constructTrainingData(String form) {
         String head = "key,files,functions,lines,addLines,deleteLines,pos,time,rf,ibf,isComponent,distance,isInducing";
         String trainingLoc = main.Main.prefix + "prediction_data" + File.separator + this.nextVersion + File.separator + this.form + File.separator + "training";
         System.out.println(trainingLoc);
@@ -78,7 +79,7 @@ public class Predictor {
 
         List<String> lines = new ArrayList();
         lines.add(head);
-        this.loadFiles(this.preVersion);
+        this.loadFiles(form, this.preVersion);
         String previous = main.Main.prefix + "prediction_data" + File.separator + this.preVersion + File.separator + this.form + File.separator + "features";
         HashMap<String, String> keyValues = new HashMap();
         HashSet<String> posInstance = new HashSet();
@@ -161,7 +162,7 @@ public class Predictor {
     /**
      * 构建测试集
      */
-    public void constructTestingData() {
+    public void constructTestingData(String form) {
         String head = "key,files,functions,lines,addLines,deleteLines,pos,time,rf,ibf,isComponent,distance,isInducing";
         String testingLoc = main.Main.prefix + "prediction_data" + File.separator + this.nextVersion + File.separator + this.form + File.separator + "testing";
         String featureLoc = main.Main.prefix + "prediction_data" + File.separator + this.nextVersion + File.separator + this.form + File.separator + "features";
@@ -171,7 +172,7 @@ public class Predictor {
         HashMap<String, String> keyValues = new HashMap();
         HashSet<String> posInstance = new HashSet();
         HashSet<String> negInstance = new HashSet();
-        this.loadFiles(this.nextVersion);
+        this.loadFiles(form, this.nextVersion);
         Iterator iterator = inducingRevisions.keySet().iterator();
 
         while (iterator.hasNext()) {
@@ -244,7 +245,7 @@ public class Predictor {
      * @param trainMultipleVersion 训练多个版本数据
      * @throws Exception
      */
-    public void predict(boolean selectFeatures, boolean trainMultipleVersion) throws Exception {
+    public void predict(String form, boolean selectFeatures, boolean trainMultipleVersion) throws Exception {
         //训练集文件 train.csv
 
         File trainFile;
@@ -252,7 +253,7 @@ public class Predictor {
             trainFile = new File("crash_data/training_single/" + preVersion + ".csv");
         else
             trainFile = new File("crash_data/training_multiple/" + preVersion + ".csv");
-        this.loadFiles(this.nextVersion);
+        this.loadFiles(form, this.nextVersion);
         //建立结果文件夹results/Logistic
         List<List<Integer>> ranks = new ArrayList();
         String resultFile = "crash_data/results";
@@ -274,7 +275,7 @@ public class Predictor {
                 if (!isHit(potential, inducing)) {
                     ranks.add(new ArrayList());
                 } else {
-                    String testFileName = "crash_data/Form3/" + nextVersion + "/" + bid + ".csv";
+                    String testFileName = Main.rootPath + form + "/" + nextVersion + "/" + bid + ".csv";
                     File testFile = new File(testFileName);
                     HashMap<String, Pair<Integer, Double>> predictLabel;
                     if (!selectFeatures)

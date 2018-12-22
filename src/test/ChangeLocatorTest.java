@@ -63,41 +63,12 @@ public class ChangeLocatorTest {
         output(values);
         System.out.println("==============================================================");
     }
-
-    public static void makeBuckets(String form) {
-        String filePath = "C:\\Users\\gzq\\Desktop\\origin\\prediction_data\\";
-        String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};//, "6.8", "6.9", "7.0", "7.1", "7.2"
-        int[] revision = {45, 42, 33, 31, 36, 33};//61, 52, 40, 38, 41, 39||89, 124, 152, 182, 215, 245
-        Project[] buckets = new Project[versions.length];
-        for (int i = 0; i < versions.length; i++) {
-            Project bucket = new Project(versions[i], filePath + versions[i] + "\\" + form + "\\results\\Logistic\\", revision[i]);
-            bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, 0));
-            buckets[i] = bucket;
-        }
-        Evaluation.evaluation(buckets, true);
-    }
-
-
-    /**
-     * ChangeLocator 在low dataset上的性能
-     */
-    public static void testLowDataset() {
-        String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
-        Project[] buckets = new Project[versions.length];
-        for (int i = 0; i < versions.length; i++) {
-            Project bucket = new Project(versions[i], changeLocatorLowBucketPath + versions[i] + "\\", 10);
-            buckets[i] = bucket;
-        }
-        Evaluation.evaLowDataset(buckets, true);
-    }
-
-
+    
     public static void main(String[] args) {
         System.out.println("Recall@1\tRecall@5\tRecall@10\tMRR\tMAP");
         //run("Form1");
         //run("Form2");
         //run("Form3");
-        makeBuckets("Form3");
         //testLowDataset();
     }
 }

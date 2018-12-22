@@ -53,35 +53,6 @@ public class Project {
     }
 
     /**
-     * ChangeLocator: 保存一个项目的所有bucket信息
-     *
-     * @param version 项目版本号
-     * @param path    changeLocator数据路径
-     */
-
-    public Project(String version, String path, int filter) {
-        File[] tempRevisions = new File(path).listFiles(); //对不同的情况需要改变 path + version
-        File[] revisions = new File[tempRevisions.length - 1]; //去除Logistic文件
-        for (int i = 0; i < revisions.length; i++)
-            revisions[i] = tempRevisions[i];
-
-        versionName = version;
-        revisionNumber = filter;
-        bucketNames = new String[revisions.length];
-        features = new Feature[revisions.length][];
-        for (int i = 0; i < features.length; i++) {
-            List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
-            bucketNames[i] = revisions[i].getName();
-            features[i] = new Feature[lines.size()];
-
-            for (int j = 0; j < lines.size(); j++) {
-                features[i][j] = new Feature(lines.get(j).split("\t"), 2, 0);
-            }
-        }
-        this.filterNumber = revisions.length;
-    }
-
-    /**
      * 选择有oracle的bucket
      */
     public void selectOracleFeature() {
@@ -114,7 +85,7 @@ public class Project {
     }
 
     /**
-     * 选择候选个数在指定阈值以内的bucket
+     * 选择候选集个数在指定阈值以内的bucket
      *
      * @param threshold 候选集数量阈值
      */
