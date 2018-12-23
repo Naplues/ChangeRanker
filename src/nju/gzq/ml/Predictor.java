@@ -22,7 +22,6 @@ public class Predictor {
     public String form; // Form
     public String classifier; //分类器名称
     private String loadedVersion; //加载的版本
-    public static int[] abandonIndex = {0, 2, 3, 4, 5, 8, 9};
     private static HashMap<Integer, HashSet<String>> inducingRevisions; //true
     private static HashMap<Integer, HashSet<String>> potentialRevisions; //false
 
@@ -31,7 +30,6 @@ public class Predictor {
         this.nextVersion = nextVersion;
         this.form = form;
         this.classifier = classifier;
-        System.out.println();
     }
 
     /**
@@ -265,6 +263,10 @@ public class Predictor {
 
         Iterator iterator = inducingRevisions.keySet().iterator();
 
+        // 标题
+        //for (int i = 0; i < 10; ++i) System.out.print("Recall@" + (i + 1) + ", ");
+        //System.out.println("MRR, MAP");
+
         while (true) {
             ArrayList result;
             // 处理单个bucket
@@ -320,15 +322,14 @@ public class Predictor {
             results[1] = mrr;
             String filename = resultFile + File.separator + this.classifier + ".txt";
             result = new ArrayList();
-            System.out.println("MAP:\t" + map);
-            result.add("MAP:\t" + map);
-            System.out.println("MRR:\t" + mrr);
-            result.add("MRR:\t" + mrr);
 
             for (int i = 0; i < N; ++i) {
-                System.out.println("TOP@" + (i + 1) + "\t" + topN[i]);
-                result.add("TOP@" + (i + 1) + "\t" + topN[i]);
+                System.out.print(topN[i] + ", ");
+                result.add("Recall@" + (i + 1) + "\t" + topN[i]);
             }
+            System.out.println(mrr + ", " + map);
+            result.add("MRR:\t" + mrr);
+            result.add("MAP:\t" + map);
 
             WriteLinesToFile.writeLinesToFile(result, filename);
             return;
