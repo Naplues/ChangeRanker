@@ -2,7 +2,193 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8440f594-c363-4fb6-b449-d82844be88a3" name="Default" comment="更新数据集">
+      <change afterPath="$PROJECT_DIR$/src/nju/gzq/predictor/EvaluationMetric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/105870.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/105870.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/116703.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/116703.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/12160.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/12160.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/132903.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/132903.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/133211.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/133211.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/133522.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/133522.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/136319.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/136319.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/136864.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/136864.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/143983.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/143983.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/144180.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/144180.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/145149.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/145149.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/145505.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/145505.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/146027.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/146027.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/146179.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/146179.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/146440.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/146440.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/147311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/147311.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/147528.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/147528.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/148968.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/148968.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/149037.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/149037.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/149126.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/149126.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/149365.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/149365.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/150616.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/150616.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/150785.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/150785.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/150791.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/150791.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/150955.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/150955.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151035.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151035.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151182.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151182.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151402.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151402.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151483.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151483.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151487.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151487.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151566.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151566.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151652.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151652.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/151702.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/151702.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/152110.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/152110.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/152117.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/152117.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/152176.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/152176.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/152407.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/152407.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/152458.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/152458.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/152953.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/152953.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/153267.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/153267.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/153409.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/153409.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/153556.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/153556.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/153790.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/153790.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/154715.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/154715.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/154730.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/154730.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/154932.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/154932.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/155021.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/155021.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/155913.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/155913.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/157282.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/157282.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/157674.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/157674.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/157882.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/157882.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/158030.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/158030.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/158356.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/158356.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/158441.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/158441.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/158743.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/158743.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/159173.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/159173.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/159351.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/159351.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/159892.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/159892.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/159974.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/159974.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/160138.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/160138.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/160336.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/160336.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/160498.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/160498.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/160660.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/160660.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/162971.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/162971.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/163040.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/163040.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/163067.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/163067.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/163409.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/163409.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164064.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164064.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164149.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164149.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164352.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164352.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164590.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164590.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164692.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164692.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164761.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164761.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/164762.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/164762.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/165431.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/165431.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/165513.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/165513.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/165622.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/165622.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/167361.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/167361.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/167489.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/167489.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/168108.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/168108.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/168472.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/168472.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/168608.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/168608.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/169812.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/169812.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/169820.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/169820.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/170231.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/170231.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/170455.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/170455.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/170549.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/170549.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/170716.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/170716.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/170762.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/170762.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171237.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171237.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171461.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171461.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171622.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171622.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171674.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171674.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171675.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171675.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171690.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171690.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171812.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171812.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/171918.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/171918.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/172265.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/172265.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/173157.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/173157.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/173758.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/173758.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/174134.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/174134.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/174501.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/174501.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/175142.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/175142.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/175259.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/175259.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/175322.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/175322.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/175967.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/175967.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/176945.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/176945.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/177122.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/177122.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/177715.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/177715.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/178227.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/178227.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/178393.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/178393.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/178466.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/178466.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/178582.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/178582.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/178794.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/178794.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/178810.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/178810.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/179185.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/179185.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/179633.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/179633.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/179641.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/179641.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/179690.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/179690.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/179784.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/179784.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/179785.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/179785.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/180073.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/180073.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/180080.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/180080.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/180599.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/180599.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/180712.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/180712.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/180726.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/180726.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/181520.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/181520.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/182429.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/182429.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/182824.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/182824.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/183051.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/183051.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/183208.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/183208.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/183264.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/183264.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/183274.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/183274.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/183543.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/183543.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/183808.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/183808.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184272.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184272.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184276.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184276.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184362.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184362.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184548.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184548.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184579.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184579.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184581.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184581.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184596.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184596.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184788.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184788.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/184997.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/184997.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/185608.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/185608.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/185647.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/185647.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/185810.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/185810.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/186211.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/186211.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/186854.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/186854.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/187417.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/187417.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/188393.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/188393.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/189526.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/189526.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/189554.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/189554.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/189746.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/189746.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/189882.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/189882.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/190604.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/190604.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/190775.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/190775.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/190901.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/190901.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/191105.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/191105.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/191156.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/191156.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/191358.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/191358.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/191399.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/191399.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/191571.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/191571.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/192186.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/192186.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/192478.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/192478.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/192719.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/192719.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/192732.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/192732.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/192776.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/192776.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/192894.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/192894.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/193374.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/193374.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/194008.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/194008.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/194225.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/194225.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/194243.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/194243.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/194717.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/194717.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/195797.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/195797.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/195997.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/195997.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/198565.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/198565.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/199833.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/199833.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/203700.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/203700.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/210816.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/210816.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/211848.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/211848.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/218072.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/218072.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/38410.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/38410.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/55032.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/55032.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crash_data/results/J48/75311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/J48/75311.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/105870.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/105870.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/116703.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/116703.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/12160.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/12160.txt" afterDir="false" />
@@ -189,16 +375,39 @@
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/55032.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/55032.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/75311.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/75311.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crash_data/results/Logistic/Logistic.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crash_data/results/Logistic/Logistic.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Selector.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PLC/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/LearnToRank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/LearnToRank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/Predictor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/Predictor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/FileHandle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/fc/Evaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/fc/Feature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/fc/Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/fc/Ranking$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/fc/Ranking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/LearnToRank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/ml/Predictor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Graphviz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Graphviz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/selector/Selector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/other/Combine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/other/Low.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/test/ChangeLocatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PLC/test/PLCTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/test/PLCTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/FileHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/utils/FileHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/fc/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/fc/Evaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/fc/Feature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/fc/Feature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/fc/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/fc/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/fc/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/fc/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/predictor/Predictor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/selector/Graphviz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/Graphviz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/other/Combine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/other/Combine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/other/Low.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/other/Low.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ChangeLocatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/PLCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PLCTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,31 +418,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Predictor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LearnToRank.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="260">
+              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding>
-                <element signature="method#learnToRankWithFeatureSelection#0;class#LearnToRank#0" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="87" column="66" selection-start-line="87" selection-start-column="66" selection-end-line="87" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getClassifier#0;class#LearnToRank#0" />
               </folding>
             </state>
           </provider>
@@ -270,13 +474,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/util/BaseFeature.java" />
-        <option value="$PROJECT_DIR$/src/util/Evaluation.java" />
-        <option value="$PROJECT_DIR$/src/util/Ranking.java" />
-        <option value="$PROJECT_DIR$/src/util/Bucket.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/pid/Ranking.java" />
-        <option value="$PROJECT_DIR$/src/test/ChangeLowTest.java" />
-        <option value="$PROJECT_DIR$/src/test/Test.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/pid/Util.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/pid/Bucket.java" />
         <option value="$PROJECT_DIR$/src/MySelector.java" />
@@ -294,7 +491,6 @@
         <option value="$PROJECT_DIR$/src/nju/gzq/base/BaseRanking.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Ranking.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Feature.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/FileHandle.java" />
         <option value="$PROJECT_DIR$/src/test/Combine.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Project.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/ml/Main.java" />
@@ -317,18 +513,26 @@
         <option value="$PROJECT_DIR$/src/main/MySelector.java" />
         <option value="$PROJECT_DIR$/src/other/Low.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/LearnToRank.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/Predictor.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/FileHandle.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/selector/fc/Feature.java" />
         <option value="$PROJECT_DIR$/src/test/PLCTest.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/selector/Selector.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/selector/fc/Evaluation.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/predictor/EvaluationMetric.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/predictor/Predictor.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1644" />
-    <option name="y" value="-5" />
-    <option name="width" value="1936" />
-    <option name="height" value="1007" />
+    <option name="x" value="631" />
+    <option name="y" value="55" />
+    <option name="width" value="1946" />
+    <option name="height" value="1106" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -338,60 +542,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
-              <item name="crash_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
-              <item name="crash_data" type="462c0819:PsiDirectoryNode" />
-              <item name="changeCandidate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
-              <item name="crash_data" type="462c0819:PsiDirectoryNode" />
-              <item name="changeCandidate" type="462c0819:PsiDirectoryNode" />
-              <item name="Form3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gzq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gzq" type="462c0819:PsiDirectoryNode" />
-              <item name="ml" type="462c0819:PsiDirectoryNode" />
+              <item name="predictor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gzq" type="462c0819:PsiDirectoryNode" />
-              <item name="selector" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PLC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PLC" type="462c0819:PsiDirectoryNode" />
+              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -399,32 +578,31 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545061120019" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/changeLocator_predict.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547135404635" />
+    <property name="last_opened_file_path" value="C:/Program Files/Weka-3-8/weka.jar!/" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gzq\Desktop\Git\ChangeRanker\src\nju\gzq\predictor" />
+      <recent name="C:\Users\gzq\Desktop\Git\ChangeRanker\src\nju\gzq\selector" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\10\Form2" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\5\Form2" />
+      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\changeCandidate\Form2\candidates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\changeCandidate\Form3" />
       <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\Combine" />
       <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\changeCandidate" />
       <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\5" />
       <recent name="C:\Users\naplues\Desktop\git\Pid" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\10\Form2" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\5\Form2" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\changeCandidate\Form2\candidates" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\10\Form1" />
-      <recent name="C:\Users\gzq\Desktop\git\PLC\crash_data\LowCandidate\5\Form1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -446,21 +624,27 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="other.*" />
+          <option name="PATTERN" value="nju.gzq.other.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Combine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="other.Combine" />
+      <option name="MAIN_CLASS_NAME" value="nju.gzq.other.Combine" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="other.*" />
+          <option name="PATTERN" value="nju.gzq.other.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Learning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Learning" />
@@ -472,70 +656,51 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Low" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="other.Low" />
+      <option name="MAIN_CLASS_NAME" value="nju.gzq.other.Low" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="other.*" />
+          <option name="PATTERN" value="nju.gzq.other.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration default="true" type="TestNG">
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -622,42 +787,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.29302832" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33006537" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.16311301" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.1659919" />
       <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36944938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34422657" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="EvoSuite" order="9" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.29129663" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新结构调整" />
@@ -668,9 +829,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="更新数据集" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="5" />
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="buckets[i]" language="JAVA" />
@@ -678,48 +836,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.8.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.9.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="354" column="26" selection-start-line="354" selection-start-column="26" selection-end-line="354" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/7.1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8512">
-          <caret line="448" column="161" selection-start-line="448" selection-start-column="161" selection-end-line="448" selection-end-column="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/6.5.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ChangeLocatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate/Form3/6.5/1347.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -811,20 +927,7 @@
     <entry file="file://$PROJECT_DIR$/crash_data/LowCandidate/5/Form3/candidates/6.5.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Learning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MySelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Learning.java" />
     <entry file="file://$PROJECT_DIR$/crash_data/6.5/1347.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -890,7 +993,7 @@
     <entry file="file://$PROJECT_DIR$/crash_data/LowCandidate/5/Form2/candidates/6.5.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/other/Low.java">
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/other/Low.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
@@ -914,41 +1017,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PLCTest.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="61" column="91" lean-forward="true" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
+        <state relative-caret-position="160">
+          <caret line="191" column="58" selection-start-line="191" selection-start-column="55" selection-end-line="191" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ChangeLocatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/fc/Feature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/utils/FileHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="951">
-          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/Predictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/ml/LearnToRank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="575">
+          <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
           <folding>
-            <element signature="method#learnToRankWithFeatureSelection#0;class#LearnToRank#0" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MySelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PLCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/selector/fc/Evaluation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="104" column="21" lean-forward="true" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/Predictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/EvaluationMetric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="87" column="66" selection-start-line="87" selection-start-column="66" selection-end-line="87" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getClassifier#0;class#LearnToRank#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="260">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,6 +1174,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

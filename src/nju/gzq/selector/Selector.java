@@ -1,6 +1,6 @@
 package nju.gzq.selector;
 
-import nju.gzq.fc.Project;
+import nju.gzq.selector.fc.Project;
 
 import java.util.*;
 

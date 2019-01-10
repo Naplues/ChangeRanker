@@ -1,6 +1,6 @@
 package nju.gzq.selector;
 
-import nju.gzq.FileHandle;
+import nju.gzq.utils.FileHandle;
 
 import java.util.HashSet;
 import java.util.Set;
