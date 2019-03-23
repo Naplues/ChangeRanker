@@ -1,11 +1,11 @@
-# PLC: A simple combination based approach to locating crash-inducing changes
+# ChangeRanker: Boosting crash-inducing change localization with rank-performance-based feature subset
 
 **Abstract**. Please Wait.   
 
 **Keywords**: Please Wait.
 
-## PLC
-This project implements the PLC approach.
+## ChangeRanker
+This project implements the ChangeRanker approach.
 
 ## Data Set:
 All changes feature data are collected by [Wu et al.](http://101.96.10.64/sccpu2.cse.ust.hk/castle/materials/ChangeLocator.pdf)  
