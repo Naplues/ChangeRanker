@@ -10,7 +10,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import main.Main;
-import nju.gzq.predictor.LearnToRank;
 import util.EvaluationMetric;
 import util.FileToLines;
 import util.Pair;
@@ -35,7 +34,7 @@ public class Predictor {
     /**
      * 加载指定版本的change candidates数据
      *
-     * @param targetVersion 目标版本
+     * @param targetVersion 目标测试版本
      */
     public void loadFiles(String form, String targetVersion) {
         // System.out.println("load: " + targetVersion);
@@ -88,7 +87,7 @@ public class Predictor {
      * @param trainMultipleVersion 训练多个版本数据
      * @throws Exception
      */
-    public void predict(String form, boolean selectFeatures, boolean trainMultipleVersion) throws Exception {
+    public void predict(String form, boolean trainMultipleVersion, boolean selectFeatures, Integer... selectedFeatures) throws Exception {
         //训练集文件 train.csv
 
         File trainFile;
@@ -125,11 +124,19 @@ public class Predictor {
                     String testFileName = Main.rootPath + form + "/" + nextVersion + "/" + bid + ".csv";
                     File testFile = new File(testFileName);
                     HashMap<String, Pair<Integer, Double>> predictLabel;
-                    if (!selectFeatures)
+                    //方法选择
+                    if (!selectFeatures) //ChangeLocator
+                    {
                         predictLabel = LearnToRank.learnToRank(trainFile, testFile, this.classifier);
-                    else
-                        predictLabel = LearnToRank.learnToRankWithFeatureSelection(trainFile, testFile, this.classifier);
-                    //HashMap<String, Pair<Integer, Double>> predictLabel = LearnToRank.learnToRankWithIndex(trainFile, testFile, this.classifier);
+                    } else if (selectedFeatures.length == 0) //ChangeLocator + Wrapper
+                    {
+                        predictLabel = LearnToRank.learnToRankWithWrapper(trainFile, testFile, this.classifier);
+                    } else  // ChangeRanker
+                    {
+                        predictLabel = LearnToRank.learnToRankWithRfs(trainFile, testFile, this.classifier, selectedFeatures);
+                    }
+
+
                     result = new ArrayList();
                     Iterator keyIterator = predictLabel.keySet().iterator();
                     //处理单个change的结果

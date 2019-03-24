@@ -1,7 +1,7 @@
 package test;
 
 import main.Main;
-import main.MySelector;
+import main.MyRfsSelector;
 import nju.gzq.selector.fc.Evaluation;
 import nju.gzq.selector.fc.Project;
 import nju.gzq.selector.fc.Ranking;
@@ -18,7 +18,9 @@ public class PLCTest {
 
     public static String[] versions = {"6.5", "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
     public static int labelIndex = 12;
-    public static int[] abandonIndex = {0, 2, 3, 4, 5, 8, 9};//, 3, 4, 5, 8, 9
+    public static int[] abandonIndex = {0, 2};//, 3, 4, 5, 8, 9
+    //0:NFA, 1:RLOCC, 2: RLOAC, 3: RLODC, 4: IADCP, 5: ITDCR, 6: RF
+    //7: IBF, 8: CC, 9: IADCL, 10: Label
 
     /**
      * 训练测试: 测试PLC方法在各版本数据集上的性能以及平均性能
@@ -60,7 +62,7 @@ public class PLCTest {
         trainVersions.add(versions[0]); //添加6.5 作为最初的训练集
         for (int i = 1; i < versions.length; i++) {
             // 在之前版本上获得最有组合
-            Integer[] featureCombination = new MySelector().start(trainVersions, 5, 5, .0, 5);
+            Integer[] featureCombination = new MyRfsSelector().start(trainVersions, 10, 3, .0, 10);
             // 在下一版本上测试性能, i: 下一版本索引
             testFeatureCombination(form, i, featureCombination);
             // 将下一版本i加入训练集

@@ -3,6 +3,9 @@ package main;
 import nju.gzq.predictor.Predictor;
 import test.PLCTest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static String rootPath = "crash_data/changeCandidate/";
@@ -17,10 +20,62 @@ public class Main {
         //测试特征选择器
         //PLCTest.testSelector(forms[2]);
 
-        //测试ML
+        // 测试ChangeLocator
+        //testChangeLocator(forms[2], classifier, false);
+
+        // 测试ChangeLocator + Wrapper
+        testChangeLocatorWithWrapper(forms[2], classifier, true);
+
+        // 测试ChangeRanker
+        //testChangeRanker(forms[2], classifier, 3, false);
+
+    }
+
+    /**
+     * 测试ChangeLocator
+     *
+     * @param form
+     * @param classifier
+     * @throws Exception
+     */
+    public static void testChangeLocator(String form, String classifier, boolean multiVersion) throws Exception {
         for (int i = 0; i < versions.length - 1; i++) {
             Predictor predict = new Predictor(versions[i], versions[i + 1], forms[2], classifier);
-            predict.predict(forms[2], true, true);
+            predict.predict(form, multiVersion, false);
+        }
+    }
+
+    /**
+     * 测试ChangeLocator
+     *
+     * @param form
+     * @param classifier
+     * @throws Exception
+     */
+    public static void testChangeLocatorWithWrapper(String form, String classifier, boolean multiVersion) throws Exception {
+        for (int i = 0; i < versions.length - 1; i++) {
+            Predictor predict = new Predictor(versions[i], versions[i + 1], forms[2], classifier);
+            predict.predict(form, multiVersion, true);
+        }
+    }
+
+    /**
+     * ChangeRanker
+     *
+     * @throws Exception
+     */
+    public static void testChangeRanker(String form, String classifier, int deep, boolean multiVersion) throws Exception {
+        // 训练数据版本
+        List<String> trainVersions = new ArrayList<>();
+        trainVersions.add(versions[0]); //添加6.5 作为最初的训练集
+        for (int i = 1; i < versions.length; i++) {
+            // 在之前版本上选取特征子集
+            Integer[] selectedFeatures = new MyRfsSelector().start(trainVersions, 10, deep, .0, 10);
+            // 在下一版本上测试性能, i: 下一版本索引
+            Predictor predict = new Predictor(versions[i - 1], versions[i], form, classifier);
+            predict.predict(form, multiVersion, true, selectedFeatures);
+            // 将下一版本i加入训练集
+            trainVersions.add(versions[i]);
         }
     }
 }

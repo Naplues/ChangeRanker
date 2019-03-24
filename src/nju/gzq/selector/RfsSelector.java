@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * 有效特征选择
  */
-public class Selector {
+public class RfsSelector {
     //选项值: 表示使用全部组合结果
     private static final int ALL = -1;
 
@@ -23,7 +23,7 @@ public class Selector {
     public final Integer[] start(List<String> trainVersions, int featureNumber, int neededFeatureNumber, double threshold, int top) {
         Node root = new Node(featureNumber);  //创建根节点
         explore(trainVersions, root, neededFeatureNumber);  //探索特征组合
-        System.out.println("Explore Finish.");
+        // System.out.println("Explore Finish.");
 
         // 获取叶子节点，并根据性能对叶子节点排序
         List<Node> leaves = new ArrayList<>();
@@ -61,9 +61,11 @@ public class Selector {
             }
         }
 
-        //bestIndex = 0;
+        bestIndex = 0;
         Set<Object> bestSet = result[bestIndex].getFeatureUsed();
         Integer[] bestCombination = new Integer[bestSet.size()];
+
+
         int i = 0;
         System.out.print("Best Feature Combination: ");
         for (Object featureIndex : bestSet) {
