@@ -6,7 +6,6 @@ import nju.gzq.selector.fc.Evaluation;
 import nju.gzq.selector.fc.Project;
 import nju.gzq.selector.fc.Ranking;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class PLCTest {
 
-    public static String[] versions = {"6.5", "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+    public static String[] versions = {"6.5", "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"}; //"6.5", "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
     public static int labelIndex = 12;
     public static int[] abandonIndex = {0, 2};//, 3, 4, 5, 8, 9
     //0:NFA, 1:RLOCC, 2: RLOAC, 3: RLODC, 4: IADCP, 5: ITDCR, 6: RF
@@ -30,8 +29,8 @@ public class PLCTest {
     public static double[] trainFeatureCombination(String form, List<String> trainVersions, boolean details, Integer... features) {
         Project[] projects = new Project[trainVersions.size()];
         for (int i = 0; i < trainVersions.size(); i++) {
-            Project bucket = new Project(Main.rootPath + "/" + form + "/" + trainVersions.get(i), labelIndex, abandonIndex);
-            bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
+            Project bucket = new Project(Main.testingPath + "/" + form + "/" + trainVersions.get(i), labelIndex, abandonIndex);
+            bucket.setFeatures(Ranking.rankByFeature(bucket, Ranking.SUMMATION, Ranking.RANK_DESC, features));
             projects[i] = bucket;
         }
         return Evaluation.evaluation(projects, details);
@@ -45,7 +44,7 @@ public class PLCTest {
      * @return
      */
     public static double[] testFeatureCombination(String form, int targetVersion, Integer... features) {
-        Project project = new Project(Main.rootPath + form + "/" + versions[targetVersion], labelIndex, abandonIndex);
+        Project project = new Project(Main.testingPath + form + "/" + versions[targetVersion], labelIndex, abandonIndex);
         project.setFeatures(Ranking.rankByFeature(project, Ranking.MULTIPLE, Ranking.RANK_DESC, features));
         return Evaluation.evaluation(project, true);
     }

@@ -16,8 +16,8 @@ import util.Pair;
 import util.WriteLinesToFile;
 
 public class Predictor {
-    public String preVersion; // 训练版本
-    public String nextVersion; //测试版本
+    public String preVersion;  // 训练版本
+    public String nextVersion; // 测试版本
     public String form; // Form
     public String classifier; //分类器名称
     private String loadedVersion; //加载的版本
@@ -40,18 +40,18 @@ public class Predictor {
         // System.out.println("load: " + targetVersion);
         if (this.loadedVersion == null || !this.loadedVersion.equals(targetVersion)) {
             this.loadedVersion = targetVersion;
-            String filename = Main.rootPath + "/" + form + "/candidates/" + targetVersion + ".txt";
+            String filename = Main.testingPath + "/" + form + "/candidates/" + targetVersion + ".txt";
             List<String> lines = FileToLines.fileToLines(filename);
-            inducingRevisions = new HashMap();
-            potentialRevisions = new HashMap();
+            inducingRevisions = new HashMap<>();
+            potentialRevisions = new HashMap<>();
             Iterator iterator = lines.iterator();
             //逐行访问候选集
             while (iterator.hasNext()) {
                 String line = (String) iterator.next();
                 String[] split = line.split("\t");
                 int bid = Integer.parseInt(split[0]);  //bucket ID
-                inducingRevisions.put(bid, new HashSet()); //inducing crash change 索引
-                potentialRevisions.put(bid, new HashSet()); //non-inducing crash change 索引
+                inducingRevisions.put(bid, new HashSet<>());  //inducing crash change 索引
+                potentialRevisions.put(bid, new HashSet<>()); //non-inducing crash change 索引
                 // 填充crash-inducing changes 数据
                 String inducing = split[1].substring(1, split[1].length() - 1);
                 String[] split2 = inducing.split(","); //crash-inducing changes 数组
@@ -92,13 +92,13 @@ public class Predictor {
 
         File trainFile;
         if (!trainMultipleVersion)
-            trainFile = new File("crash_data/training_single/" + preVersion + ".csv");
+            trainFile = new File(Main.trainingSinglePath + preVersion + ".csv");
         else
-            trainFile = new File("crash_data/training_multiple/" + preVersion + ".csv");
+            trainFile = new File(Main.trainingMultiplePath + form + "\\" + preVersion + ".csv");
         this.loadFiles(form, this.nextVersion);
         //建立结果文件夹results/Logistic
-        List<List<Integer>> ranks = new ArrayList();
-        String resultFile = "crash_data/results";
+        List<List<Integer>> ranks = new ArrayList<>();
+        String resultFile = Main.resultPath;
         File file = new File(resultFile);
         if (!file.exists()) file.mkdir();
         resultFile = resultFile + File.separator + this.classifier;
@@ -121,7 +121,7 @@ public class Predictor {
                 if (!isHit(potential, inducing)) {
                     ranks.add(new ArrayList());
                 } else {
-                    String testFileName = Main.rootPath + form + "/" + nextVersion + "/" + bid + ".csv";
+                    String testFileName = Main.testingPath + form + "/" + nextVersion + "/" + bid + ".csv";
                     File testFile = new File(testFileName);
                     HashMap<String, Pair<Integer, Double>> predictLabel;
                     //方法选择

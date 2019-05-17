@@ -72,7 +72,7 @@ public class LearnToRank {
         int[] abandonIndex = new int[12 - selectedFeatures.length];
         for (int i = 0, j = 0; i < 12; i++) if (!containedInArray(i, selected)) abandonIndex[j++] = i;
 
-        abandonIndex = new int[]{0, 1, 2, 3, 4, 5, 7, 8, 9};
+        //abandonIndex = new int[]{0, 1, 2, 3, 4, 5, 7, 8, 9};
         Classifier classifier = getClassifier(classifierName);
         HashMap<String, Pair<Integer, Double>> predictLabel = new HashMap();
         CSVLoader loader = new CSVLoader();
