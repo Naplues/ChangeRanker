@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import main.Main;
-import util.EvaluationMetric;
+
 import util.FileToLines;
 import util.Pair;
 import util.WriteLinesToFile;
@@ -83,97 +83,97 @@ public class Predictor {
     /**
      * 预测
      *
-     * @param selectFeatures       选择特征
+     * @param approach             选择特征
      * @param trainMultipleVersion 训练多个版本数据
      * @throws Exception
      */
-    public void predict(String form, boolean trainMultipleVersion, boolean selectFeatures, Integer... selectedFeatures) throws Exception {
+    public void predict(String form, boolean trainMultipleVersion, String approach, Integer... selectedFeatures) throws Exception {
         //训练集文件 train.csv
-
         File trainFile;
         if (!trainMultipleVersion)
             trainFile = new File(Main.trainingSinglePath + preVersion + ".csv");
         else
             trainFile = new File(Main.trainingMultiplePath + form + "\\" + preVersion + ".csv");
         this.loadFiles(form, this.nextVersion);
-        //建立结果文件夹results/Logistic
+        //建立结果文件夹results/Logistic/Project
         List<List<Integer>> ranks = new ArrayList<>();
-        String resultFile = Main.resultPath;
-        File file = new File(resultFile);
-        if (!file.exists()) file.mkdir();
-        resultFile = resultFile + File.separator + this.classifier;
-        file = new File(resultFile);
-        if (!file.exists()) file.mkdir();
+        String resultFilePath = Main.resultPath + File.separator + this.classifier + File.separator + nextVersion;
+        File file = new File(resultFilePath);
+        if (!file.exists()) file.mkdirs();
 
         Iterator iterator = inducingRevisions.keySet().iterator();
 
-        // 标题
-        //for (int i = 0; i < 10; ++i) System.out.print("Recall@" + (i + 1) + ", ");
-        //System.out.println("MRR, MAP");
-
-        while (true) {
-            ArrayList result;
-            // 处理单个bucket
-            while (iterator.hasNext()) {
-                int bid = (Integer) iterator.next(); //bucket ID
-                HashSet<String> inducing = inducingRevisions.get(bid);
-                HashSet<String> potential = potentialRevisions.get(bid);
-                if (!isHit(potential, inducing)) {
-                    ranks.add(new ArrayList());
-                } else {
-                    String testFileName = Main.testingPath + form + "/" + nextVersion + "/" + bid + ".csv";
-                    File testFile = new File(testFileName);
-                    HashMap<String, Pair<Integer, Double>> predictLabel;
-                    //方法选择
-                    if (!selectFeatures) //ChangeLocator
-                    {
+        ArrayList result;
+        // 处理单个bucket
+        while (iterator.hasNext()) {
+            int bid = (Integer) iterator.next(); //bucket ID
+            HashSet<String> inducing = inducingRevisions.get(bid);
+            HashSet<String> potential = potentialRevisions.get(bid);
+            if (!isHit(potential, inducing)) {
+                ranks.add(new ArrayList());
+            } else {
+                String testFileName = Main.testingPath + form + "/" + nextVersion + "/" + bid + ".csv";
+                File testFile = new File(testFileName);
+                HashMap<String, Pair<Integer, Double>> predictLabel;
+                //方法选择
+                switch (approach) {
+                    case "ChangeLocator":
                         predictLabel = LearnToRank.learnToRank(trainFile, testFile, this.classifier);
-                    } else if (selectedFeatures.length == 0) //ChangeLocator + Wrapper
-                    {
+                        break;
+                    case "Wrapper":
                         predictLabel = LearnToRank.learnToRankWithWrapper(trainFile, testFile, this.classifier);
-                    } else  // ChangeRanker
-                    {
+                        break;
+                    case "CFS":
+                        predictLabel = LearnToRank.learnToRankWithCFS(trainFile, testFile, this.classifier);
+                        break;
+                    case "InfoGain":
+                        predictLabel = LearnToRank.learnToRankWithInfoGain(trainFile, testFile, this.classifier);
+                        break;
+                    case "ChangeRanker":
                         predictLabel = LearnToRank.learnToRankWithRfs(trainFile, testFile, this.classifier, selectedFeatures);
-                    }
-
-
-                    result = new ArrayList();
-                    Iterator keyIterator = predictLabel.keySet().iterator();
-                    //处理单个change的结果
-                    while (keyIterator.hasNext()) {
-                        String key = (String) keyIterator.next();
-                        //将change ID 和预测值对应起来 <192894@8bc8d1cd23df, 0.8607162006854425>
-                        result.add(new Pair(key, ((Pair) predictLabel.get(key)).getValue()));
-                        //储存bucket的oracle change ID和oracle
-                    }
-                    //根据数值从小到大排序
-                    Collections.sort(result);
-                    List<Integer> rank = new ArrayList(); //inducing changes 的排名位置
-                    List<String> saveLines = new ArrayList();
-
-                    for (int i = 0; i < result.size(); ++i) {
-                        int index = result.size() - i - 1;
-                        // change ID
-                        String change = ((String) ((Pair) result.get(index)).getKey()).split("@")[1];
-                        if (inducing.contains(change)) rank.add(i);
-
-                        saveLines.add(((Pair) result.get(index)).getKey() + "\t" + ((Pair) result.get(index)).getValue() + "\t" + inducing.contains(change));
-                    }
-
-                    ranks.add(rank);
-                    WriteLinesToFile.writeLinesToFile(saveLines, resultFile + File.separator + bid + ".txt");
+                        break;
+                    default:
+                        predictLabel = new HashMap<>();
+                        break;
                 }
-            }
 
-            int N = 10;
-            double[] results = new double[N + 2];
-            double[] topN = EvaluationMetric.topN(ranks, N);
-            double map = EvaluationMetric.MAP(ranks);
-            double mrr = EvaluationMetric.MRR(ranks);
-            results[0] = map;
-            results[1] = mrr;
-            System.out.println(topN[0] + ", " + topN[4] + ", " + topN[9] + ", " + mrr + ", " + map);
-            return;
+                result = new ArrayList();
+                Iterator keyIterator = predictLabel.keySet().iterator();
+                //处理单个change的结果
+                while (keyIterator.hasNext()) {
+                    String key = (String) keyIterator.next();
+                    //将change ID 和预测值对应起来 <192894@8bc8d1cd23df, 0.8607162006854425>
+                    result.add(new Pair(key, ((Pair) predictLabel.get(key)).getValue()));
+                    //储存bucket的oracle change ID和oracle
+                }
+                //根据数值从小到大排序
+                Collections.sort(result);
+                List<Integer> rank = new ArrayList(); //inducing changes 的排名位置
+                List<String> saveLines = new ArrayList();
+
+                for (int i = 0; i < result.size(); ++i) {
+                    int index = result.size() - i - 1;
+                    // change ID
+                    String change = ((String) ((Pair) result.get(index)).getKey()).split("@")[1];
+                    if (inducing.contains(change)) rank.add(i);
+                    saveLines.add(((Pair) result.get(index)).getKey() + "\t" + ((Pair) result.get(index)).getValue() + "\t" + inducing.contains(change));
+                }
+                ranks.add(rank);
+                WriteLinesToFile.writeLinesToFile(saveLines, resultFilePath + File.separator + bid + ".txt");
+            }
         }
+
+        int N = 10;
+        double[] results = new double[N + 2];
+        double[] topN = EvaluationMetric.topN(ranks, N);
+        double map = EvaluationMetric.MAP(ranks);
+        double mrr = EvaluationMetric.MRR(ranks);
+        results[0] = map;
+        results[1] = mrr;
+        System.out.println(String.format("%.3f", topN[0]) + ", " +
+                String.format("%.3f", topN[4]) + ", " +
+                String.format("%.3f", topN[9]) + ", " +
+                String.format("%.3f", mrr) + ", " +
+                String.format("%.3f", map));
     }
 }

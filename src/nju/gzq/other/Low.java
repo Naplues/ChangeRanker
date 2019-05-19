@@ -1,6 +1,6 @@
 package nju.gzq.other;
 
-import nju.gzq.utils.FileHandle;
+import nju.gzq.utils.FileHandler;
 
 import java.io.File;
 import java.util.List;
@@ -19,14 +19,14 @@ public class Low {
     public static void remainLowCandidate(String form, String version, int threshold) {
         File[] files = new File(filePath + threshold + "/" + form + "/" + version + "/").listFiles();
         for (int i = 0; i < files.length; i++) {
-            List<String> lines = FileHandle.readFileToLines(files[i].getPath());
+            List<String> lines = FileHandler.readFileToLines(files[i].getPath());
             if (lines.size() - 1 <= threshold) new File(files[i].getPath()).delete();
         }
     }
 
     public static void remainLowCandidateFile(String form, String version, int threshold) {
         File[] buckets = new File(filePath + threshold + "/" + form + "/" + version + "/").listFiles();
-        List<String> lines = FileHandle.readFileToLines("crash_data/changeCandidate/" + form + "/candidates/" + version + ".txt");
+        List<String> lines = FileHandler.readFileToLines("crash_data/changeCandidate/" + form + "/candidates/" + version + ".txt");
         String text = "";
         for (String line : lines) {
             for (int i = 0; i < buckets.length; i++) {
@@ -36,7 +36,7 @@ public class Low {
                 }
             }
         }
-        FileHandle.writeStringToFile(filePath + threshold + "/" + form + "/candidates/" + version + ".txt", text);
+        FileHandler.writeStringToFile(filePath + threshold + "/" + form + "/candidates/" + version + ".txt", text);
     }
 
     public static void main(String[] args) {

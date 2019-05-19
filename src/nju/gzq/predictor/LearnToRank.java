@@ -7,9 +7,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import util.Pair;
-import weka.attributeSelection.AttributeSelection;
-import weka.attributeSelection.BestFirst;
-import weka.attributeSelection.WrapperSubsetEval;
+import weka.attributeSelection.*;
 import weka.classifiers.Classifier;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.functions.Logistic;
@@ -26,7 +24,6 @@ import weka.core.converters.CSVLoader;
 public class LearnToRank {
     //0: key, 1:NFA, 2: Function, 3:RLOCC, 4: RLOAC, 5: RLODC, 6: IADCP, 7: ITDCR, 8: RF, 9: IBF
     //10: CC, 11: IADCL, 12: Label
-    public static int[] abandonIndex = {0, 1, 2, 3, 4, 5, 7, 8, 9};//,1, 2, 3, 4, 5, 7, 8, 9
     public static Map map = new HashMap();
     //0:NFA, 1:RLOCC, 2: RLOAC, 3: RLODC, 4: IADCP, 5: ITDCR, 6: RF, 7: IBF
     //8: CC, 9: IADCL, 10: Label
@@ -47,9 +44,6 @@ public class LearnToRank {
 
 
     }
-    //0, 1, 2, 3, 5, 8, 9, 11
-    //0, 2, 3, 4, 5, 8, 9
-    //0, 1, 2, 3, 4, 5, 7, 8, 9
 
     public static boolean containedInArray(int index, int[] array) {
         for (int arr : array) if (arr == index) return true;
@@ -239,6 +233,157 @@ public class LearnToRank {
     }
 
     /**
+     * ChangeLocator + Info Gain
+     *
+     * @param trainFile
+     * @param testFile
+     * @param classifierName
+     * @return
+     * @throws Exception
+     */
+    public static HashMap<String, Pair<Integer, Double>> learnToRankWithInfoGain(File trainFile, File testFile, String classifierName) throws Exception {
+        Classifier classifier = getClassifier(classifierName);
+
+        HashMap<String, Pair<Integer, Double>> predictLabel = new HashMap<>();
+        CSVLoader loader = new CSVLoader();
+        loader.setSource(trainFile);
+        Instances trainDataset = loader.getDataSet();
+        trainDataset.deleteAttributeAt(2);
+        trainDataset.deleteAttributeAt(0);
+
+        trainDataset.setClassIndex(trainDataset.numAttributes() - 1);
+        int index = indexOfMinority(trainDataset);
+        loader = new CSVLoader();
+        loader.setSource(testFile);
+        Instances testDataset = loader.getDataSet();
+        Instances copyTestDataset = new Instances(testDataset);
+        testDataset.setClassIndex(testDataset.numAttributes() - 1);
+        copyTestDataset.setClassIndex(copyTestDataset.numAttributes() - 1);
+        testDataset.deleteAttributeAt(2);
+        testDataset.deleteAttributeAt(0);
+
+        ///////////////////////////////////////////////////////////
+        // 进行特征选择
+        AttributeSelection attributeSelection = new AttributeSelection(); //属性选择器
+        InfoGainAttributeEval attributeEval = new InfoGainAttributeEval(); //信息增益评估
+        attributeSelection.setEvaluator(attributeEval); //评估器
+        attributeSelection.setSearch(new Ranker()); //搜索策略: Ranker
+        attributeSelection.SelectAttributes(trainDataset);
+        //选择好的属性索引
+        int[] indices = attributeSelection.selectedAttributes();
+/*
+*         for (int idx : indices) System.out.print(idx + " ");
+        System.out.println();
+* */
+        int N = trainDataset.numAttributes();
+        int current = 0;
+        int deleteIndex = 0;
+
+        for (int i = 0; i < N; ++i) {
+            if (deleteIndex < indices.length && i >= indices[current]) {
+                ++current;
+                ++deleteIndex;
+            } else {
+                trainDataset.deleteAttributeAt(deleteIndex);
+                testDataset.deleteAttributeAt(deleteIndex);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////
+        //构建分类器
+        classifier.buildClassifier(trainDataset);
+
+        for (int i = 0; i < testDataset.numInstances(); ++i) {
+            Instance instance = testDataset.instance(i);
+            double[] values = classifier.distributionForInstance(instance);
+            String key = copyTestDataset.instance(i).stringValue(0);
+            int label = (int) copyTestDataset.instance(i).value(copyTestDataset.numAttributes() - 1);
+            label = 1 - label;
+            double suspicious = values[index];
+            predictLabel.put(key, new Pair(label, suspicious));
+        }
+
+        return predictLabel;
+    }
+
+
+    /**
+     * ChangeLocator + Info Gain
+     *
+     * @param trainFile
+     * @param testFile
+     * @param classifierName
+     * @return
+     * @throws Exception
+     */
+    public static HashMap<String, Pair<Integer, Double>> learnToRankWithCFS(File trainFile, File testFile, String classifierName) throws Exception {
+        Classifier classifier = getClassifier(classifierName);
+
+        HashMap<String, Pair<Integer, Double>> predictLabel = new HashMap<>();
+        CSVLoader loader = new CSVLoader();
+        loader.setSource(trainFile);
+        Instances trainDataset = loader.getDataSet();
+        trainDataset.deleteAttributeAt(2);
+        trainDataset.deleteAttributeAt(0);
+
+        trainDataset.setClassIndex(trainDataset.numAttributes() - 1);
+        int index = indexOfMinority(trainDataset);
+        loader = new CSVLoader();
+        loader.setSource(testFile);
+        Instances testDataset = loader.getDataSet();
+        Instances copyTestDataset = new Instances(testDataset);
+        testDataset.setClassIndex(testDataset.numAttributes() - 1);
+        copyTestDataset.setClassIndex(copyTestDataset.numAttributes() - 1);
+        testDataset.deleteAttributeAt(2);
+        testDataset.deleteAttributeAt(0);
+
+        ///////////////////////////////////////////////////////////
+        // 进行特征选择
+        AttributeSelection attributeSelection = new AttributeSelection(); //属性选择器
+        CfsSubsetEval attributeEval = new CfsSubsetEval(); // Cfs评估
+        String[] evalOptions = new String[]{"-P", "1", "-E", "1"};
+        attributeEval.setOptions(evalOptions);
+        attributeSelection.setEvaluator(attributeEval); //评估器
+        attributeSelection.setSearch(new BestFirst()); //搜索策略: BestFirst
+        attributeSelection.SelectAttributes(trainDataset);
+        //选择好的属性索引
+        int[] indices = attributeSelection.selectedAttributes();
+/*
+*         for (int idx : indices) System.out.print(idx + " ");
+        System.out.println();
+* */
+        int N = trainDataset.numAttributes();
+        int current = 0;
+        int deleteIndex = 0;
+
+        for (int i = 0; i < N; ++i) {
+            if (deleteIndex < indices.length && i >= indices[current]) {
+                ++current;
+                ++deleteIndex;
+            } else {
+                trainDataset.deleteAttributeAt(deleteIndex);
+                testDataset.deleteAttributeAt(deleteIndex);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////
+        //构建分类器
+        classifier.buildClassifier(trainDataset);
+
+        for (int i = 0; i < testDataset.numInstances(); ++i) {
+            Instance instance = testDataset.instance(i);
+            double[] values = classifier.distributionForInstance(instance);
+            String key = copyTestDataset.instance(i).stringValue(0);
+            int label = (int) copyTestDataset.instance(i).value(copyTestDataset.numAttributes() - 1);
+            label = 1 - label;
+            double suspicious = values[index];
+            predictLabel.put(key, new Pair(label, suspicious));
+        }
+
+        return predictLabel;
+    }
+
+    /**
      * ChangeLocator
      *
      * @param trainFile
@@ -248,7 +393,7 @@ public class LearnToRank {
      * @throws Exception
      */
     public static HashMap<String, Pair<Integer, Double>> learnToRank(File trainFile, File testFile, String classifierName) throws Exception {
-        int[] abandonIndex = {0, }; //1, 2, 3, 4, 5, 7, 8, 9
+        int[] abandonIndex = {0,}; //1, 2, 3, 4, 5, 7, 8, 9
         Classifier classifier = getClassifier(classifierName);
         HashMap<String, Pair<Integer, Double>> predictLabel = new HashMap();
         CSVLoader loader = new CSVLoader();

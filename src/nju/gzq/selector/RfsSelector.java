@@ -67,12 +67,13 @@ public class RfsSelector {
 
 
         int i = 0;
-        System.out.print("Best Feature Combination: ");
+
+       // System.out.print("Best Feature Combination: ");
         for (Object featureIndex : bestSet) {
             bestCombination[i++] = (Integer) featureIndex;
-            System.out.print(featureIndex + " ");
+           // System.out.print(featureIndex + " ");
         }
-        System.out.println();
+        //System.out.println();
         return bestCombination;
     }
 

@@ -1,6 +1,6 @@
 package nju.gzq.other;
 
-import nju.gzq.utils.FileHandle;
+import nju.gzq.utils.FileHandler;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,12 +13,16 @@ public class Extractor {
     public static String targetPath = "C:\\Users\\GZQ\\Desktop\\crash_data\\";
 
     public static void main(String[] args) throws IOException {
+        double rate = 0.4;
         String[] projects = {"AspectJ", "JDT", "PDE", "Tomcat"};
         String[] forms = {"Form1", "Form2", "Form3"};
         for (String project : projects) {
             for (String form : forms) {
                 //changeCandidate(project, form);
-                outTrain(project, form);
+                //outTrain(project, form);
+                extractExpData(project, form, rate);
+                outTrain(project, form, rate);
+                filterTestingBucket(project, form, rate);
             }
         }
     }
@@ -57,10 +61,10 @@ public class Extractor {
         if (form.equals("Form1")) {
             StringBuilder text = new StringBuilder("key,files,functions,lines,addLines,deleteLines,pos,time,rf,ibf,isComponent,distance,isInducing\n");
             for (String p : set) {
-                List<String> lines = FileHandle.readFileToLines(originPath + p + "\\" + form + "\\training\\train.csv");
+                List<String> lines = FileHandler.readFileToLines(originPath + p + "\\" + form + "\\training\\train.csv");
                 for (int i = 1; i < lines.size(); i++) text.append(lines.get(i)).append("\n");
             }
-            FileHandle.writeStringToFile(multiplePath + project + ".csv", text.toString());
+            FileHandler.writeStringToFile(multiplePath + project + ".csv", text.toString());
         }
 
         //results
@@ -69,14 +73,52 @@ public class Extractor {
     }
 
 
-    public static void outTrain(String project, String form) {
-        String path = "C:\\Users\\GZQ\\Desktop\\crash_data\\changeCandidate\\" + form + "\\" + project + "\\";
+    public static void extractExpData(String project, String form, double rate) throws IOException {
+        String path = "C:\\Users\\gzq\\Desktop\\crash_data\\changeCandidate\\" + form + "\\" + project + "\\";
+        String newTestPath = "C:\\Users\\gzq\\Desktop\\crash_data\\changeCandidate_" + rate + "\\" + form + "\\" + project + "\\";
+        String newTrainPath = "C:\\Users\\gzq\\Desktop\\crash_data\\training_" + rate + "\\" + form + "\\" + project + "\\";
+        String newCandidatePath = "C:\\Users\\gzq\\Desktop\\crash_data\\changeCandidate_" + rate + "\\" + form + "\\candidates\\";
+        File newTrainFolder = new File(newTestPath);
+        if (!newTrainFolder.exists()) newTrainFolder.mkdirs();
+        File newTestFolder = new File(newTrainPath);
+        if (!newTestFolder.exists()) newTestFolder.mkdirs();
+        File newCandidateFolder = new File(newCandidatePath);
+        if (!newCandidateFolder.exists()) newCandidateFolder.mkdirs();
+
+        //复制buckets文件
+        File[] buckets = new File(path).listFiles();
+        double trainSize = buckets.length * rate;
+        Set<Integer> bucketIDSet = new TreeSet<>();
+        for (File bucket : buckets) bucketIDSet.add(Integer.parseInt(bucket.getName().replace(".csv", "")));
+        int i = 0;
+        for (Integer bucketID : bucketIDSet) {
+            File sourceFile = new File(path + bucketID + ".csv");
+            File targetFile;
+            if (i < trainSize) {
+                // 将训练集文件复制到training_rate文件夹
+                targetFile = new File(newTrainPath + bucketID + ".csv");
+                System.out.println(bucketID);
+            } else {
+                targetFile = new File(newTestPath + bucketID + ".csv");
+            }
+            Files.copy(sourceFile.toPath(), targetFile.toPath());
+            i++;
+        }
+        // 复制candidates文件
+        String candidatePath = "C:\\Users\\gzq\\Desktop\\crash_data\\changeCandidate\\" + form + "\\candidates\\" + project + ".txt";
+        Files.copy(new File(candidatePath).toPath(), new File(newCandidatePath + project + ".txt").toPath());
+
+    }
+
+    public static void outTrain(String project, String form, double rate) {
+        String path = "C:\\Users\\gzq\\Desktop\\crash_data\\training_" + rate + "\\" + form + "\\" + project + "\\";
         StringBuilder text = new StringBuilder("key,files,functions,lines,addLines,deleteLines,pos,time,rf,ibf,isComponent,distance,isInducing\n");
         List<String> falseLines = new ArrayList<>();
         File[] files = new File(path).listFiles();
         int trueCounter = 0, falseCounter = 0;
         for (File file : files) {
-            List<String> lines = FileHandle.readFileToLines(file.getPath());
+            // System.out.println(file.getPath());
+            List<String> lines = FileHandler.readFileToLines(file.getPath());
             for (int i = 1; i < lines.size(); i++) {
                 if (lines.get(i).endsWith("true")) {
                     trueCounter++;
@@ -89,12 +131,31 @@ public class Extractor {
         }
 
         for (int i = 0; i < trueCounter; i++) {
-            int index = (int) ( Math.random() * falseLines.size());
+            int index = (int) (Math.random() * falseLines.size());
             text.append(falseLines.get(index)).append("\n");
         }
 
         System.out.println(project + " " + form + " " + trueCounter + " " + falseCounter);
         System.out.println(text.toString());
+        String outPath = "C:\\Users\\gzq\\Desktop\\crash_data\\training_" + rate + "\\" + form + "\\" + project + ".csv";
+        FileHandler.writeStringToFile(outPath, text.toString());
     }
 
+    public static void filterTestingBucket(String project, String form, double rate) {
+        String basePath = "C:\\Users\\GZQ\\Desktop\\crash_data\\changeCandidate_" + rate + "\\" + form + "\\";
+        String bucketPath = basePath + project + "\\";
+        File[] buckets = new File(bucketPath).listFiles();
+        Set<String> bucketID = new HashSet<>();
+        for (File bucket : buckets) {
+            bucketID.add(bucket.getName().replace(".csv", ""));
+        }
+        StringBuilder text = new StringBuilder();
+        String candidatePath = basePath + "candidates\\" + project + ".txt";
+        List<String> lines = FileHandler.readFileToLines(candidatePath);
+        for (String line : lines) {
+            if (bucketID.contains(line.split("\t")[0])) text.append(line).append("\n");
+        }
+        String outPath = basePath + "candidates\\" + project + ".txt";
+        FileHandler.writeStringToFile(outPath, text.toString());
+    }
 }

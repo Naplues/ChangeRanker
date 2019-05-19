@@ -1,6 +1,6 @@
 package nju.gzq.selector.fc;
 
-import nju.gzq.utils.FileHandle;
+import nju.gzq.utils.FileHandler;
 
 import java.io.File;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Project {
         bucketNames = new String[revisions.length];
         features = new Feature[revisions.length][];
         for (int i = 0; i < features.length; i++) {
-            List<String> lines = FileHandle.readFileToLines(revisions[i].getPath());
+            List<String> lines = FileHandler.readFileToLines(revisions[i].getPath());
             bucketNames[i] = revisions[i].getName();
             features[i] = new Feature[lines.size() - 1];
             for (int j = 1; j < lines.size(); j++) {
@@ -49,7 +49,7 @@ public class Project {
 
         String text = "";
         for (String name : bucketNames) text += name + "\n";
-        // FileHandle.writeStringToFile("crash_data\\oracleBuckets\\" + versionName, text);
+        // FileHandler.writeStringToFile("crash_data\\oracleBuckets\\" + versionName, text);
     }
 
     /**
@@ -124,7 +124,7 @@ public class Project {
         for (int i = 0; i < features.length; i++) {
             for (int j = 0; j < features[i].length; j++) string += features[i][j];
         }
-        FileHandle.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv", string);
+        FileHandler.writeStringToFile("C:\\Users\\gzq\\Desktop\\out.csv", string);
         return string;
     }
 

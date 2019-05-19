@@ -1,6 +1,6 @@
 package nju.gzq.selector;
 
-import nju.gzq.utils.FileHandle;
+import nju.gzq.utils.FileHandler;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -104,7 +104,7 @@ public class Graphviz {
         System.out.println(summary);
 
         string += "}";
-        FileHandle.writeStringToFile(filePath + ".dot", string); // 写入文件
+        FileHandler.writeStringToFile(filePath + ".dot", string); // 写入文件
 
         //////////////////////////////////////////// 4. 读取dot文件进行绘图 //////////////////////////////////////////////
         String cmd = "cmd /c start dot -T " + type + " " + filePath + ".dot -o " + filePath + "." + type;

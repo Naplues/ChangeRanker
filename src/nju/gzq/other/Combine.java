@@ -1,6 +1,6 @@
 package nju.gzq.other;
 
-import nju.gzq.utils.FileHandle;
+import nju.gzq.utils.FileHandler;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -35,12 +35,12 @@ public class Combine {
      * @return
      */
     public static List<String> combineOneVersion(String version) {
-        Set<String> oracleSet = FileHandle.readFileToSet(oracleBucketNamePath + version);
+        Set<String> oracleSet = FileHandler.readFileToSet(oracleBucketNamePath + version);
         File[] files = new File(sourcePath + version).listFiles();
         List<String> lists = new ArrayList<>();
         for (File file : files) {
             if (!oracleSet.contains(file.getName())) continue;
-            List<String> lines = FileHandle.readFileToLines(file.getPath());
+            List<String> lines = FileHandler.readFileToLines(file.getPath());
             for (int lineIndex = 1; lineIndex < lines.size(); lineIndex++) {
                 String[] temp = lines.get(lineIndex).split(",");
                 boolean allZero = true;
@@ -74,7 +74,7 @@ public class Combine {
                 text += line + "\n";
             }
         }
-        FileHandle.writeStringToFile(targetPath + versions[versionNumber] + "_train.csv", text);
+        FileHandler.writeStringToFile(targetPath + versions[versionNumber] + "_train.csv", text);
         System.out.println("The train set for version " + versions[versionNumber] + "has combined into " + targetPath + versions[versionNumber] + "_train.csv");
     }
 }
