@@ -1,4 +1,0 @@
-194243@eb7c79ef3ef7	1.0	true
-194243@2707e7a9b5da	1.0	false
-194243@a6b6e3cf36a4	0.0	false
-194243@313ca82fe335	0.0	false

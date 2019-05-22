@@ -41,8 +41,6 @@ public class LearnToRank {
         map.put(8, 10);
         map.put(9, 11);
         map.put(10, 12);
-
-
     }
 
     public static boolean containedInArray(int index, int[] array) {
@@ -148,25 +146,12 @@ public class LearnToRank {
      */
     public static HashMap<String, Pair<Integer, Double>> learnToRankWithWrapper(File trainFile, File testFile, String classifierName) throws Exception {
         Classifier classifier = getClassifier(classifierName);
-        String classifierClass = "";
-        if (classifierName.equals("Logistic")) {
+        String classifierClass  = "weka.classifiers.bayes.NaiveBayes";
+        /*if (classifierName.equals("Logistic")) {
             classifierClass = "weka.classifiers.functions.Logistic";
         } else if (classifierName.equals("NB")) {
             classifierClass = "weka.classifiers.bayes.NaiveBayes";
-        } else if (classifierName.equals("MLP")) {
-            classifierClass = "weka.classifiers.functions.MultilayerPerceptron";
-        } else if (classifierName.equals("J48")) {
-            classifierClass = "weka.classifiers.trees.J48";
-        } else if (classifierName.equals("IBk")) {
-            classifierClass = "weka.classifiers.lazy.IBk";
-        } else if (classifierName.equals("RF")) {
-            classifierClass = "weka.classifiers.functions.Logistic";
-        } else if (classifierName.equals("SVM")) {
-            classifierClass = "weka.classifiers.functions.SMO";
-        } else if (classifierName.equals("PART")) {
-            classifierClass = "weka.classifiers.rules.PART";
-        }
-
+        }*/
 
         HashMap<String, Pair<Integer, Double>> predictLabel = new HashMap();
         CSVLoader loader = new CSVLoader();
@@ -190,7 +175,7 @@ public class LearnToRank {
         // 进行特征选择
         AttributeSelection attributeSelection = new AttributeSelection(); //属性选择器
         WrapperSubsetEval wse = new WrapperSubsetEval(); //评估方式
-        String[] evalOptions = new String[]{"-B", classifierClass, "-E", "auc"};
+        String[] evalOptions = new String[]{"-B", classifierClass, "-E", "AUPRC"};
         wse.setOptions(evalOptions);
         attributeSelection.setEvaluator(wse); //评估器
         attributeSelection.setSearch(new BestFirst()); //搜索策略: BestFirst
@@ -241,7 +226,7 @@ public class LearnToRank {
      * @return
      * @throws Exception
      */
-    public static HashMap<String, Pair<Integer, Double>> learnToRankWithInfoGain(File trainFile, File testFile, String classifierName) throws Exception {
+    public static HashMap<String, Pair<Integer, Double>> learnToRankWithSVM(File trainFile, File testFile, String classifierName) throws Exception {
         Classifier classifier = getClassifier(classifierName);
 
         HashMap<String, Pair<Integer, Double>> predictLabel = new HashMap<>();
@@ -265,10 +250,11 @@ public class LearnToRank {
         ///////////////////////////////////////////////////////////
         // 进行特征选择
         AttributeSelection attributeSelection = new AttributeSelection(); //属性选择器
-        InfoGainAttributeEval attributeEval = new InfoGainAttributeEval(); //信息增益评估
+        SVMAttributeEval attributeEval = new SVMAttributeEval(); //信息增益评估
         attributeSelection.setEvaluator(attributeEval); //评估器
         attributeSelection.setSearch(new Ranker()); //搜索策略: Ranker
         attributeSelection.SelectAttributes(trainDataset);
+
         //选择好的属性索引
         int[] indices = attributeSelection.selectedAttributes();
 /*

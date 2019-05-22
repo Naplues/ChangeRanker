@@ -64,14 +64,11 @@ public class RfsSelector {
         bestIndex = 0;
         Set<Object> bestSet = result[bestIndex].getFeatureUsed();
         Integer[] bestCombination = new Integer[bestSet.size()];
-
-
         int i = 0;
-
-       // System.out.print("Best Feature Combination: ");
+        //System.out.print("Best Feature Combination: ");
         for (Object featureIndex : bestSet) {
             bestCombination[i++] = (Integer) featureIndex;
-           // System.out.print(featureIndex + " ");
+            //System.out.print(featureIndex + " ");
         }
         //System.out.println();
         return bestCombination;

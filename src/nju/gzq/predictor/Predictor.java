@@ -83,17 +83,12 @@ public class Predictor {
     /**
      * 预测
      *
-     * @param approach             选择特征
-     * @param trainMultipleVersion 训练多个版本数据
+     * @param approach 选择特征
      * @throws Exception
      */
-    public void predict(String form, boolean trainMultipleVersion, String approach, Integer... selectedFeatures) throws Exception {
+    public void predict(String form, String approach, Integer... selectedFeatures) throws Exception {
         //训练集文件 train.csv
-        File trainFile;
-        if (!trainMultipleVersion)
-            trainFile = new File(Main.trainingSinglePath + preVersion + ".csv");
-        else
-            trainFile = new File(Main.trainingMultiplePath + form + "\\" + preVersion + ".csv");
+        File trainFile = new File(Main.trainingMultiplePath + form + "\\" + preVersion + ".csv");
         this.loadFiles(form, this.nextVersion);
         //建立结果文件夹results/Logistic/Project
         List<List<Integer>> ranks = new ArrayList<>();
@@ -126,8 +121,8 @@ public class Predictor {
                     case "CFS":
                         predictLabel = LearnToRank.learnToRankWithCFS(trainFile, testFile, this.classifier);
                         break;
-                    case "InfoGain":
-                        predictLabel = LearnToRank.learnToRankWithInfoGain(trainFile, testFile, this.classifier);
+                    case "SVM":
+                        predictLabel = LearnToRank.learnToRankWithSVM(trainFile, testFile, this.classifier);
                         break;
                     case "ChangeRanker":
                         predictLabel = LearnToRank.learnToRankWithRfs(trainFile, testFile, this.classifier, selectedFeatures);
