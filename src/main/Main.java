@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static double rate = 0.7;
-    public static String rootPath = "C:\\Users\\gzq\\Desktop\\data\\new_project\\"; // "C:\\Users\\gzq\\Desktop\\data\\new_project\\"
+    public static double rate = 0.5;
+    public static String rootPath = "C:\\Users\\gzq\\Desktop\\data\\new_project_SMOTE\\"; // "C:\\Users\\gzq\\Desktop\\data\\new_project\\"
     public static String testingPath = rootPath + "changeCandidate_" + rate + "\\";
     public static String trainingMultiplePath = rootPath + "training_" + rate + "\\";
     public static String resultPath = rootPath + "results\\";
@@ -29,7 +29,7 @@ public class Main {
             //testChangeLocator(form, classifier);
 
             // 测试ChangeLocator + Wrapper
-            testChangeLocatorWithFS(form, classifier, "Wrapper");
+            //testChangeLocatorWithFS(form, classifier, "Wrapper");
 
             // 测试ChangeLocator + CFS
             //testChangeLocatorWithFS(form, classifier, "CFS");
@@ -38,7 +38,7 @@ public class Main {
             //testChangeLocatorWithFS(form, classifier, "SVM");
 
             // 测试ChangeRanker
-            //testChangeRankerInNetBeans(form, classifier, 3);
+            testChangeRanker(form, classifier, 3);
         }
     }
 

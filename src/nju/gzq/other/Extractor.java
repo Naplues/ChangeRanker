@@ -20,8 +20,7 @@ public class Extractor {
             for (String form : forms) {
                 //changeCandidate(project, form);
                 //extractExpData(project, form, rate);
-                //underSampling(project, form, rate);
-                overSampling(project, form, rate);
+                underSampling(project, form, rate);
                 //filterTestingBucket(project, form, rate);
                 //test(project, form);
             }
@@ -29,36 +28,6 @@ public class Extractor {
     }
 
 
-    public static void overSampling(String project, String form, double rate) {
-        String path = "C:\\Users\\gzq\\Desktop\\data\\netbeans_project\\training_" + rate + "\\" + form + "\\" + project + "\\";
-        StringBuilder text = new StringBuilder("key,files,functions,lines,addLines,deleteLines,pos,time,rf,ibf,isComponent,distance,isInducing\n");
-        List<String> trueLines = new ArrayList<>();
-        File[] files = new File(path).listFiles();
-        int trueCounter = 0, falseCounter = 0;
-        for (File file : files) {
-            List<String> lines = FileHandler.readFileToLines(file.getPath());
-            for (int i = 1; i < lines.size(); i++) {
-                if (lines.get(i).endsWith("true")) {
-                    trueCounter++;
-                    trueLines.add(lines.get(i));
-                } else {
-                    falseCounter++;
-                    text.append(lines.get(i)).append("\n");
-                }
-            }
-        }
-
-        for (int i = 0; i < falseCounter; i++) {
-            text.append(trueLines.get(i % trueCounter)).append("\n");
-        }
-
-        System.out.println(project + " " + form + " " + trueCounter + " " + falseCounter);
-        System.out.println(text.toString());
-        String outPath = "C:\\Users\\gzq\\Desktop\\data\\over_sampling\\training_" + rate + "\\" + form + "\\";
-        File outFolder = new File(outPath);
-        if (!outFolder.exists()) outFolder.mkdirs();
-        FileHandler.writeStringToFile(outPath + project + ".csv", text.toString());
-    }
 
     public static void test(String project, String form) {
         String path = "C:\\Users\\GZQ\\Desktop\\data\\new_project\\changeCandidate\\" + form + "\\" + project + "\\";
