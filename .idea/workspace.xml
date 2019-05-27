@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8440f594-c363-4fb6-b449-d82844be88a3" name="Default" comment="更新数据集">
-      <change afterPath="$PROJECT_DIR$/src/nju/gzq/other/Sampling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nju/gzq/other/Locus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PLC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PLC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/predictor/LearnToRank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/predictor/LearnToRank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/other/Extractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/other/Extractor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testChangeLocator#0;class#Main#0" />
@@ -36,14 +31,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nju/gzq/other/Sampling.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/nju/gzq/other/Locus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="276">
+              <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#balance#0;class#Sampling#0" />
+                <element signature="e#1934#1935#0" expanded="true" />
+                <element signature="e#1984#1985#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,7 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/nju/gzq/Setting.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/base/BaseProject.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/plc/Evaluation.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/selector/Graphviz.java" />
@@ -131,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/nju/gzq/other/Extractor.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/other/Sampling.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/nju/gzq/other/Locus.java" />
       </list>
     </option>
   </component>
@@ -148,8 +144,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,7 +193,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558947164966" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558962874328" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/SMOTE.jar!/" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -232,7 +228,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Locus">
     <configuration name="Extractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nju.gzq.other.Extractor" />
       <module name="PLC" />
@@ -247,13 +243,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Learning" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Learning" />
+    <configuration name="Locus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="nju.gzq.other.Locus" />
       <module name="PLC" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="nju.gzq.other.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -321,18 +317,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Extractor" />
-      <item itemvalue="Application.Learning" />
       <item itemvalue="Application.Low" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Sampling" />
+      <item itemvalue="Application.Locus" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Locus" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Sampling" />
         <item itemvalue="Application.Extractor" />
         <item itemvalue="Application.Low" />
-        <item itemvalue="Application.Learning" />
       </list>
     </recent_temporary>
   </component>
@@ -402,9 +398,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.18336888" />
       <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -413,7 +410,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261105" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3900325" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39219934" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3428064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -451,7 +448,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.7.txt" />
     <entry file="file://$PROJECT_DIR$/crash_data/candidates/6.8.txt" />
     <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form1/6.5/7612.csv" />
     <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form1/6.5/1347.csv" />
@@ -592,13 +588,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/SMOTE.jar!/weka/filters/supervised/instance/SMOTE.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/SMOTE.jar!/weka/filters/supervised/instance/SMOTE.class" />
     <entry file="jar://$PROJECT_DIR$/lib/changeLocator_predict.jar!/weka/filters/supervised/instance/SMOTE.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -636,12 +626,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testChangeLocator#0;class#Main#0" />
             <element signature="method#testChangeLocatorWithFS#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/other/Locus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
           </folding>
         </state>
       </provider>
