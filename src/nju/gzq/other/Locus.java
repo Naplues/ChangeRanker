@@ -9,15 +9,18 @@ public class Locus {
     static String LocusPath = "C:\\Users\\GZQ\\Desktop\\data\\Locus\\";
 
     public static void main(String[] args) {
-        String[] projects = {"JDT"};  //, "JDT", "PDE", "Tomcat"
+        String[] projects = {"AspectJ", "JDT", "PDE", "Tomcat"};  //, "JDT", "PDE", "Tomcat"
         String[] forms = {"Form1", "Form2", "Form3"}; // , "Form2", "Form3"
         double[] rates = {0.4, 0.5, 0.6, 0.7};
-        for (String project : projects) {
+        for (double rate : rates) {
+            System.out.println(rate);
             for (String form : forms) {
-                for (double rate : rates) {
+                System.out.println(form);
+                for (String project : projects) {
                     //getResult(project, form, rate); //获取预测结果
                     evaluate(project, form, rate); // 预测结果
                 }
+                System.out.println();
             }
         }
     }
@@ -80,8 +83,70 @@ public class Locus {
     }
 
     public static void evaluate(String project, String form, double rate) {
+        String testingFilePath = LocusPath + "testing_" + rate + "\\" + form + "\\" + project + "\\";
+        String result = Recall(testingFilePath, 1);
+        result += "," + Recall(testingFilePath, 5);
+        result += "," + Recall(testingFilePath, 10);
+        result += "," + MRR(testingFilePath);
+        result += "," + MAP(testingFilePath);
+        System.out.println(result);
 
     }
+
+    public static String Recall(String path, int k) {
+        File[] files = new File(path).listFiles();
+        int total = files.length;
+        double recall = .0;
+        for (File file : files) {
+            List<String> lines = FileHandler.readFileToLines(file.getPath());
+            if (lines.size() == 0) continue;
+            for (int i = 0; i < k && i < lines.size(); i++) {
+                if (lines.get(i).endsWith("true")) {
+                    recall++;
+                    break;
+                }
+            }
+        }
+        return String.format("%.3f", recall / total);
+    }
+
+    public static String MRR(String path) {
+        File[] files = new File(path).listFiles();
+        int total = files.length;
+        double rr = .0;
+        for (File file : files) {
+            List<String> lines = FileHandler.readFileToLines(file.getPath());
+            if (lines.size() == 0) continue;
+            for (int i = 0; i < lines.size(); i++) {
+                if (lines.get(i).endsWith("true")) {
+                    rr += 1.0 / (i + 1);
+                    break;
+                }
+            }
+        }
+        return String.format("%.3f", rr / total);
+    }
+
+    public static String MAP(String path) {
+        File[] files = new File(path).listFiles();
+        int total = files.length;
+        double ap = .0;
+        for (File file : files) {
+            List<String> lines = FileHandler.readFileToLines(file.getPath());
+            if (lines.size() == 0) continue;
+            double n = 1.0;
+            double p = .0;
+            for (int i = 0; i < lines.size(); i++) {
+                if (lines.get(i).endsWith("true")) {
+                    p += n / (i + 1);
+                    n++;
+                }
+            }
+            ap += p / n;
+        }
+        return String.format("%.3f", ap / total);
+    }
+
 }
 
 class Rank implements Comparable {
