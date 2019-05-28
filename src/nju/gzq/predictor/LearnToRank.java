@@ -14,6 +14,7 @@ import weka.classifiers.functions.Logistic;
 import weka.classifiers.functions.MultilayerPerceptron;
 import weka.classifiers.functions.SMO;
 import weka.classifiers.lazy.IBk;
+import weka.classifiers.meta.Bagging;
 import weka.classifiers.rules.PART;
 import weka.classifiers.trees.J48;
 import weka.classifiers.trees.RandomForest;
@@ -101,7 +102,7 @@ public class LearnToRank {
      * @param classifierName
      * @return
      */
-    public static Classifier getClassifier(String classifierName) {
+    public static Classifier getClassifier(String classifierName) throws Exception {
         Classifier classifier;
 
         switch (classifierName) {
@@ -130,7 +131,9 @@ public class LearnToRank {
                 classifier = new PART();
                 break;
             default:
-                classifier = new Logistic();
+                classifier = new Bagging();
+                classifier.setOptions(new String[]{"-B", "Logistic"});
+
         }
         return classifier;
     }
@@ -146,7 +149,7 @@ public class LearnToRank {
      */
     public static HashMap<String, Pair<Integer, Double>> learnToRankWithWrapper(File trainFile, File testFile, String classifierName) throws Exception {
         Classifier classifier = getClassifier(classifierName);
-        String classifierClass  = "weka.classifiers.bayes.NaiveBayes";
+        String classifierClass = "weka.classifiers.bayes.NaiveBayes";
         /*if (classifierName.equals("Logistic")) {
             classifierClass = "weka.classifiers.functions.Logistic";
         } else if (classifierName.equals("NB")) {
