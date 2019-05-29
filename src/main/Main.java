@@ -7,39 +7,40 @@ import java.util.List;
 
 public class Main {
     public static double rate = 1.0;
-    public static String rootPath = "C:\\Users\\gzq\\Desktop\\data\\netbeans_project\\"; // "C:\\Users\\gzq\\Desktop\\data\\new_project\\"
-    public static String testingPath = rootPath + "changeCandidate_" + rate + "\\";
-    public static String trainingMultiplePath = rootPath + "training_" + rate + "\\";
+    public static String rootPath = "C:\\Users\\gzq\\Desktop\\data\\new_project\\"; // "C:\\Users\\gzq\\Desktop\\data\\new_project\\"
+    public static String testingPath = rootPath + "testing\\";
+    public static String trainingMultiplePath = rootPath + "training\\";
     public static String resultPath = rootPath + "results\\";
-    public static String classifier = "Bagging"; // Logistic  NB  MLP  J48  IBk  RF  SVM  PART
-    public static String[] classifiers = {"Logistic", "NB", " MLP", "J48", "IBk", "SVM", "PART"};
-    public static String form = "Form3";
+    public static String classifier = "Logistic"; // Logistic  NB  MLP  J48  IBk  RF  SVM  PART
+    public static String[] classifiers = {"Logistic", "NB", "MLP", "J48", "IBk", "SVM", "PART"};
+    public static String form = "Form1";
     public static String[] forms = {"Form1", "Form2", "Form3"};
-    public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+    public static String[] versions = {"AspectJ", "JDT", "Tomcat"};
 
     // "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
     // "AspectJ", "JDT", "PDE", "Tomcat"
 
     public static void main(String[] args) throws Exception {
-        for (String form : forms) {
-            // for (String classifier : classifiers) {
-            System.out.println(form);
-            // 测试ChangeLocator
-            //System.out.println("ChangeLocator");
-            //testChangeLocator(form, classifier);
+        //  for (String form : forms) {
+        //for (String classifier : classifiers) {
+        System.out.println(classifier);
+        // 测试ChangeLocator
+        //System.out.println("ChangeLocator");
+        //testChangeLocator(form, classifier);
 
-            // 测试ChangeLocator + Wrapper
-            //testChangeLocatorWithFS(form, classifier, "Wrapper");
+        // 测试ChangeLocator + Wrapper
+        //testChangeLocatorWithFS(form, classifier, "Wrapper");
 
-            // 测试ChangeLocator + CFS
-            //testChangeLocatorWithFS(form, classifier, "CFS");
+        // 测试ChangeLocator + CFS
+        //testChangeLocatorWithFS(form, classifier, "CFS");
 
-            // 测试ChangeLocator + InfoGain
-            //testChangeLocatorWithFS(form, classifier, "SVM");
+        // 测试ChangeLocator + InfoGain
+        //testChangeLocatorWithFS(form, classifier, "SVM");
 
-            // 测试ChangeRanker
-            testChangeRanker(form, classifier, 3);
-        }
+        // 测试ChangeRanker
+        testChangeRanker(form, classifier, 3);
+        // }
+
     }
 
     /**

@@ -101,14 +101,15 @@ public class Predictor {
         ArrayList result;
         // 处理单个bucket
         while (iterator.hasNext()) {
-            int bid = (Integer) iterator.next(); //bucket ID
+            int bid = (Integer) iterator.next(); //candidate 中的 bucket ID
             HashSet<String> inducing = inducingRevisions.get(bid);
             HashSet<String> potential = potentialRevisions.get(bid);
             if (!isHit(potential, inducing)) {
-                ranks.add(new ArrayList());
+                ranks.add(new ArrayList<>());
             } else {
                 String testFileName = Main.testingPath + form + "/" + nextVersion + "/" + bid + ".csv";
                 File testFile = new File(testFileName);
+
                 HashMap<String, Pair<Integer, Double>> predictLabel;
                 //方法选择
                 switch (approach) {

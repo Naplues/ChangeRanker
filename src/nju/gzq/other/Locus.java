@@ -9,26 +9,23 @@ public class Locus {
     static String LocusPath = "C:\\Users\\GZQ\\Desktop\\data\\Locus\\";
 
     public static void main(String[] args) {
-        String[] projects = {"AspectJ", "JDT", "PDE", "Tomcat"};  //, "JDT", "PDE", "Tomcat"
+        String[] projects = {"AspectJ", "JDT", "Tomcat"};  //, "JDT", "Tomcat"
         String[] forms = {"Form1", "Form2", "Form3"}; // , "Form2", "Form3"
-        double[] rates = {0.4, 0.5, 0.6, 0.7};
-        for (double rate : rates) {
-            System.out.println(rate);
-            for (String form : forms) {
-                System.out.println(form);
-                for (String project : projects) {
-                    //getResult(project, form, rate); //获取预测结果
-                    evaluate(project, form, rate); // 预测结果
-                }
-                System.out.println();
+
+        for (String form : forms) {
+            System.out.println(form);
+            for (String project : projects) {
+                //getResult(project, form); //获取预测结果 9, 10, 10
+                evaluate(project, form); // 预测结果
             }
+            System.out.println();
         }
     }
 
-    public static void getResult(String project, String form, double rate) {
+    public static void getResult(String project, String form) {
         //测试集中的bucket
         Map<String, Map<String, String>> candidatesMap = new HashMap<>();
-        String path = "C:\\Users\\GZQ\\Desktop\\data\\new_project\\changeCandidate_" + rate + "\\" + form + "\\" + project + "\\";
+        String path = "C:\\Users\\GZQ\\Desktop\\data\\new_project\\testing\\" + form + "\\" + project + "\\";
         Set<String> testSet = new HashSet<>();
         File[] files = new File(path).listFiles();
         for (File file : files) {
@@ -52,8 +49,7 @@ public class Locus {
             revision.put(rev.substring(0, 10), rev.substring(0, 12));
         }
 
-
-        String testingFilePath = LocusPath + "testing_" + rate + "\\" + form + "\\" + project + "\\";
+        String testingFilePath = LocusPath + "testing\\" + form + "\\" + project + "\\";
         File testingFile = new File(testingFilePath);
         if (!testingFile.exists()) testingFile.mkdirs();
         List<String> lines = FileHandler.readFileToLines(LocusPath + project + ".txt");
@@ -67,7 +63,6 @@ public class Locus {
                 Rank rank = new Rank(temp[i]);
                 rank.id = revision.get(rank.id);
                 if (candidatesMap.get(bucketID).containsKey(rank.id)) {
-
                     ranks.add(rank);
                 }
             }
@@ -82,15 +77,14 @@ public class Locus {
         }
     }
 
-    public static void evaluate(String project, String form, double rate) {
-        String testingFilePath = LocusPath + "testing_" + rate + "\\" + form + "\\" + project + "\\";
+    public static void evaluate(String project, String form) {
+        String testingFilePath = LocusPath + "testing\\" + form + "\\" + project + "\\";
         String result = Recall(testingFilePath, 1);
         result += "," + Recall(testingFilePath, 5);
         result += "," + Recall(testingFilePath, 10);
         result += "," + MRR(testingFilePath);
         result += "," + MAP(testingFilePath);
         System.out.println(result);
-
     }
 
     public static String Recall(String path, int k) {
