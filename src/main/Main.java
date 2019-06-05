@@ -6,19 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static double rate = 1.0;
-    public static String rootPath = "C:\\Users\\gzq\\Desktop\\data\\new_project\\"; // "C:\\Users\\gzq\\Desktop\\data\\new_project\\"
-    public static String testingPath = rootPath + "testing\\";
-    public static String trainingMultiplePath = rootPath + "training\\";
+    public static String rootPath = "C:\\Users\\gzq\\Desktop\\data\\netbeans_project\\"; // "C:\\Users\\gzq\\Desktop\\data\\new_project\\"
+    public static String testingPath = rootPath + "ChangeCandidate_1.0\\";
+    public static String trainingMultiplePath = rootPath + "training_1.0\\";
     public static String resultPath = rootPath + "results\\";
     public static String classifier = "Logistic"; // Logistic  NB  MLP  J48  IBk  RF  SVM  PART
     public static String[] classifiers = {"Logistic", "NB", "MLP", "J48", "IBk", "SVM", "PART"};
-    public static String form = "Form1";
+    public static String form = "Form3";
     public static String[] forms = {"Form1", "Form2", "Form3"};
-    public static String[] versions = {"AspectJ", "JDT", "Tomcat"};
+    public static String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
 
     // "6.7", "6.8", "6.9", "7.0", "7.1", "7.2"
-    // "AspectJ", "JDT", "PDE", "Tomcat"
+    // "AspectJ", "JDT", "Tomcat"
 
     public static void main(String[] args) throws Exception {
         //  for (String form : forms) {

@@ -184,11 +184,12 @@ public class LearnToRank {
         attributeSelection.setSearch(new BestFirst()); //搜索策略: BestFirst
         attributeSelection.SelectAttributes(trainDataset);
         //选择好的属性索引
+
         int[] indices = attributeSelection.selectedAttributes();
-/*
-*         for (int idx : indices) System.out.print(idx + " ");
-        System.out.println();
-* */
+        /*
+        for (int idx : indices) System.out.print(idx + " ");
+        System.out.println();*/
+
         int N = trainDataset.numAttributes();
         int current = 0;
         int deleteIndex = 0;
@@ -260,10 +261,10 @@ public class LearnToRank {
 
         //选择好的属性索引
         int[] indices = attributeSelection.selectedAttributes();
-/*
-*         for (int idx : indices) System.out.print(idx + " ");
+
+        for (int idx : indices) System.out.print(idx + " ");
         System.out.println();
-* */
+
         int N = trainDataset.numAttributes();
         int current = 0;
         int deleteIndex = 0;
@@ -338,9 +339,9 @@ public class LearnToRank {
         //选择好的属性索引
         int[] indices = attributeSelection.selectedAttributes();
 /*
-*         for (int idx : indices) System.out.print(idx + " ");
-        System.out.println();
-* */
+        for (int idx : indices) System.out.print(idx + " ");
+        System.out.println();*/
+
         int N = trainDataset.numAttributes();
         int current = 0;
         int deleteIndex = 0;

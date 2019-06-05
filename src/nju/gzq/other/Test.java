@@ -22,11 +22,29 @@ public class Test {
 
 
     public static void main(String[] args) throws IOException {
-
+        /*
         for (String project : projects) {
             for (String form : forms) {
                 getInitialDataSet(project, form);
                 underSampling(project, form);
+            }
+        }*/
+
+        String[] versions = {"6.7", "6.8", "6.9", "7.0", "7.1", "7.2"};
+
+
+        for (String version : versions) {
+            System.out.println("Version: " + version);
+            File[] clFiles = new File("C:\\Users\\GZQ\\Desktop\\cl\\" + version + "\\").listFiles();
+            File[] crFiles = new File("C:\\Users\\GZQ\\Desktop\\cr\\" + version + "\\").listFiles();
+            for (int fileIndex = 0; fileIndex < clFiles.length; fileIndex++) {
+                System.out.print(clFiles[fileIndex].getName().replace(".txt", "") + "\t");
+                List<String> lines = FileHandler.readFileToLines(clFiles[fileIndex].getPath());
+
+                for (int i = 0; i < lines.size(); i++) {
+                    if (lines.get(i).split("\t")[2].equals("true")) System.out.print(i + ", ");
+                }
+                System.out.println();
             }
         }
     }
