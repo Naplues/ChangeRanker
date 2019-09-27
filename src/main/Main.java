@@ -1,5 +1,6 @@
 package main;
 
+import nju.gzq.predictor.LearnToRank;
 import nju.gzq.predictor.Predictor;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ public class Main {
     public static String testingPath = rootPath + "ChangeCandidate_1.0\\";
     public static String trainingMultiplePath = rootPath + "training_1.0\\";
     public static String resultPath = rootPath + "results\\";
-    public static String classifier = "Logistic"; // Logistic  NB  MLP  J48  IBk  RF  SVM  PART
+    public static String classifier = "J48"; // Logistic  NB  MLP  J48  IBk  RF  SVM  PART
     public static String[] classifiers = {"Logistic", "NB", "MLP", "J48", "IBk", "SVM", "PART"};
     public static String form = "Form3";
     public static String[] forms = {"Form1", "Form2", "Form3"};
@@ -20,27 +21,31 @@ public class Main {
     // "AspectJ", "JDT", "Tomcat"
 
     public static void main(String[] args) throws Exception {
-        //  for (String form : forms) {
-        //for (String classifier : classifiers) {
-        System.out.println(classifier);
-        // 测试ChangeLocator
-        //System.out.println("ChangeLocator");
-        //testChangeLocator(form, classifier);
 
-        // 测试ChangeLocator + Wrapper
-        //testChangeLocatorWithFS(form, classifier, "Wrapper");
+        for (String option : Options.getOptions(classifier)) {
+            LearnToRank.option = option;
+            //  for (String form : forms) {
+            //for (String classifier : classifiers) {
+            System.out.println(option);
+            // 测试ChangeLocator
+            //System.out.println("ChangeLocator");
+            //testChangeLocator(form, classifier);
 
-        // 测试ChangeLocator + CFS
-        //testChangeLocatorWithFS(form, classifier, "CFS");
+            // 测试ChangeLocator + Wrapper
+            //testChangeLocatorWithFS(form, classifier, "Wrapper");
 
-        // 测试ChangeLocator + InfoGain
-        //testChangeLocatorWithFS(form, classifier, "SVM");
+            // 测试ChangeLocator + CFS
+            //testChangeLocatorWithFS(form, classifier, "CFS");
 
-        // 测试ChangeRanker
-        testChangeRanker(form, classifier, 3);
-        // }
+            // 测试ChangeLocator + InfoGain
+            //testChangeLocatorWithFS(form, classifier, "SVM");
 
+            // 测试ChangeRanker
+            testChangeRanker(form, classifier, 3);
+            // }
+        }
     }
+
 
     /**
      * Test ChangeLocator

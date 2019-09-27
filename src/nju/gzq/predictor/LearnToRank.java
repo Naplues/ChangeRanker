@@ -20,9 +20,11 @@ import weka.classifiers.trees.J48;
 import weka.classifiers.trees.RandomForest;
 import weka.core.Instance;
 import weka.core.Instances;
+import weka.core.Utils;
 import weka.core.converters.CSVLoader;
 
 public class LearnToRank {
+    public static String option = "";
     //0: key, 1:NFA, 2: Function, 3:RLOCC, 4: RLOAC, 5: RLODC, 6: IADCP, 7: ITDCR, 8: RF, 9: IBF
     //10: CC, 11: IADCL, 12: Label
     public static Map map = new HashMap();
@@ -106,35 +108,34 @@ public class LearnToRank {
         Classifier classifier;
 
         switch (classifierName) {
-            case "Logistic":
+            case "Logistic": // 2
                 classifier = new Logistic();
                 break;
-            case "NB":
+            case "NB":  // 2
                 classifier = new NaiveBayes();
                 break;
-            case "MLP":
+            case "MLP": // 14
                 classifier = new MultilayerPerceptron();
                 break;
-            case "J48":
+            case "J48": // 9
                 classifier = new J48();
                 break;
-            case "IBk":
+            case "IBk": // 8
                 classifier = new IBk();
                 break;
-            case "RF":
+            case "RF": // 4
                 classifier = new RandomForest();
                 break;
-            case "SVM":
+            case "SVM": // 10
                 classifier = new SMO();
                 break;
-            case "PART":
+            case "PART": // 7
                 classifier = new PART();
                 break;
             default:
                 classifier = new Bagging();
-                classifier.setOptions(new String[]{"-B", "Logistic"});
-
         }
+        classifier.setOptions(Utils.splitOptions(option));
         return classifier;
     }
 
