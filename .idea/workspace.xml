@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8440f594-c363-4fb6-b449-d82844be88a3" name="Default" comment="更新数据集">
-      <change afterPath="$PROJECT_DIR$/src/main/Options.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/META-INF/PLC.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/other/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/other/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PLC/nju/gzq/predictor/LearnToRank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PLC/nju/gzq/predictor/LearnToRank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/IBk.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/IBk.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/J48.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/J48.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/Logistic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/Logistic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/MLP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/MLP.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/NB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/NB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/PART.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/PART.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/RF.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/RF.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameter/SVM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/SVM.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,25 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+            <state relative-caret-position="57">
+              <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1406">
-              <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#getClassifier#0;class#LearnToRank#0" />
-                <element signature="method#learnToRankWithCFS#0;class#LearnToRank#0" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -77,15 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/nju/gzq/selector/Graphviz.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/base/BaseRanking.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/plc/Ranking.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/plc/Feature.java" />
-        <option value="$PROJECT_DIR$/src/test/Combine.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/plc/Project.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/ml/Main.java" />
-        <option value="$PROJECT_DIR$/src/nju/gzq/Learning.java" />
-        <option value="$PROJECT_DIR$/src/test/Learning.java" />
         <option value="$PROJECT_DIR$/crash_data/training_single/6.5.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_single/6.7.csv" />
         <option value="$PROJECT_DIR$/crash_data/training_single/6.8.csv" />
@@ -128,11 +116,21 @@
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/Options.java" />
         <option value="$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java" />
+        <option value="$PROJECT_DIR$/parameter/IBk.csv" />
+        <option value="$PROJECT_DIR$/parameter/J48.csv" />
+        <option value="$PROJECT_DIR$/parameter/MLP.csv" />
+        <option value="$PROJECT_DIR$/parameter/NB.csv" />
+        <option value="$PROJECT_DIR$/parameter/PART.csv" />
+        <option value="$PROJECT_DIR$/parameter/RF.csv" />
+        <option value="$PROJECT_DIR$/parameter/SVM.csv" />
+        <option value="$PROJECT_DIR$/parameter/Logistic.csv" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="790" />
+    <option name="x" value="791" />
+    <option name="y" value="2" />
     <option name="width" value="1137" />
     <option name="height" value="1047" />
   </component>
@@ -144,13 +142,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
+              <item name="parameter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
@@ -163,28 +165,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gzq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChangeRanker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChangeRanker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gzq" type="462c0819:PsiDirectoryNode" />
-              <item name="predictor" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569573458740" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569847029244" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/SMOTE.jar!/" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -309,9 +299,9 @@
     <list>
       <item itemvalue="Application.Locus" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Options" />
       <item itemvalue="Application.Sampling" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.Options" />
     </list>
     <recent_temporary>
       <list>
@@ -389,10 +379,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.15245202" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4973545" visible="true" weight="0.15405117" />
       <window_info id="Structure" order="1" sideWeight="0.5026455" side_tool="true" weight="0.17299919" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -411,7 +401,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3285968" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.29035753" />
-      <window_info anchor="bottom" id="Run" order="12" visible="true" weight="0.3531961" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.3531961" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -439,16 +429,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form1/candidates/AspectJ.txt" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_multiple/Form1/6.5.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form1/PDE.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form1/Tomcat.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form1/JDT.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form1/AspectJ.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form1/7.1.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form2/Tomcat/54475.csv" />
-    <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form2/candidates/AspectJ.txt" />
-    <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form3/Tomcat/54475.csv" />
     <entry file="file://$PROJECT_DIR$/crash_data/changeCandidate_1/Form3/candidates/AspectJ.txt" />
     <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form2/AspectJ.csv" />
     <entry file="file://$PROJECT_DIR$/crash_data/training_1/Form3/AspectJ.csv" />
@@ -570,13 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="424" column="47" selection-start-line="424" selection-start-column="42" selection-end-line="424" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/Predictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -706,9 +679,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/Predictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/LearnToRank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1406">
+        <state relative-caret-position="2090">
           <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -718,10 +701,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/nju/gzq/predictor/EvaluationMetric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/SVM.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/RF.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/PART.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/NB.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/MLP.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/Logistic.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/J48.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter/IBk.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        <state relative-caret-position="57">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>

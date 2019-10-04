@@ -5,7 +5,10 @@
 **Keywords**: Please Wait.
 
 ## ChangeRanker
-This project implements the ChangeRanker approach.
+This project implements the ChangeRanker.
+
+## Parameters Details
+The detailed parameters setting can be fond in the folder [parameter](https://github.com/Naplues/ChangeRanker/blob/master/parameter/)
 
 ## Data Set:
 All changes feature data are collected by [Wu et al.](http://101.96.10.64/sccpu2.cse.ust.hk/castle/materials/ChangeLocator.pdf)  
