@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8440f594-c363-4fb6-b449-d82844be88a3" name="Default" comment="更新数据集">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/IBk.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/IBk.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/J48.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/J48.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/Logistic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/Logistic.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/MLP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/MLP.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/NB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/NB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/PART.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/PART.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/RF.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/RF.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameter/SVM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parameter/SVM.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="342">
+              <caret line="18" column="491" selection-start-line="18" selection-start-column="491" selection-end-line="18" selection-end-column="491" />
             </state>
           </provider>
         </entry>
@@ -773,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="342">
+          <caret line="18" column="491" selection-start-line="18" selection-start-column="491" selection-end-line="18" selection-end-column="491" />
         </state>
       </provider>
     </entry>
